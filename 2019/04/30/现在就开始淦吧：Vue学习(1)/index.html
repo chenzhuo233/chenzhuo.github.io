@@ -86,13 +86,13 @@
 <meta property="og:site_name" content="陈某人的基地">
 <meta property="og:description" content="前面出于某些原因，而且下学期也有课教web的基础知识，把前端(HTML CSS Javascript)学的差不多（并不后，决定学习并掌握一个框架，于是开始学习Vue。  首先推荐一个系列视频：链接(bilibili) 讲的比较详细适合入门 1.什么是Vue.js渐进式JavaScript框架 官方网站解释 个人认为：是一个很方便没有很多限制的框架，不像其他框架有单独限制，可兼并其他的库和框架，使用">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/现在就开始淦吧：Vue学习(1)/Users/chenzhuo123/blog/source/_posts/现在就开始淦吧：Vue学习/QQ20190505-230029@2x.png">
-<meta property="og:image" content="http://yoursite.com/2019/04/30/现在就开始淦吧：Vue学习(1)/Users/chenzhuo123/blog/source/_posts/现在就开始淦吧：Vue学习/QQ20190505-231507@2x.png">
-<meta property="og:updated_time" content="2019-05-05T15:23:41.112Z">
+<meta property="og:image" content="http://yoursite.com/2019/04/30/现在就开始淦吧：Vue学习(1)/Users/chenzhuo123/blog/source/_posts/现在就开始淦吧：Vue学习(1">
+<meta property="og:image" content="http://yoursite.com/2019/04/30/现在就开始淦吧：Vue学习(1)/Users/chenzhuo123/blog/source/_posts/现在就开始淦吧：Vue学习(1">
+<meta property="og:updated_time" content="2019-05-06T12:08:23.139Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="现在就开始淦吧：Vue学习(1)">
 <meta name="twitter:description" content="前面出于某些原因，而且下学期也有课教web的基础知识，把前端(HTML CSS Javascript)学的差不多（并不后，决定学习并掌握一个框架，于是开始学习Vue。  首先推荐一个系列视频：链接(bilibili) 讲的比较详细适合入门 1.什么是Vue.js渐进式JavaScript框架 官方网站解释 个人认为：是一个很方便没有很多限制的框架，不像其他框架有单独限制，可兼并其他的库和框架，使用">
-<meta name="twitter:image" content="http://yoursite.com/2019/04/30/现在就开始淦吧：Vue学习(1)/Users/chenzhuo123/blog/source/_posts/现在就开始淦吧：Vue学习/QQ20190505-230029@2x.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/04/30/现在就开始淦吧：Vue学习(1)/Users/chenzhuo123/blog/source/_posts/现在就开始淦吧：Vue学习(1">
 
 
 
@@ -363,7 +363,7 @@
 <h3 id="2-引入Vue"><a href="#2-引入Vue" class="headerlink" title="2.引入Vue"></a>2.引入Vue</h3><p>如果是用来学习和做一些简单的小东西<del>????</del>，直接可以在html中加入 <code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;</code> 来引入，或<code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue&quot;&gt;&lt;/script&gt;</code> 前者是开发环境版本，包含了有帮助的命令行警告；后者为生产环境版本，优化了尺寸与速度。</p>
 <p><a href="https://cn.vuejs.org/v2/guide/" target="_blank" rel="noopener">其他方法</a> </p>
 <h3 id="3-开始"><a href="#3-开始" class="headerlink" title="3.开始"></a>3.开始</h3><p>第一步肯定是先弄一个html</p>
-<p><img src="/2019/04/30/现在就开始淦吧：Vue学习(1)/Users/chenzhuo123/blog/source/_posts/现在就开始淦吧：Vue学习/QQ20190505-230029@2x.png" alt="QQ20190505-230029@2x"></p>
+<p><img src="/2019/04/30/现在就开始淦吧：Vue学习(1)/Users/chenzhuo123/blog/source/_posts/现在就开始淦吧：Vue学习(1" alt="QQ20190505-230029@2x"><a href="mailto:/QQ20190505-230029@2x.png" target="_blank" rel="noopener">/QQ20190505-230029@2x.png</a>)</p>
 <p>HTML源码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">	&lt;title&gt;vue.js学习&lt;/title&gt;</span><br><span class="line">	&lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue/dist/vue.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;!--vue-123是一个容器，这个容器要在vue中被引入--&gt;</span><br><span class="line">	&lt;div id=&quot;vue-123&quot;&gt;</span><br><span class="line">		&lt;h1&gt;&#123;&#123;name&#125;&#125;&lt;/h1&gt;</span><br><span class="line">	&lt;/div&gt;</span><br><span class="line">	&lt;!--将123.js链接来--&gt;</span><br><span class="line">	&lt;script src=&quot;123.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 <p>首先先实例化一个对象，和new一个对象的思路差不多：</p>
@@ -373,7 +373,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">new Vue(&#123;</span><br><span class="line">	el:&quot;#vue-123&quot;,</span><br><span class="line">	data:&#123;</span><br><span class="line">		name=&quot;chenzhuo&quot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>这里data里给name赋予chenzhuo这个内容，所以回到html中，调用name数据的方法为两个花括号(上图)。</p>
 <p>所以直接打开时是这样的：</p>
-<p><img src="/2019/04/30/现在就开始淦吧：Vue学习(1)/Users/chenzhuo123/blog/source/_posts/现在就开始淦吧：Vue学习/QQ20190505-231507@2x.png" alt="QQ20190505-231507@2x"></p>
+<p><img src="/2019/04/30/现在就开始淦吧：Vue学习(1)/Users/chenzhuo123/blog/source/_posts/现在就开始淦吧：Vue学习(1" alt="QQ20190505-231507@2x"><a href="mailto:/QQ20190505-231507@2x.png" target="_blank" rel="noopener">/QQ20190505-231507@2x.png</a>)</p>
 <p><strong>Vue学习(1)笔记结束</strong></p>
 <p><del>写了3天拖了2天半</del></p>
 <p><a href="https://chenzhuo233.github.io/" target="_blank" rel="noopener">My blog</a> </p>
