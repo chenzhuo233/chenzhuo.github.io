@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Java数据结构与算法–快速排序1.快速排序思想与原理基本思想：通过一趟排序将数据分割为前后两个部分，第一部分所有数据比第二组小（前面）然后分别继续快排，使用递归实现。 原理就是在一组数据中找到一个轴值（一般是第一个数），然后从后往前扫，在待排数据中比轴值小的数放在待排数据的前面，然后从前往后扫，比轴值大的放在数据后面。然后左右大致已经分好大小区域，这时使用递归将左右元素继续排序。下面代码中教材代">
+<meta name="description" content="Java数据结构与算法–快速排序1.快速排序思想与原理快速排序是综合性无序排序比较强的方法，但对于基本有序的数组，快排就慢的很多 1.1基本思想：通过一趟排序将数据分割为前后两个部分，第一部分所有数据比第二组小（前面）然后分别继续快排，使用递归实现。 1.2时间复杂度与空间复杂度   平均时间复杂度 最好情况 最坏情况 空间复杂度 排序方式 稳定性    O(n log n) O(n log n)">
 <meta name="keywords" content="数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="快速排序">
 <meta property="og:url" content="http://yoursite.com/2019/05/31/快速排序/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="Java数据结构与算法–快速排序1.快速排序思想与原理基本思想：通过一趟排序将数据分割为前后两个部分，第一部分所有数据比第二组小（前面）然后分别继续快排，使用递归实现。 原理就是在一组数据中找到一个轴值（一般是第一个数），然后从后往前扫，在待排数据中比轴值小的数放在待排数据的前面，然后从前往后扫，比轴值大的放在数据后面。然后左右大致已经分好大小区域，这时使用递归将左右元素继续排序。下面代码中教材代">
+<meta property="og:description" content="Java数据结构与算法–快速排序1.快速排序思想与原理快速排序是综合性无序排序比较强的方法，但对于基本有序的数组，快排就慢的很多 1.1基本思想：通过一趟排序将数据分割为前后两个部分，第一部分所有数据比第二组小（前面）然后分别继续快排，使用递归实现。 1.2时间复杂度与空间复杂度   平均时间复杂度 最好情况 最坏情况 空间复杂度 排序方式 稳定性    O(n log n) O(n log n)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-30T17:17:04.916Z">
+<meta property="og:updated_time" content="2019-06-03T14:27:39.123Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速排序">
-<meta name="twitter:description" content="Java数据结构与算法–快速排序1.快速排序思想与原理基本思想：通过一趟排序将数据分割为前后两个部分，第一部分所有数据比第二组小（前面）然后分别继续快排，使用递归实现。 原理就是在一组数据中找到一个轴值（一般是第一个数），然后从后往前扫，在待排数据中比轴值小的数放在待排数据的前面，然后从前往后扫，比轴值大的放在数据后面。然后左右大致已经分好大小区域，这时使用递归将左右元素继续排序。下面代码中教材代">
+<meta name="twitter:description" content="Java数据结构与算法–快速排序1.快速排序思想与原理快速排序是综合性无序排序比较强的方法，但对于基本有序的数组，快排就慢的很多 1.1基本思想：通过一趟排序将数据分割为前后两个部分，第一部分所有数据比第二组小（前面）然后分别继续快排，使用递归实现。 1.2时间复杂度与空间复杂度   平均时间复杂度 最好情况 最坏情况 空间复杂度 排序方式 稳定性    O(n log n) O(n log n)">
 
 
 
@@ -389,8 +389,29 @@
       
 
       
-        <h2 id="Java数据结构与算法–快速排序"><a href="#Java数据结构与算法–快速排序" class="headerlink" title="Java数据结构与算法–快速排序"></a>Java数据结构与算法–快速排序</h2><h3 id="1-快速排序思想与原理"><a href="#1-快速排序思想与原理" class="headerlink" title="1.快速排序思想与原理"></a>1.快速排序思想与原理</h3><h4 id="基本思想："><a href="#基本思想：" class="headerlink" title="基本思想："></a>基本思想：</h4><p>通过一趟排序将数据分割为前后两个部分，第一部分所有数据比第二组小（前面）然后分别继续快排，使用递归实现。</p>
-<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>就是在一组数据中找到一个轴值（一般是第一个数），然后从后往前扫，在待排数据中比轴值小的数放在待排数据的前面，然后从前往后扫，比轴值大的放在数据后面。然后左右大致已经分好大小区域，这时使用递归将左右元素继续排序。下面代码中教材代码为：49、38、65、97、76、13、27。<del>其实是数据结构课的作业稍作修改</del>。</p>
+        <h2 id="Java数据结构与算法–快速排序"><a href="#Java数据结构与算法–快速排序" class="headerlink" title="Java数据结构与算法–快速排序"></a>Java数据结构与算法–快速排序</h2><h3 id="1-快速排序思想与原理"><a href="#1-快速排序思想与原理" class="headerlink" title="1.快速排序思想与原理"></a>1.快速排序思想与原理</h3><p><strong>快速排序是综合性无序排序比较强的方法，但对于基本有序的数组，快排就慢的很多</strong></p>
+<h4 id="1-1基本思想："><a href="#1-1基本思想：" class="headerlink" title="1.1基本思想："></a>1.1基本思想：</h4><p>通过一趟排序将数据分割为前后两个部分，第一部分所有数据比第二组小（前面）然后分别继续快排，使用递归实现。</p>
+<h4 id="1-2时间复杂度与空间复杂度"><a href="#1-2时间复杂度与空间复杂度" class="headerlink" title="1.2时间复杂度与空间复杂度"></a>1.2时间复杂度与空间复杂度</h4><table>
+<thead>
+<tr>
+<th align="center">平均时间复杂度</th>
+<th align="center">最好情况</th>
+<th align="center">最坏情况</th>
+<th align="center">空间复杂度</th>
+<th align="center">排序方式</th>
+<th>稳定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">O(n log n)</td>
+<td align="center">O(n log n)</td>
+<td align="center">O(n^2)</td>
+<td align="center">O(log n)</td>
+<td align="center">内部排序</td>
+<td>不稳定</td>
+</tr>
+</tbody></table>
+<h4 id="1-3原理"><a href="#1-3原理" class="headerlink" title="1.3原理"></a>1.3原理</h4><p>就是在一组数据中找到一个轴值（一般是第一个数），然后从后往前扫，在待排数据中比轴值小的数放在待排数据的前面，然后从前往后扫，比轴值大的放在数据后面。然后左右大致已经分好大小区域，这时使用递归将左右元素继续排序。下面代码中教材代码为：49、38、65、97、76、13、27。<del>其实是数据结构课的作业稍作修改</del>。</p>
 <p>算法代码：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//快排方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">sort</span><span class="params">()</span></span>&#123;</span><br><span class="line">        quicksort(qsort,<span class="number">0</span>,qsort.length-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//方法</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span>[] qsort,<span class="keyword">int</span> low,<span class="keyword">int</span> high)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.qsort=qsort;</span><br><span class="line">        <span class="keyword">if</span>(low&lt;high)&#123;<span class="comment">//当i和j没相遇时</span></span><br><span class="line">        <span class="keyword">int</span> pivotkey=qsort[low];<span class="comment">//取第一个元素作为轴值</span></span><br><span class="line">        <span class="keyword">int</span> i=low;</span><br><span class="line">        <span class="keyword">int</span> j=high;</span><br><span class="line"><span class="comment">//开始从右往左扫描</span></span><br><span class="line">            <span class="keyword">while</span> (i &lt; j)&#123;</span><br><span class="line">                <span class="keyword">while</span>(i &lt; j &amp;&amp; qsort[j] &gt; pivotkey)&#123;<span class="comment">//遇到比轴值大的，继续往前移动</span></span><br><span class="line">                    j--;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(i &lt; j)&#123;<span class="comment">//找到比轴值小的，交换当前的两组数据，然后开始从左扫描</span></span><br><span class="line">                    qsort[i]=qsort[j];</span><br><span class="line">                    i++;</span><br><span class="line">                &#125;</span><br><span class="line"><span class="comment">//从左扫描</span></span><br><span class="line">                <span class="keyword">while</span> (i &lt; j &amp;&amp; qsort[i] &lt; pivotkey)&#123;<span class="comment">//遇到比轴值小的，继续移动</span></span><br><span class="line">                    i++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(i &lt; j)&#123;<span class="comment">//找到比轴值大的，交换当前两组数据，开始从右扫描</span></span><br><span class="line">                    qsort[j]=qsort[i];</span><br><span class="line">                    j--;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            qsort[i]=pivotkey;<span class="comment">//把轴值放到轴的位置</span></span><br><span class="line">            quicksort(qsort,low,i-<span class="number">1</span>);<span class="comment">//左侧按照快排，递归</span></span><br><span class="line">            quicksort(qsort,i+<span class="number">1</span>,high);<span class="comment">//右侧按照快拍，递归</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
@@ -616,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java数据结构与算法–快速排序"><span class="nav-number">1.</span> <span class="nav-text">Java数据结构与算法–快速排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-快速排序思想与原理"><span class="nav-number">1.1.</span> <span class="nav-text">1.快速排序思想与原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本思想："><span class="nav-number">1.1.1.</span> <span class="nav-text">基本思想：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原理"><span class="nav-number">1.1.2.</span> <span class="nav-text">原理</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java数据结构与算法–快速排序"><span class="nav-number">1.</span> <span class="nav-text">Java数据结构与算法–快速排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-快速排序思想与原理"><span class="nav-number">1.1.</span> <span class="nav-text">1.快速排序思想与原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1基本思想："><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1基本思想：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2时间复杂度与空间复杂度"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.2时间复杂度与空间复杂度</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3原理"><span class="nav-number">1.1.3.</span> <span class="nav-text">1.3原理</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
