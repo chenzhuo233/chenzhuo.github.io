@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="陈某人的基地">
 <meta property="og:description" content="并发编程与多线程1.1 基本概念 什么是并发编程  什么是线程：  线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源.一个线程可以创建和撤销另一个线程;同一个进程中的多个线程之间可以并发执行   什么是多">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-18T15:37:09.063Z">
+<meta property="og:updated_time" content="2019-09-20T11:46:38.486Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA并发编程">
 <meta name="twitter:description" content="并发编程与多线程1.1 基本概念 什么是并发编程  什么是线程：  线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源.一个线程可以创建和撤销另一个线程;同一个进程中的多个线程之间可以并发执行   什么是多">
@@ -441,6 +441,20 @@
 
 <p>这时在两个AtomXXX方法代码中，就可能有其他线程进入来更改数据。</p>
 <p>AtomXXX原子操作数据也和volatile一样多线程共享数据。</p>
+<p><strong>synchronized</strong></p>
+<p>synchronized优化，只对实际操作进行上锁，同步代码块中语句越少越好，比如只需要锁一个变量数据，就不要给整个方法加锁</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">m</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">	Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">	count++;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">	Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*上面这个方法实际只对count变量控制，但却给整个方法加锁，大大降低了执行效率，做以下优化*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">m</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">	Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">  <span class="keyword">synchronized</span>(<span class="keyword">this</span>)&#123;</span><br><span class="line">	count++;</span><br><span class="line">  &#125;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">	Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*采用细粒度的锁，可以使线程争用时间变短，从而提高效率*/</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>synchronized锁是锁在堆内存里的，不是锁在引用里的</strong></p>
+<p>不要以String常量作为锁定对象，比如有<code>String a=&quot;Hello&quot;;</code> 还有<code>String b=&quot;Hello&quot;;</code> 然后有两个方法分别对a和b加锁，但实际他们锁的是同一个对象，而且当引用某些类库的时候，在类库本身会出现对字符串加锁的情况，如果再锁有时候会出现很诡异的死锁阻塞。</p>
+<p><strong>wait和notify</strong></p>
+<p>wait()方法会让当前调用该方法的线程进入等待状态，<strong>并且释放锁，</strong>notify()需要在其他线程中调用，作用是唤醒当前正在等待状态的线程，<strong>但是notify不会释放锁</strong>，如果另一个线程被唤醒了，没有拿到锁，那么还是会在阻塞状态。</p>
+<p>notifyAll()作用是唤醒所有正在wait状态的线程。</p>
+<p><strong>门闩</strong></p>
+<p>countdownlatch/cyclicbarrier/semaphore</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/*创建一个门闩，内部定为1，countdown就是往下数为0时就开了*/</span><br><span class="line">CountDownLatch latch = new CountDownLatch(1);</span><br><span class="line">/*等待方法,也可以指定时间*/</span><br><span class="line">latch.await();	</span><br><span class="line">latch.await(2000);</span><br><span class="line">/*开门*/</span><br><span class="line">latch.countDown();</span><br></pre></td></tr></table></figure>
+
+<p>门闩不需要像synchronized会锁定任何东西。</p>
 
       
     </div>
