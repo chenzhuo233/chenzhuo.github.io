@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="JAVA,">
 
 
 
@@ -79,17 +79,22 @@
 
 
 
-<meta name="description" content="Keep looking,and don&apos;t settle">
+<meta name="description" content="JVM内存结构Java虚拟机内存结构可分为公有和私有两部分，公有指的是所有线程都共享的部分，指的是java堆、方法区、常量池。私有指的是每个线程的私有数据，包括pc寄存器、Java虚拟机栈、本地方法栈。 公有部分：Java堆、方法区、常量池Java堆指的是从JVM中划分出来的一块区域，这块区域专门用于Java实例对象的内存分配，几乎所有的实例对象都会在这里进行内存的分配，但有的小对象会直接在栈上分">
+<meta name="keywords" content="JAVA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM内存模型">
 <meta property="og:url" content="/chenzhuo233.github.io/2019/09/28/JVM内存模型/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="Keep looking,and don&apos;t settle">
+<meta property="og:description" content="JVM内存结构Java虚拟机内存结构可分为公有和私有两部分，公有指的是所有线程都共享的部分，指的是java堆、方法区、常量池。私有指的是每个线程的私有数据，包括pc寄存器、Java虚拟机栈、本地方法栈。 公有部分：Java堆、方法区、常量池Java堆指的是从JVM中划分出来的一块区域，这块区域专门用于Java实例对象的内存分配，几乎所有的实例对象都会在这里进行内存的分配，但有的小对象会直接在栈上分">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-28T14:44:52.744Z">
+<meta property="og:image" content="/2019/09/28/JVM内存模型/jg.png">
+<meta property="og:image" content="/2019/09/28/JVM内存模型/jmm1.jpg">
+<meta property="og:image" content="/2019/09/28/JVM内存模型/jmm2.jpeg">
+<meta property="og:updated_time" content="2019-10-08T13:28:45.635Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM内存模型">
-<meta name="twitter:description" content="Keep looking,and don&apos;t settle">
+<meta name="twitter:description" content="JVM内存结构Java虚拟机内存结构可分为公有和私有两部分，公有指的是所有线程都共享的部分，指的是java堆、方法区、常量池。私有指的是每个线程的私有数据，包括pc寄存器、Java虚拟机栈、本地方法栈。 公有部分：Java堆、方法区、常量池Java堆指的是从JVM中划分出来的一块区域，这块区域专门用于Java实例对象的内存分配，几乎所有的实例对象都会在这里进行内存的分配，但有的小对象会直接在栈上分">
+<meta name="twitter:image" content="/2019/09/28/JVM内存模型/jg.png">
 
 
 
@@ -324,6 +329,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -366,7 +393,35 @@
       
 
       
-        
+        <h1 id="JVM内存结构"><a href="#JVM内存结构" class="headerlink" title="JVM内存结构"></a>JVM内存结构</h1><p>Java虚拟机内存结构可分为公有和私有两部分，公有指的是所有线程都共享的部分，指的是java堆、方法区、常量池。私有指的是每个线程的私有数据，包括pc寄存器、Java虚拟机栈、本地方法栈。</p>
+<h2 id="公有部分：Java堆、方法区、常量池"><a href="#公有部分：Java堆、方法区、常量池" class="headerlink" title="公有部分：Java堆、方法区、常量池"></a>公有部分：Java堆、方法区、常量池</h2><p><strong>Java堆</strong>指的是从JVM中划分出来的一块区域，这块区域专门用于Java实例对象的内存分配，几乎所有的实例对象都会在这里进行内存的分配，但有的小对象会直接在栈上分配。</p>
+<p>Java堆根据对象存活时间不同，分为年轻代，老年代两个区域，年轻代还被分为Eden区、From Survivor空间、To Survivor空间，如下图。</p>
+<img src="/2019/09/28/JVM内存模型/jg.png" title="堆区域划分">
+
+<p>​    当有对象要分配的时候，一个对象永远都是先被分到年轻代的Eden区，等到Eden区内存不够时，JVM会启动垃圾回收。此时Eden区中没有被引用的对象的内存会被回收，在JVM中有一个名为 -XX：MaxTenuringThreshold 的参数专门来设置晋升到老年代所需要经历的GC次数，当在年轻代的对象经过了一定次数的GC后，在下一次GC进入老年代。</p>
+<p>​    Java划分区域的原因是：在Java中会有存活时间长的对象也有存活时间短的对象，如果混在一起，如果存活时间短的对象多的话就会出现频繁的垃圾回收，而每次垃圾回收时都要进行全部内存的扫描，这样的话对于存活时间很长对象来说无异于是浪费，为了提高垃圾回收的效率，就出现了分区。</p>
+<p>​    Why默认虚拟机配置 Eden：From ：To = 8:1:1。</p>
+<p>这是IBM公司统计得出的结论：发现80%对象存活时间都很短，所以将Eden区设置为年轻代80%，可以减少内存空间浪费，提高内存空间利用率。</p>
+<p><strong>方法区</strong> 指存储Java类字节码数据的一块区域，存储类信息、常量、静态变量等数据，是线程共享的区域，为了与Java堆区分，方法区有一个别名叫<strong>NonHeap</strong>。它存储了每一个类的结构信息，比如运行时的常量池、字段和方法数据、构造方法等。其实常量池是存在在方法区中的，但《Java虚拟机规范》将常量池和方法区放在同一等级。</p>
+<h2 id="私有部分：PC寄存器，Java虚拟机栈，本地方法栈"><a href="#私有部分：PC寄存器，Java虚拟机栈，本地方法栈" class="headerlink" title="私有部分：PC寄存器，Java虚拟机栈，本地方法栈"></a>私有部分：PC寄存器，Java虚拟机栈，本地方法栈</h2><p><strong>PC寄存器</strong>，Program Counter寄存器（程序计数器），用来保存线程当前正在执行的方法。功能是存放伪指令，更确切的说存放的是将要执行指令的地址，它甚至可以是操作系统指令的本地地址，当虚拟机正在执行的方法是一个本地方法的时候，jvm的pc寄存器存储的值是undefined，虚拟机的pc寄存器是用于存放下一条将要执行的指令的地址(字节码流)。</p>
+<p>对于一个运行中的Java程序而言，其中的每一个线程都有它自己的PC（程序计数器）寄存器，它是在该线程启动时创建的，PC寄存器的大小是一个字长，很小，因此它既能够持有一个本地指针，也能够持有一个returnAddress（finally块）。当线程执行某个Java方法时，PC寄存器的内容总是下一条将被执行指令的“地址”，这里的“地址”可以是一个本地指针，也可以是在方法字节码中相对于该方法起始指令的偏移量。如果该线程正在执行一个本地方法，那么此时PC寄存器的值是“undefined”。</p>
+<p><strong>Java虚拟机栈</strong>， 这个栈与线程同时创建，用来储存栈帧，也就是存储局部变量与一些过程结果的地方。栈帧存储的数据包括：局部变量表，操作数栈。</p>
+<h1 id="JMM"><a href="#JMM" class="headerlink" title="JMM"></a>JMM</h1><blockquote>
+<p>参考文章：</p>
+<p><a href="https://www.jianshu.com/p/8a58d8335270" target="_blank" rel="noopener">https://www.jianshu.com/p/8a58d8335270</a></p>
+<p><a href="https://www.cnblogs.com/nexiyi/p/java_memory_model_and_thread.html" target="_blank" rel="noopener">https://www.cnblogs.com/nexiyi/p/java_memory_model_and_thread.html</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/29881777" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/29881777</a></p>
+</blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/29881777" target="_blank" rel="noopener">本篇参考</a></p>
+<p>Java内存模型的主要目标是定义程序中各个变量的访问规则，即在虚拟机中将变量存储到内存和从内存中取出变量这样底层细节。此处的变量与Java编程时所说的变量不一样，指包括了实例字段、静态字段和构成数组对象的元素，但是不包括局部变量与方法参数，后者是线程私有的，不会被共享。</p>
+<img src="/2019/09/28/JVM内存模型/jmm1.jpg">
+
+<p>Java虚拟机规范中定义了Java内存模型（Java Memory Model，JMM），用于屏蔽掉各种硬件和操作系统的内存访问差异，以实现让Java程序在各种平台下都能达到一致的并发效果，JMM规范了Java虚拟机与计算机内存是如何协同工作的：规定了一个线程如何和何时可以看到由其他线程修改过后的共享变量的值，以及在必须时如何同步的访问共享变量。</p>
+<hr>
+<p>Java内存模型：调用栈和本地变量存放在线程栈上，对象存放在堆上。</p>
+<img src="/2019/09/28/JVM内存模型/jmm2.jpeg">
+
+
       
     </div>
     
@@ -380,6 +435,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JAVA/" rel="tag"># JAVA</a>
+          
+        </div>
       
 
       
@@ -399,6 +460,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/08/Kotlin/" rel="prev" title="Kotlin">
+                Kotlin <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -471,8 +536,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -500,7 +574,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -511,7 +585,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -550,6 +624,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM内存结构"><span class="nav-number">1.</span> <span class="nav-text">JVM内存结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#公有部分：Java堆、方法区、常量池"><span class="nav-number">1.1.</span> <span class="nav-text">公有部分：Java堆、方法区、常量池</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#私有部分：PC寄存器，Java虚拟机栈，本地方法栈"><span class="nav-number">1.2.</span> <span class="nav-text">私有部分：PC寄存器，Java虚拟机栈，本地方法栈</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JMM"><span class="nav-number">2.</span> <span class="nav-text">JMM</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
