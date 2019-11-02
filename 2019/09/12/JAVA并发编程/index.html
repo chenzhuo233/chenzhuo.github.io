@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="陈某人的基地">
 <meta property="og:description" content="并发编程与多线程1.1 基本概念 什么是并发编程  什么是线程：  线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源.一个线程可以创建和撤销另一个线程;同一个进程中的多个线程之间可以并发执行   什么是多">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-29T11:47:08.170Z">
+<meta property="og:updated_time" content="2019-11-01T17:07:50.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA并发编程">
 <meta name="twitter:description" content="并发编程与多线程1.1 基本概念 什么是并发编程  什么是线程：  线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源.一个线程可以创建和撤销另一个线程;同一个进程中的多个线程之间可以并发执行   什么是多">
@@ -456,6 +456,11 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/*创建一个门闩，内部定为1，countdown就是往下数为0时就开了*/</span><br><span class="line">CountDownLatch latch = new CountDownLatch(1);</span><br><span class="line">/*等待方法,也可以指定时间*/</span><br><span class="line">latch.await();	</span><br><span class="line">latch.await(2000);</span><br><span class="line">/*开门*/</span><br><span class="line">latch.countDown();</span><br></pre></td></tr></table></figure>
 
 <p>门闩不需要像synchronized会锁定任何东西。</p>
+<blockquote>
+<p>参考：</p>
+<p><a href="https://link.zhihu.com/?target=http%3A//mp.weixin.qq.com/s%3F__biz%3DMzI3NzM2OTQ5Mg%3D%3D%26mid%3D2247484289%26idx%3D1%26sn%3Dbdf6721e01c613bfb1458a8584e80800%26chksm%3Deb66047adc118d6c395c14e5b953686bfdfac93fd6fa8c0731bb89aadd7437bba800d034659d%26scene%3D21%23wechat_redirect" target="_blank" rel="noopener">volatile总结</a> （保证内存可见性：Lock前缀的指令、内存屏障禁止重排序）</p>
+<p><a href="https://link.zhihu.com/?target=http%3A//mp.weixin.qq.com/s%3F__biz%3DMzI3NzM2OTQ5Mg%3D%3D%26mid%3D2247484280%26idx%3D1%26sn%3D8de305338c5ab348c3e2a784084e4306%26chksm%3Deb660483dc118d95e9bcde15a01103f818ed2fd399989f36dc2d57740a305e91cf986d4f5a64%26scene%3D21%23wechat_redirect" target="_blank" rel="noopener">synchronized总结</a> （保证内存可见性和操作原子性：互斥锁；锁优化）</p>
+</blockquote>
 
       
     </div>
@@ -598,7 +603,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">24</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

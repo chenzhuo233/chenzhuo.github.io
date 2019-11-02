@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="JAVA,">
 
 
 
@@ -79,16 +79,24 @@
 
 
 
-<meta name="description" content="Keep looking,and don&apos;t settle">
-<meta property="og:type" content="website">
-<meta property="og:title" content="陈某人的基地">
-<meta property="og:url" content="/chenzhuo233.github.io/archives/2019/07/index.html">
+<meta name="description" content="Garbage Collection，GC简单介绍Java内存虚拟机内存运行时的数据区主要有三块：  堆（Heap）：存放对象实例和数组。全局共享 栈（Stack）：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有 方法区（Method Area）：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同    堆：最大的最重要的部分，逻辑堆。对应图中J">
+<meta name="keywords" content="JAVA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA垃圾回收">
+<meta property="og:url" content="/chenzhuo233.github.io/2019/10/29/JAVA垃圾回收/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="Keep looking,and don&apos;t settle">
+<meta property="og:description" content="Garbage Collection，GC简单介绍Java内存虚拟机内存运行时的数据区主要有三块：  堆（Heap）：存放对象实例和数组。全局共享 栈（Stack）：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有 方法区（Method Area）：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同    堆：最大的最重要的部分，逻辑堆。对应图中J">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="/2019/10/29/JAVA垃圾回收/gc.jpeg">
+<meta property="og:image" content="/2019/10/29/JAVA垃圾回收/gc1.jpg">
+<meta property="og:image" content="/2019/10/29/JAVA垃圾回收/gc2.jpg">
+<meta property="og:image" content="/2019/10/29/JAVA垃圾回收/gc3.png">
+<meta property="og:image" content="/2019/10/29/JAVA垃圾回收/gc4.jpg">
+<meta property="og:updated_time" content="2019-11-02T13:18:12.756Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="陈某人的基地">
-<meta name="twitter:description" content="Keep looking,and don&apos;t settle">
+<meta name="twitter:title" content="JAVA垃圾回收">
+<meta name="twitter:description" content="Garbage Collection，GC简单介绍Java内存虚拟机内存运行时的数据区主要有三块：  堆（Heap）：存放对象实例和数组。全局共享 栈（Stack）：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有 方法区（Method Area）：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同    堆：最大的最重要的部分，逻辑堆。对应图中J">
+<meta name="twitter:image" content="/2019/10/29/JAVA垃圾回收/gc.jpeg">
 
 
 
@@ -118,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="/chenzhuo233.github.io/archives/2019/07/">
+  <link rel="canonical" href="/chenzhuo233.github.io/2019/10/29/JAVA垃圾回收/">
 
 
 
 
 
-  <title>归档 | 陈某人的基地</title>
+  <title>JAVA垃圾回收 | 陈某人的基地</title>
   
 
 
@@ -143,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -269,107 +277,262 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 25 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2019/10/29/JAVA垃圾回收/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sober ChenZhuo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/1.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈某人的基地">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/07/16/Js与Express/" itemprop="url">
-              
-                <span itemprop="name">Js与Express</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">JAVA垃圾回收</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-16T12:36:08+08:00" content="2019-07-16">
-          07-16
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-29T16:33:53+08:00">
+                2019-10-29
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/10/29/JAVA垃圾回收/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/29/JAVA垃圾回收/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_value_page_pv"></span>次阅读
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/07/03/Node-js（2）/" itemprop="url">
-              
-                <span itemprop="name">Node.js（2）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-07-03T19:45:02+08:00" content="2019-07-03">
-          07-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <h1 id="Garbage-Collection，GC"><a href="#Garbage-Collection，GC" class="headerlink" title="Garbage Collection，GC"></a>Garbage Collection，GC</h1><h2 id="简单介绍Java内存"><a href="#简单介绍Java内存" class="headerlink" title="简单介绍Java内存"></a>简单介绍Java内存</h2><p>虚拟机内存<strong>运行时的数据区</strong>主要有三块：</p>
+<ol>
+<li><strong>堆（Heap）</strong>：存放对象实例和数组。全局共享</li>
+<li><strong>栈（Stack）</strong>：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有</li>
+<li><strong>方法区（Method Area）</strong>：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同</li>
+</ol>
+<img src="/2019/10/29/JAVA垃圾回收/gc.jpeg">
+
+<p><strong>堆：</strong>最大的最重要的部分，逻辑堆。对应图中Java Heaps区。</p>
+<p><strong>方法区：</strong>永生代，主要由类加载器ClassLoader加载类信息。用于储存类的元数据，常量池，字段，静态变量，方法内的局部变量，已编译好的字节码。线程共享。JDK8后类的静态变量和内部字符串分离到逻辑堆。</p>
+<p><strong>栈：</strong> 对象的引用，八种基本数据类型。</p>
+<p><strong>PC 寄存器：</strong> 用来给每个线程分配本机进程编号。</p>
+<h2 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h2><h3 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h3><p>分为“年轻代”与“老年代”。年轻代分为<strong>“Eden”（伊甸园）区</strong>和两个大小对等的Servivor区：<strong>from区</strong>和<strong>to区</strong>。在Java内存模型中堆中有详细介绍。这里主要记录回收算法。</p>
+<img src="/2019/10/29/JAVA垃圾回收/gc1.jpg">
+
+<p><strong>年轻代垃圾回收</strong></p>
+<p><strong>Mark—Sweep</strong>算法，也就是标记清除算法。标记出活着的实例，清除未标记实例。</p>
+<ol>
+<li><p>标记存活实例</p>
+<p>寻找根对象，遍历所有和根对象有直接或间接引用关系的实例。</p>
+<blockquote>
+<p><a href="https://link.zhihu.com/?target=http%3A//www.dynatrace.com/en/javabook/how-garbage-collection-works.html" target="_blank" rel="noopener">根对象参考</a></p>
+</blockquote>
+<p>根对象主要包括四类对象：</p>
+<ol>
+<li><p><strong>stack栈中引用对象</strong>：就是指存储在JVM栈中的对象引用。</p>
+<img src="/2019/10/29/JAVA垃圾回收/gc2.jpg">
+</li>
+<li><p><strong>static静态变量：</strong>静态方法和变量不产生实例，直接由类引用。Java的类是由类加载器加载（<strong>java.lang.ClassLoader</strong>），类的数据都不在逻辑堆，而是在永生代（Metaspace方法区），类本身一旦被GC清除。他所有的静态变量也一并释放。</p>
+</li>
+<li><p><strong>mian thread：</strong> main方法就是一个thread线程。java里线程也都是继承自基类，所以自身也是一个大实例。</p>
+</li>
+<li><p><strong>JNI引用：</strong> JNI是支持其他编程语言的本机码和Java字节码相互调用的程序。</p>
+</li>
+</ol>
+<blockquote>
+<p><a href="https://link.zhihu.com/?target=http%3A//www.jianshu.com/p/b0f5d21fe031" target="_blank" rel="noopener">参考</a></p>
+<p>概念补充：</p>
+<ol>
+<li><p>mutator:指除了垃圾收集器以外的部分。mutator指责一般是new（分配内存），read（从内存读取），write（内容写入内存）。</p>
+<p>collector：垃圾收集器。回收不再使用的内存供mutator使用</p>
+</li>
+<li><p>mutator roots(mutator根对象),mutator根对象一般指的是分配在堆内存之外，可以直接被mutator直接访问到的对象，一般是指静态/全局变量以及Thread-Local变量(在Java中，存储在java.lang.ThreadLocal中的变量和分配在栈上的变量 - 方法内部的临时变量等都属于此类).</p>
+</li>
+<li><p>可达对象的定义，从mutator根对象开始进行遍历，可以被访问到的对象都称为是可达对象。这些对象也是mutator(你的应用程序)正在使用的对象。</p>
+</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<img src="/2019/10/29/JAVA垃圾回收/gc3.png">
+
+<p><strong>在标记阶段，mutator先中断整个程序的运行。然后collector从根对象开始遍历，对从mutator根对象可以访问到的对象都打上一个标示，在对象header中，将其记录为可达对象。然后清除阶段，collector对堆内存从头到尾进行线性遍历，若发现某个对象没有标记为可达对象，则将其回收</strong></p>
+<p><strong>拷贝到其他代区</strong></p>
+<p><strong>回收过程：新对象内存分配到Eden区，当Eden空间不足时触发年轻代上的垃圾回收（Minor Garbage Collection），gc触发后，存活对象拷贝到一个Survior区同时年龄增加，并清除Eden中非可达对象。其他代区相同方法依次类推。</strong></p>
+<img src="/2019/10/29/JAVA垃圾回收/gc4.jpg">
+
+<p><strong>老年代垃圾回收</strong></p>
+<p>当minor gc发生时，如果Tenured区没有空间容纳新对象时，触发老年代垃圾回收（Major Garbage Collection）。老年代垃圾回收算法取决于JVM用什么垃圾回收器，有三种：Parallel Scavenge(PS),Concurrent Mark Sweep(CMS)还有最新的Garbage First(G1)垃圾收集器。</p>
+<p><strong>Garbage First</strong></p>
+<p><a href="https://www.cnblogs.com/wjh123/p/11146195.html" target="_blank" rel="noopener">G1垃圾收集器是什么</a></p>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JAVA/" rel="tag"># JAVA</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/08/Kotlin/" rel="next" title="Kotlin">
+                <i class="fa fa-chevron-left"></i> Kotlin
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+      <div>    
+ 
+ 
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+      <strong>本文作者：</strong>Sober ChenZhuo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="/2019/10/29/JAVA垃圾回收/" title="JAVA垃圾回收">2019/10/29/JAVA垃圾回收/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权： </strong>
+    本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+  </li>
+</ul>
+
+</div>
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -377,6 +540,13 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
 
         </div>
         
@@ -397,8 +567,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -476,6 +655,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Garbage-Collection，GC"><span class="nav-number">1.</span> <span class="nav-text">Garbage Collection，GC</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单介绍Java内存"><span class="nav-number">1.1.</span> <span class="nav-text">简单介绍Java内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#垃圾回收"><span class="nav-number">1.2.</span> <span class="nav-text">垃圾回收</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#堆"><span class="nav-number">1.2.1.</span> <span class="nav-text">堆</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -627,6 +822,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
