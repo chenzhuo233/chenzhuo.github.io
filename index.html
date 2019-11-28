@@ -1,52 +1,85 @@
 <!DOCTYPE html>
-<html lang="zh-Hans">
-<head>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
-
-<link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
 
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('/chenzhuo233.github.io').hostname,
-    root: '/',
-    scheme: 'Muse',
-    version: '7.5.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    sidebarPadding: 40
-  };
-</script>
 
-  <meta name="description" content="Keep looking,and don&apos;t settle">
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/1.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/1.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/1.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Keep looking,and don&apos;t settle">
 <meta property="og:type" content="website">
 <meta property="og:title" content="陈某人的基地">
 <meta property="og:url" content="/chenzhuo233.github.io/index.html">
@@ -57,19 +90,39 @@
 <meta name="twitter:title" content="陈某人的基地">
 <meta name="twitter:description" content="Keep looking,and don&apos;t settle">
 
-<link rel="canonical" href="/chenzhuo233.github.io/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
   };
 </script>
+
+
+
+  <link rel="canonical" href="/chenzhuo233.github.io/">
+
+
+
+
 
   <title>陈某人的基地</title>
   
@@ -79,146 +132,251 @@
 
 
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-    <div>
+    <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">陈某人的基地</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
 
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
 </div>
-
 
 <nav class="site-nav">
   
-  <ul id="menu" class="menu">
+
+  
+    <ul id="menu" class="menu">
+      
+        
         <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
-
-  </li>
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
 
-  </li>
-  </ul>
-
-</nav>
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
 </div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
     </header>
 
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
+    <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          
-
-          <div class="content">
+          <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
 
-  <div class="posts-expand">
-        
+  
+
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2019/11/28/Spring/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Sober ChenZhuo">
-      <meta itemprop="description" content="Keep looking,and don't settle">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/1.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="陈某人的基地">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/28/Spring/" class="post-title-link" itemprop="url">Spring</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/28/Spring/" itemprop="url">Spring</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-28T22:41:21+08:00">
+                2019-11-28
+              </time>
+            
 
-              <time title="Created: 2019-11-28 22:41:21" itemprop="dateCreated datePublished" datetime="2019-11-28T22:41:21+08:00">2019-11-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-29 01:33:09" itemprop="dateModified" datetime="2019-11-29T01:33:09+08:00">2019-11-29</time>
-              </span>
-            <span class="post-meta-item">
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Spring/" itemprop="url" rel="index">
                     <span itemprop="name">Spring</span>
                   </a>
                 </span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/11/28/Spring/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/11/28/Spring/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -226,133 +384,166 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="1-Ioc控制反转"><a href="#1-Ioc控制反转" class="headerlink" title="1. Ioc控制反转"></a>1. Ioc控制反转</h2><p><a href="https://blog.kuangstudy.com/index.php/archives/511/" target="_blank" rel="noopener">参考博客</a></p>
-<p>DI（依赖注入）是实现Ioc的一种方法</p>
-<p>Ioc就是将得到对象的方式反转，不是由我们自身主动创建（new）对象，而是将创建对象的过程交给spring容器完成，我们只负责从容器中得到（get）对象。</p>
-<p><strong>Ioc是Spring的核心</strong>。可以使用xml，注解的方式实现Ioc，也可以零配置实现。</p>
-<p>Spring容器在初始化时会先读取配置文件，根据配置文件或元数据创建与组织对象存入容器中，程序使用时再从Ioc容器中取出需要的对象。</p>
-<p>用XML方式配置Bean时，Bean的定义信息是和实现分离的，而采用注解的方式可以把两者合为一体，Bean的定义信息直接以注解的形式定义在实现类中，从而达到了零配置的目的。</p>
-<p><strong>控制反转是一种通过描述（XML或注解）并通过第三方去生产或获取特定对象的方式。在Spring中实现控制反转的是IoC容器，其实现方法是依赖注入（Dependency Injection,DI）。</strong></p>
-<h2 id="2-配置文件Bean-xml"><a href="#2-配置文件Bean-xml" class="headerlink" title="2. 配置文件Bean.xml"></a>2. 配置文件Bean.xml</h2><h3 id="2-1-认识"><a href="#2-1-认识" class="headerlink" title="2.1 认识"></a>2.1 认识</h3><p><strong>bean.xml：</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://www.springframework.org/schema/beans</span></span></span><br><span class="line"><span class="tag"><span class="string">        http://www.springframework.org/schema/beans/spring-beans.xsd"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!--bean就是java对象，由spring管理，id是外部获得对象的唯一id，class是实现类的包路，property中name是类内部变量，value是赋予name的值--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"hello"</span> <span class="attr">class</span>=<span class="string">"com.kuang.pojo.Hello"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">value</span>=<span class="string">"Spring"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      
 
-<p><strong>Hello.java：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">  	<span class="keyword">private</span> String sz;</span><br><span class="line">  	<span class="function"><span class="keyword">public</span> <span class="title">Hello</span><span class="params">()</span></span>&#123;</span><br><span class="line">      System.out.println(<span class="string">"无参构造方法"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Hello</span><span class="params">(String name)</span></span>&#123;</span><br><span class="line">    		<span class="keyword">this</span>.name = name;</span><br><span class="line">      	System.out.println(<span class="string">"有参构造方法name="</span>+name);</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  	<span class="function"><span class="keyword">public</span> String <span class="title">getSz</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> sz;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setSz</span><span class="params">(String sz)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.sz = sz;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello,"</span>+ name );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>测试：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//解析beans.xml文件 , 生成管理相应的Bean对象</span></span><br><span class="line">    ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"beans.xml"</span>);</span><br><span class="line">    <span class="comment">//getBean : 参数即为spring配置文件中bean的id .</span></span><br><span class="line">    Hello hello = (Hello) context.getBean(<span class="string">"hello"</span>);</span><br><span class="line">    hello.show();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-2-用法"><a href="#2-2-用法" class="headerlink" title="2.2 用法"></a>2.2 用法</h3><p>在配置文件加载时，bean中管理的对象就已经初始化了。</p>
-<ul>
-<li><p>当没有定义任何构造方法时会默认调用无参构造方法</p>
-</li>
-<li><p>有参构造方法最常用：</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 根据参数名字设置 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"hello"</span> <span class="attr">class</span>=<span class="string">"com.kuang.pojo.Hello"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- name指参数名 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">constructor-arg</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">value</span>=<span class="string">"cz"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<p>id是bean的唯一标识符，如果bean中没有设置id值，那么name默认为标识符，如果设置了id，name就是别名，别名可设置多个。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--bean就是java对象,由Spring创建和管理--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">    id 是bean的标识符,要唯一,如果没有配置id,name就是默认标识符</span></span><br><span class="line"><span class="comment">    如果配置id,又配置了name,那么name是别名</span></span><br><span class="line"><span class="comment">    name可以设置多个别名,可以用逗号,分号,空格隔开</span></span><br><span class="line"><span class="comment">    如果不配置id和name,可以根据applicationContext.getBean(.class)获取对象;</span></span><br><span class="line"><span class="comment">		ref用来传入引用</span></span><br><span class="line"><span class="comment">    class是bean的全限定名=包名+类名</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"student"</span> <span class="attr">name</span>=<span class="string">"hello2 h2,h3;h4"</span> <span class="attr">class</span>=<span class="string">"com.kuang.pojo.Student"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"sz"</span> <span class="attr">value</span>=<span class="string">"czczcz"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"hello"</span> <span class="attr">name</span>=<span class="string">"hello2 h2,h3;h4"</span> <span class="attr">class</span>=<span class="string">"com.kuang.pojo.Hello"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">value</span>=<span class="string">"schatten.cz"</span>/&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"student"</span> <span class="attr">ref</span>=<span class="string">"student"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><code>&lt;import resource=&quot;{path}/beans.xml&quot;/&gt;</code> 多人import导入其他配置文件可以合并。</p>
-<h2 id="3-DI依赖注入"><a href="#3-DI依赖注入" class="headerlink" title="3. DI依赖注入"></a>3. DI依赖注入</h2><h3 id="3-1-Bean注入"><a href="#3-1-Bean注入" class="headerlink" title="3.1 Bean注入"></a>3.1 Bean注入</h3><p><strong>1. 注意点：这里的值是一个引用，ref</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"addr"</span> <span class="attr">class</span>=<span class="string">"com.kuang.pojo.Address"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"address"</span> <span class="attr">value</span>=<span class="string">"重庆"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"student"</span> <span class="attr">class</span>=<span class="string">"com.kuang.pojo.Student"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">value</span>=<span class="string">"小明"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"address"</span> <span class="attr">ref</span>=<span class="string">"addr"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>2. 数组注入</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"student"</span> <span class="attr">class</span>=<span class="string">"com.kuang.pojo.Student"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">value</span>=<span class="string">"小明"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"address"</span> <span class="attr">ref</span>=<span class="string">"addr"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"books"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">value</span>&gt;</span>西游记<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">value</span>&gt;</span>红楼梦<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">value</span>&gt;</span>水浒传<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>3. List注入</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"hobbys"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">list</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>听歌<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>看电影<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>爬山<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">list</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>4. Map</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"card"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">map</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">"中国邮政"</span> <span class="attr">value</span>=<span class="string">"456456456465456"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">"建设"</span> <span class="attr">value</span>=<span class="string">"1456682255511"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">map</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>5. set</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"games"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>LOL<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>BOB<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>COC<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>6. Null</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"wife"</span>&gt;</span><span class="tag">&lt;<span class="name">null</span>/&gt;</span><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>7. Properties</strong></p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"info"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">props</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"学号"</span>&gt;</span>20190604<span class="tag">&lt;/<span class="name">prop</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"性别"</span>&gt;</span>男<span class="tag">&lt;/<span class="name">prop</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">prop</span> <span class="attr">key</span>=<span class="string">"姓名"</span>&gt;</span>小明<span class="tag">&lt;/<span class="name">prop</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">props</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-2-拓展"><a href="#3-2-拓展" class="headerlink" title="3.2 拓展"></a>3.2 拓展</h3><p>User.java ： 【注意：这里没有有参构造器！】</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">User</span><span class="params">(String name,<span class="keyword">int</span> age)</span></span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.name = name;</span><br><span class="line">      <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"User&#123;"</span> +</span><br><span class="line">                <span class="string">"name='"</span> + name + <span class="string">'\''</span> +</span><br><span class="line">                <span class="string">", age="</span> + age +</span><br><span class="line">                <span class="string">'&#125;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li><strong>P注入（set方法注入） :</strong> 需要在头文件中加入约束文件</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">导入约束 : xmlns:p="http://www.springframework.org/schema/p"</span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--P(属性: properties)命名空间 , 属性依然要设置set方法--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"user"</span> <span class="attr">class</span>=<span class="string">"com.kuang.pojo.User"</span> <span class="attr">p:name</span>=<span class="string">"狂神"</span> <span class="attr">p:age</span>=<span class="string">"18"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><strong>c 注入（构造器注入） :</strong> 需要在头文件中加入约束文件</li>
-</ol>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">导入约束 : xmlns:c="http://www.springframework.org/schema/c"</span><br><span class="line"><span class="comment">&lt;!--C(构造: Constructor)命名空间 , 属性依然要设置set方法--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"user"</span> <span class="attr">class</span>=<span class="string">"com.kuang.pojo.User"</span> <span class="attr">c:name</span>=<span class="string">"狂神"</span> <span class="attr">c:age</span>=<span class="string">"18"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test02</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line">    User user = (User) context.getBean(<span class="string">"user"</span>);</span><br><span class="line">    System.out.println(user);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-3-Bean作用域"><a href="#3-3-Bean作用域" class="headerlink" title="3.3 Bean作用域"></a>3.3 Bean作用域</h3><img src="/2019/11/28/Spring/beanzyy.png" title="作用域">
+      
+        
+          
+          Spring1. Ioc控制反转参考博客
+DI（依赖注入）是实现Ioc的一种方法
+Ioc就是将得到对象的方式反转，不是由我们自身主动创建（new）对象，而是将创建对象的过程交给spring容器完成，我们只负责从容器中得到（get）对象。
+Ioc是Spring的核心。可以使用xml，注解的方式实现Io
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/11/28/Spring/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
+    
+    
+    
 
     
+
     
+
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
+      
+      <div>    
+ 
+ 
+</div>
+    </footer>
+  </div>
+  
+  
+  
   </article>
+
+
+    
+      
+
+  
+
   
   
   
 
-        
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2019/11/03/sliding-window-algorithm算法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Sober ChenZhuo">
-      <meta itemprop="description" content="Keep looking,and don't settle">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/1.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="陈某人的基地">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/11/03/sliding-window-algorithm算法/" class="post-title-link" itemprop="url">sliding-window-algorithm算法</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/03/sliding-window-algorithm算法/" itemprop="url">sliding-window-algorithm算法</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-03T22:40:37+08:00">
+                2019-11-03
+              </time>
+            
 
-              <time title="Created: 2019-11-03 22:40:37 / Modified: 23:26:49" itemprop="dateCreated datePublished" datetime="2019-11-03T22:40:37+08:00">2019-11-03</time>
-            </span>
-            <span class="post-meta-item">
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/sliding-window-algorithm/" itemprop="url" rel="index">
                     <span itemprop="name">sliding window algorithm</span>
                   </a>
                 </span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/11/03/sliding-window-algorithm算法/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/11/03/sliding-window-algorithm算法/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -360,91 +551,170 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="滑窗算法"><a href="#滑窗算法" class="headerlink" title="滑窗算法"></a>滑窗算法</h1><p>滑窗算法是通过使用特定大小的子列表，在遍历完整列表的同时进行特定的操作，以达到降低了循环的嵌套深度。</p>
-<p>一般在找无重复最长子串，连续元素最大和等。</p>
-<img src="/2019/11/03/sliding-window-algorithm算法/sws.png">
-
-<p>双指针移动，遍历时不嵌套循环所有值，外层遍历代表整个窗口向右滑动，每次减去失效值（重复值）加上最新值，比较长度。</p>
-<p>例子：</p>
-<blockquote>
-<p>给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</p>
-<p>示例 1:</p>
-<p>输入: “abcabcbb”<br>输出: 3<br>解释: 因为无重复字符的最长子串是 “abc”，所以其长度为 3。</p>
-</blockquote>
-<p>解法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">        Set&lt;Character&gt; NoSameChar = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(left &lt; s.length() &amp;&amp; right &lt; s.length())&#123;</span><br><span class="line">            <span class="keyword">if</span>(!NoSameChar.contains(s.charAt(right)))&#123;</span><br><span class="line">                NoSameChar.add(s.charAt(right));</span><br><span class="line">                right++;</span><br><span class="line">                max = max &gt; right-left ? max : right - left;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                NoSameChar.remove(s.charAt(left));</span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>参考：</p>
-<p><a href="https://blog.csdn.net/sty945/article/details/79846516" target="_blank" rel="noopener">滑窗详解</a></p>
-<p><a href="https://www.cnblogs.com/cdfive2018/p/10054563.html" target="_blank" rel="noopener">滑窗算法</a></p>
+      
 
       
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
         
+          
+          滑窗算法滑窗算法是通过使用特定大小的子列表，在遍历完整列表的同时进行特定的操作，以达到降低了循环的嵌套深度。
+一般在找无重复最长子串，连续元素最大和等。
+
+
+双指针移动，遍历时不嵌套循环所有值，外层遍历代表整个窗口向右滑动，每次减去失效值（重复值）加上最新值，比较长度。
+例子：
+
+给定一个字符串，请
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/11/03/sliding-window-algorithm算法/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+      <div>    
+ 
+ 
+</div>
+    </footer>
+  </div>
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2019/10/29/JAVA垃圾回收/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Sober ChenZhuo">
-      <meta itemprop="description" content="Keep looking,and don't settle">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/1.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="陈某人的基地">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/10/29/JAVA垃圾回收/" class="post-title-link" itemprop="url">JAVA垃圾回收</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/29/JAVA垃圾回收/" itemprop="url">JAVA垃圾回收</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-29T16:33:53+08:00">
+                2019-10-29
+              </time>
+            
 
-              <time title="Created: 2019-10-29 16:33:53" itemprop="dateCreated datePublished" datetime="2019-10-29T16:33:53+08:00">2019-10-29</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-02 21:18:12" itemprop="dateModified" datetime="2019-11-02T21:18:12+08:00">2019-11-02</time>
-              </span>
-            <span class="post-meta-item">
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Java/" itemprop="url" rel="index">
                     <span itemprop="name">Java</span>
                   </a>
                 </span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/10/29/JAVA垃圾回收/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/29/JAVA垃圾回收/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -452,117 +722,145 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Garbage-Collection，GC"><a href="#Garbage-Collection，GC" class="headerlink" title="Garbage Collection，GC"></a>Garbage Collection，GC</h1><h2 id="简单介绍Java内存"><a href="#简单介绍Java内存" class="headerlink" title="简单介绍Java内存"></a>简单介绍Java内存</h2><p>虚拟机内存<strong>运行时的数据区</strong>主要有三块：</p>
-<ol>
-<li><strong>堆（Heap）</strong>：存放对象实例和数组。全局共享</li>
-<li><strong>栈（Stack）</strong>：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有</li>
-<li><strong>方法区（Method Area）</strong>：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同</li>
-</ol>
-<img src="/2019/10/29/JAVA垃圾回收/gc.jpeg">
-
-<p><strong>堆：</strong>最大的最重要的部分，逻辑堆。对应图中Java Heaps区。</p>
-<p><strong>方法区：</strong>永生代，主要由类加载器ClassLoader加载类信息。用于储存类的元数据，常量池，字段，静态变量，方法内的局部变量，已编译好的字节码。线程共享。JDK8后类的静态变量和内部字符串分离到逻辑堆。</p>
-<p><strong>栈：</strong> 对象的引用，八种基本数据类型。</p>
-<p><strong>PC 寄存器：</strong> 用来给每个线程分配本机进程编号。</p>
-<h2 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h2><h3 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h3><p>分为“年轻代”与“老年代”。年轻代分为<strong>“Eden”（伊甸园）区</strong>和两个大小对等的Servivor区：<strong>from区</strong>和<strong>to区</strong>。在Java内存模型中堆中有详细介绍。这里主要记录回收算法。</p>
-<img src="/2019/10/29/JAVA垃圾回收/gc1.jpg">
-
-<p><strong>年轻代垃圾回收</strong></p>
-<p><strong>Mark—Sweep</strong>算法，也就是标记清除算法。标记出活着的实例，清除未标记实例。</p>
-<ol>
-<li><p>标记存活实例</p>
-<p>寻找根对象，遍历所有和根对象有直接或间接引用关系的实例。</p>
-<blockquote>
-<p><a href="https://link.zhihu.com/?target=http%3A//www.dynatrace.com/en/javabook/how-garbage-collection-works.html" target="_blank" rel="noopener">根对象参考</a></p>
-</blockquote>
-<p>根对象主要包括四类对象：</p>
-<ol>
-<li><p><strong>stack栈中引用对象</strong>：就是指存储在JVM栈中的对象引用。</p>
-<img src="/2019/10/29/JAVA垃圾回收/gc2.jpg">
-</li>
-<li><p><strong>static静态变量：</strong>静态方法和变量不产生实例，直接由类引用。Java的类是由类加载器加载（<strong>java.lang.ClassLoader</strong>），类的数据都不在逻辑堆，而是在永生代（Metaspace方法区），类本身一旦被GC清除。他所有的静态变量也一并释放。</p>
-</li>
-<li><p><strong>mian thread：</strong> main方法就是一个thread线程。java里线程也都是继承自基类，所以自身也是一个大实例。</p>
-</li>
-<li><p><strong>JNI引用：</strong> JNI是支持其他编程语言的本机码和Java字节码相互调用的程序。</p>
-</li>
-</ol>
-<blockquote>
-<p><a href="https://link.zhihu.com/?target=http%3A//www.jianshu.com/p/b0f5d21fe031" target="_blank" rel="noopener">参考</a></p>
-<p>概念补充：</p>
-<ol>
-<li><p>mutator:指除了垃圾收集器以外的部分。mutator指责一般是new（分配内存），read（从内存读取），write（内容写入内存）。</p>
-<p>collector：垃圾收集器。回收不再使用的内存供mutator使用</p>
-</li>
-<li><p>mutator roots(mutator根对象),mutator根对象一般指的是分配在堆内存之外，可以直接被mutator直接访问到的对象，一般是指静态/全局变量以及Thread-Local变量(在Java中，存储在java.lang.ThreadLocal中的变量和分配在栈上的变量 - 方法内部的临时变量等都属于此类).</p>
-</li>
-<li><p>可达对象的定义，从mutator根对象开始进行遍历，可以被访问到的对象都称为是可达对象。这些对象也是mutator(你的应用程序)正在使用的对象。</p>
-</li>
-</ol>
-</blockquote>
-</li>
-</ol>
-<img src="/2019/10/29/JAVA垃圾回收/gc3.png">
-
-<p><strong>在标记阶段，mutator先中断整个程序的运行。然后collector从根对象开始遍历，对从mutator根对象可以访问到的对象都打上一个标示，在对象header中，将其记录为可达对象。然后清除阶段，collector对堆内存从头到尾进行线性遍历，若发现某个对象没有标记为可达对象，则将其回收</strong></p>
-<p><strong>拷贝到其他代区</strong></p>
-<p><strong>回收过程：新对象内存分配到Eden区，当Eden空间不足时触发年轻代上的垃圾回收（Minor Garbage Collection），gc触发后，存活对象拷贝到一个Survior区同时年龄增加，并清除Eden中非可达对象。其他代区相同方法依次类推。</strong></p>
-<img src="/2019/10/29/JAVA垃圾回收/gc4.jpg">
-
-<p><strong>老年代垃圾回收</strong></p>
-<p>当minor gc发生时，如果Tenured区没有空间容纳新对象时，触发老年代垃圾回收（Major Garbage Collection）。老年代垃圾回收算法取决于JVM用什么垃圾回收器，有三种：Parallel Scavenge(PS),Concurrent Mark Sweep(CMS)还有最新的Garbage First(G1)垃圾收集器。</p>
-<p><strong>Garbage First</strong></p>
-<p><a href="https://www.cnblogs.com/wjh123/p/11146195.html" target="_blank" rel="noopener">G1垃圾收集器是什么</a></p>
+      
 
       
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
         
+          
+          Garbage Collection，GC简单介绍Java内存虚拟机内存运行时的数据区主要有三块：
+
+堆（Heap）：存放对象实例和数组。全局共享
+栈（Stack）：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有
+方法区（Method Area）：存放 ”类“被加载后的信息，常量，静态变量。全局
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/10/29/JAVA垃圾回收/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+      <div>    
+ 
+ 
+</div>
+    </footer>
+  </div>
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2019/10/08/Kotlin/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Sober ChenZhuo">
-      <meta itemprop="description" content="Keep looking,and don't settle">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/1.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="陈某人的基地">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/10/08/Kotlin/" class="post-title-link" itemprop="url">Kotlin</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/08/Kotlin/" itemprop="url">Kotlin</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-08T17:06:18+08:00">
+                2019-10-08
+              </time>
+            
 
-              <time title="Created: 2019-10-08 17:06:18" itemprop="dateCreated datePublished" datetime="2019-10-08T17:06:18+08:00">2019-10-08</time>
-            </span>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/10/08/Kotlin/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/08/Kotlin/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -570,74 +868,163 @@
     <div class="post-body" itemprop="articleBody">
 
       
+      
+
+      
+        
           
+          
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/10/08/Kotlin/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
+    
+    
+    
 
     
+
     
+
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
+      
+      <div>    
+ 
+ 
+</div>
+    </footer>
+  </div>
+  
+  
+  
   </article>
+
+
+    
+      
+
+  
+
   
   
   
 
-        
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2019/09/28/JVM内存模型/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Sober ChenZhuo">
-      <meta itemprop="description" content="Keep looking,and don't settle">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/1.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="陈某人的基地">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/09/28/JVM内存模型/" class="post-title-link" itemprop="url">JVM内存模型</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/28/JVM内存模型/" itemprop="url">JVM内存模型</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-28T22:44:52+08:00">
+                2019-09-28
+              </time>
+            
 
-              <time title="Created: 2019-09-28 22:44:52" itemprop="dateCreated datePublished" datetime="2019-09-28T22:44:52+08:00">2019-09-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-02 01:08:00" itemprop="dateModified" datetime="2019-11-02T01:08:00+08:00">2019-11-02</time>
-              </span>
-            <span class="post-meta-item">
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Java/" itemprop="url" rel="index">
                     <span itemprop="name">Java</span>
                   </a>
                 </span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/09/28/JVM内存模型/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/09/28/JVM内存模型/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -645,162 +1032,164 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="JVM内存结构"><a href="#JVM内存结构" class="headerlink" title="JVM内存结构"></a>JVM内存结构</h1><p>Java虚拟机内存结构可分为公有和私有两部分，公有指的是所有线程都共享的部分，指的是java堆、方法区、常量池。私有指的是每个线程的私有数据，包括pc寄存器、Java虚拟机栈、本地方法栈。</p>
-<h2 id="公有部分：Java堆、方法区、常量池"><a href="#公有部分：Java堆、方法区、常量池" class="headerlink" title="公有部分：Java堆、方法区、常量池"></a>公有部分：Java堆、方法区、常量池</h2><p><strong>Java堆</strong>指的是从JVM中划分出来的一块区域，这块区域专门用于Java实例对象的内存分配，几乎所有的实例对象都会在这里进行内存的分配，但有的小对象会直接在栈上分配。</p>
-<p>Java堆根据对象存活时间不同，分为年轻代，老年代两个区域，年轻代还被分为Eden区、From Survivor空间、To Survivor空间，如下图。</p>
-<img src="/2019/09/28/JVM内存模型/jg.png" title="堆区域划分">
-
-<p>​    当有对象要分配的时候，一个对象永远都是先被分到年轻代的Eden区，等到Eden区内存不够时，JVM会启动垃圾回收。此时Eden区中没有被引用的对象的内存会被回收，在JVM中有一个名为 -XX：MaxTenuringThreshold 的参数专门来设置晋升到老年代所需要经历的GC次数，当在年轻代的对象经过了一定次数的GC后，在下一次GC进入老年代。</p>
-<p>​    Java划分区域的原因是：在Java中会有存活时间长的对象也有存活时间短的对象，如果混在一起，如果存活时间短的对象多的话就会出现频繁的垃圾回收，而每次垃圾回收时都要进行全部内存的扫描，这样的话对于存活时间很长对象来说无异于是浪费，为了提高垃圾回收的效率，就出现了分区。</p>
-<p>​    Why默认虚拟机配置 Eden：From ：To = 8:1:1。</p>
-<p>这是IBM公司统计得出的结论：发现80%对象存活时间都很短，所以将Eden区设置为年轻代80%，可以减少内存空间浪费，提高内存空间利用率。</p>
-<p><strong>方法区</strong> 指存储Java类字节码数据的一块区域，存储类信息、常量、静态变量等数据，是线程共享的区域，为了与Java堆区分，方法区有一个别名叫<strong>NonHeap</strong>。它存储了每一个类的结构信息，比如运行时的常量池、字段和方法数据、构造方法等。其实常量池是存在在方法区中的，但《Java虚拟机规范》将常量池和方法区放在同一等级。</p>
-<h2 id="私有部分：PC寄存器，Java虚拟机栈，本地方法栈"><a href="#私有部分：PC寄存器，Java虚拟机栈，本地方法栈" class="headerlink" title="私有部分：PC寄存器，Java虚拟机栈，本地方法栈"></a>私有部分：PC寄存器，Java虚拟机栈，本地方法栈</h2><p><strong>PC寄存器</strong>，Program Counter寄存器（程序计数器），用来保存线程当前正在执行的方法。功能是存放伪指令，更确切的说存放的是将要执行指令的地址，它甚至可以是操作系统指令的本地地址，当虚拟机正在执行的方法是一个本地方法的时候，jvm的pc寄存器存储的值是undefined，虚拟机的pc寄存器是用于存放下一条将要执行的指令的地址(字节码流)。</p>
-<p>对于一个运行中的Java程序而言，其中的每一个线程都有它自己的PC（程序计数器）寄存器，它是在该线程启动时创建的，PC寄存器的大小是一个字长，很小，因此它既能够持有一个本地指针，也能够持有一个returnAddress（finally块）。当线程执行某个Java方法时，PC寄存器的内容总是下一条将被执行指令的“地址”，这里的“地址”可以是一个本地指针，也可以是在方法字节码中相对于该方法起始指令的偏移量。如果该线程正在执行一个本地方法，那么此时PC寄存器的值是“undefined”。</p>
-<p><strong>Java虚拟机栈</strong>， 这个栈与线程同时创建，用来储存栈帧，也就是存储局部变量与一些过程结果的地方。栈帧存储的数据包括：局部变量表，操作数栈。</p>
-<h1 id="JMM"><a href="#JMM" class="headerlink" title="JMM"></a>JMM</h1><blockquote>
-<p>参考文章：</p>
-<p><a href="https://www.jianshu.com/p/8a58d8335270" target="_blank" rel="noopener">https://www.jianshu.com/p/8a58d8335270</a></p>
-<p><a href="https://www.cnblogs.com/nexiyi/p/java_memory_model_and_thread.html" target="_blank" rel="noopener">https://www.cnblogs.com/nexiyi/p/java_memory_model_and_thread.html</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/29881777" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/29881777</a></p>
-</blockquote>
-<p><a href="https://zhuanlan.zhihu.com/p/29881777" target="_blank" rel="noopener">本篇参考</a></p>
-<p>Java内存模型的主要目标是定义程序中各个变量的访问规则，即在虚拟机中将变量存储到内存和从内存中取出变量这样底层细节。此处的变量与Java编程时所说的变量不一样，指包括了实例字段、静态字段和构成数组对象的元素，但是不包括局部变量与方法参数，后者是线程私有的，不会被共享。</p>
-<img src="/2019/09/28/JVM内存模型/jmm1.jpg">
-
-<p>Java虚拟机规范中定义了Java内存模型（Java Memory Model，JMM），实现了多平台可移植性，JMM规范了Java虚拟机与计算机内存是如何协同工作的：规定了一个线程如何和何时可以看到由其他线程修改过后的共享变量的值，以及在必须时如何同步的访问共享变量。</p>
-<hr>
-<p>Java内存模型：调用栈和本地变量存放在线程栈上，对象存放在堆上。</p>
-<img src="/2019/09/28/JVM内存模型/jmm2.jpeg">
-
-<ul>
-<li>一个本地变量可能是原始类型，在这种情况下，它总是“呆在”线程栈上。</li>
-<li>一个本地变量也可能是指向一个对象的一个引用。在这种情况下，引用（这个本地变量）存放在线程栈上，但是对象本身存放在堆上。</li>
-<li>一个对象可能包含方法，这些方法可能包含本地变量。这些本地变量仍然存放在线程栈上，即使这些方法所属的对象存放在堆上。</li>
-<li>一个对象的成员变量可能随着这个对象自身存放在堆上。不管这个成员变量是原始类型还是引用类型。</li>
-<li>静态成员变量跟随着类定义一起也存放在堆上。</li>
-<li>存放在堆上的对象可以被所有持有对这个对象引用的线程访问。当一个线程可以访问一个对象时，它也可以访问这个对象的成员变量。如果两个线程同时调用同一个对象上的同一个方法，它们将会都访问这个对象的成员变量，但是每一个线程都拥有这个成员变量的私有拷贝。</li>
-</ul>
-<p>从抽象的角度来看，JMM定义了线程和主内存之间的抽象关系：</p>
-<ul>
-<li>线程之间的共享变量存储在主内存（Main Memory）中</li>
-<li>每个线程都有一个私有的本地内存（Local Memory），本地内存是JMM的一个抽象概念，并不真实存在，它涵盖了缓存、写缓冲区、寄存器以及其他的硬件和编译器优化。本地内存中存储了该线程以读/写共享变量的拷贝副本。</li>
-<li>从更低的层次来说，主内存就是硬件的内存，而为了获取更好的运行速度，虚拟机及硬件系统可能会让工作内存优先存储于寄存器和高速缓存中。</li>
-<li>Java内存模型中的线程的工作内存（working memory）是cpu的寄存器和高速缓存的抽象描述。而JVM的静态内存储模型（JVM内存模型）只是一种对内存的物理划分而已，它只局限在内存，而且只局限在JVM的内存。</li>
-</ul>
-<img src="/2019/09/28/JVM内存模型/jmm4.jpg">
-
-<hr>
-<h2 id="JMM模型下的线程间通信："><a href="#JMM模型下的线程间通信：" class="headerlink" title="JMM模型下的线程间通信："></a><strong>JMM模型下的线程间通信：</strong></h2><p>线程间通信必须要经过主内存。</p>
-<p>如下，如果线程A与线程B之间要通信的话，必须要经历下面2个步骤：</p>
-<p>1）线程A把本地内存A中更新过的共享变量刷新到主内存中去。</p>
-<p>2）线程B到主内存中去读取线程A之前已更新过的共享变量。</p>
-<img src="/2019/09/28/JVM内存模型/jmm5.jpg">
-
-<p><strong>关于主内存与工作内存之间的具体交互协议，即一个变量如何从主内存拷贝到工作内存、如何从工作内存同步到主内存之间的实现细节，Java内存模型定义了以下八种操作来完成：</strong></p>
-<ul>
-<li><strong>lock（锁定）</strong>：作用于主内存的变量，把一个变量标识为一条线程独占状态。</li>
-<li><strong>unlock（解锁）</strong>：作用于主内存变量，把一个处于锁定状态的变量释放出来，释放后的变量才可以被其他线程锁定。</li>
-<li><strong>read（读取）</strong>：作用于主内存变量，把一个变量值从主内存传输到线程的工作内存中，以便随后的load动作使用</li>
-<li><strong>load（载入）</strong>：作用于工作内存的变量，它把read操作从主内存中得到的变量值放入工作内存的变量副本中。</li>
-<li><strong>use（使用）</strong>：作用于工作内存的变量，把工作内存中的一个变量值传递给执行引擎，每当虚拟机遇到一个需要使用变量的值的字节码指令时将会执行这个操作。</li>
-<li><strong>assign（赋值）</strong>：作用于工作内存的变量，它把一个从执行引擎接收到的值赋值给工作内存的变量，每当虚拟机遇到一个给变量赋值的字节码指令时执行这个操作。</li>
-<li><strong>store（存储）</strong>：作用于工作内存的变量，把工作内存中的一个变量的值传送到主内存中，以便随后的write的操作。</li>
-<li><strong>write（写入）</strong>：作用于主内存的变量，它把store操作从工作内存中一个变量的值传送到主内存的变量中。</li>
-</ul>
-<p><strong>Java内存模型还规定了在执行上述八种基本操作时，必须满足如下规则：</strong></p>
-<ul>
-<li>如果要把一个变量从主内存中复制到工作内存，就需要按顺寻地执行read和load操作， 如果把变量从工作内存中同步回主内存中，就要按顺序地执行store和write操作。但Java内存模型只要求上述操作必须按顺序执行，而没有保证必须是连续执行。</li>
-<li>不允许read和load、store和write操作之一单独出现</li>
-<li>不允许一个线程丢弃它的最近assign的操作，即变量在工作内存中改变了之后必须同步到主内存中。</li>
-<li>不允许一个线程无原因地（没有发生过任何assign操作）把数据从工作内存同步回主内存中。</li>
-<li>一个新的变量只能在主内存中诞生，不允许在工作内存中直接使用一个未被初始化（load或assign）的变量。即就是对一个变量实施use和store操作之前，必须先执行过了assign和load操作。</li>
-<li>一个变量在同一时刻只允许一条线程对其进行lock操作，但lock操作可以被同一条线程重复执行多次，多次执行lock后，只有执行相同次数的unlock操作，变量才会被解锁。lock和unlock必须成对出现</li>
-<li>如果对一个变量执行lock操作，将会清空工作内存中此变量的值，在执行引擎使用这个变量前需要重新执行load或assign操作初始化变量的值</li>
-<li>如果一个变量事先没有被lock操作锁定，则不允许对它执行unlock操作；也不允许去unlock一个被其他线程锁定的变量。</li>
-<li>对一个变量执行unlock操作之前，必须先把此变量同步到主内存中（执行store和write操作）。</li>
-</ul>
-<h2 id="JMM解决的问题"><a href="#JMM解决的问题" class="headerlink" title="JMM解决的问题"></a>JMM解决的问题</h2><p><strong>1.多线程读同步与可见性</strong></p>
-<ul>
-<li>volatile</li>
-<li>synchronized</li>
-<li>final</li>
-</ul>
-<p><strong>2.多线程写同步与原子性</strong></p>
-<ul>
-<li>Atom</li>
-<li>synchronized</li>
-</ul>
-<p><a href="https://link.zhihu.com/?target=http%3A//mp.weixin.qq.com/s%3F__biz%3DMzI3NzM2OTQ5Mg%3D%3D%26mid%3D2247484289%26idx%3D1%26sn%3Dbdf6721e01c613bfb1458a8584e80800%26chksm%3Deb66047adc118d6c395c14e5b953686bfdfac93fd6fa8c0731bb89aadd7437bba800d034659d%26scene%3D21%23wechat_redirect" target="_blank" rel="noopener">volatile总结</a> （保证内存可见性：Lock前缀的指令、内存屏障禁止重排序）</p>
-<p><a href="https://link.zhihu.com/?target=http%3A//mp.weixin.qq.com/s%3F__biz%3DMzI3NzM2OTQ5Mg%3D%3D%26mid%3D2247484280%26idx%3D1%26sn%3D8de305338c5ab348c3e2a784084e4306%26chksm%3Deb660483dc118d95e9bcde15a01103f818ed2fd399989f36dc2d57740a305e91cf986d4f5a64%26scene%3D21%23wechat_redirect" target="_blank" rel="noopener">synchronized总结</a> （保证内存可见性和操作原子性：互斥锁；锁优化）</p>
+      
 
       
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
         
+          
+          JVM内存结构Java虚拟机内存结构可分为公有和私有两部分，公有指的是所有线程都共享的部分，指的是java堆、方法区、常量池。私有指的是每个线程的私有数据，包括pc寄存器、Java虚拟机栈、本地方法栈。
+公有部分：Java堆、方法区、常量池Java堆指的是从JVM中划分出来的一块区域，这块区域专门用
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/28/JVM内存模型/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+      <div>    
+ 
+ 
+</div>
+    </footer>
+  </div>
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2019/09/28/JVM类加载机制/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Sober ChenZhuo">
-      <meta itemprop="description" content="Keep looking,and don't settle">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/1.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="陈某人的基地">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/09/28/JVM类加载机制/" class="post-title-link" itemprop="url">JVM类加载机制</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/28/JVM类加载机制/" itemprop="url">JVM类加载机制</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-28T22:44:36+08:00">
+                2019-09-28
+              </time>
+            
 
-              <time title="Created: 2019-09-28 22:44:36" itemprop="dateCreated datePublished" datetime="2019-09-28T22:44:36+08:00">2019-09-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-10-29 15:26:21" itemprop="dateModified" datetime="2019-10-29T15:26:21+08:00">2019-10-29</time>
-              </span>
-            <span class="post-meta-item">
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Java/" itemprop="url" rel="index">
                     <span itemprop="name">Java</span>
                   </a>
                 </span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/09/28/JVM类加载机制/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/09/28/JVM类加载机制/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -808,176 +1197,166 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Java类加载机制"><a href="#Java类加载机制" class="headerlink" title="Java类加载机制"></a>Java类加载机制</h1><p><a href="https://zhuanlan.zhihu.com/p/73078336" target="_blank" rel="noopener">参考</a></p>
-<h2 id="1-字节码"><a href="#1-字节码" class="headerlink" title="1. 字节码"></a>1. 字节码</h2><p>源码：</p>
-<p>test.java</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Test;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*这个文件主要用来做java课程作业*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"this is a test"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>编译成功后，用<code>xxd test.class</code> 命令可以查看一下这个字节码文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">00000000: cafe babe 0000 0038 0010 0a00 0300 0d07  .......8........</span><br><span class="line">00000010: 000e 0700 0f01 0006 3c69 6e69 743e 0100  ........&lt;init&gt;..</span><br><span class="line">00000020: 0328 2956 0100 0443 6f64 6501 000f 4c69  .()V...Code...Li</span><br><span class="line">00000030: 6e65 4e75 6d62 6572 5461 626c 6501 0012  neNumberTable...</span><br><span class="line">00000040: 4c6f 6361 6c56 6172 6961 626c 6554 6162  LocalVariableTab</span><br><span class="line">00000050: 6c65 0100 0474 6869 7301 000b 4c54 6573  le...this...LTes</span><br><span class="line">00000060: 742f 7465 7374 3b01 000a 536f 7572 6365  t/test;...Source</span><br><span class="line">00000070: 4669 6c65 0100 0974 6573 742e 6a61 7661  File...test.java</span><br><span class="line">00000080: 0c00 0400 0501 0009 5465 7374 2f74 6573  ........Test/tes</span><br><span class="line">00000090: 7401 0010 6a61 7661 2f6c 616e 672f 4f62  t...java/lang/Ob</span><br><span class="line">000000a0: 6a65 6374 0021 0002 0003 0000 0000 0001  ject.!..........</span><br><span class="line">000000b0: 0001 0004 0005 0001 0006 0000 002f 0001  ............./..</span><br><span class="line">000000c0: 0001 0000 0005 2ab7 0001 b100 0000 0200  ......*.........</span><br><span class="line">000000d0: 0700 0000 0600 0100 0000 0400 0800 0000  ................</span><br><span class="line">000000e0: 0c00 0100 0000 0500 0900 0a00 0000 0100  ................</span><br><span class="line">000000f0: 0b00 0000 0200 0c                        .......</span><br></pre></td></tr></table></figure>
-
-<p>第一行<code>cafe babe</code>    被称为“魔数”，是JVM识别.class文件到标志。文件格式的定制者可以自由选择魔数值（只要没用过），比如说 .png 文件的魔数是 <code>8950 4e47</code>。</p>
-<h2 id="2-类加载"><a href="#2-类加载" class="headerlink" title="2. 类加载"></a>2. 类加载</h2><p>类加载分为三个步骤：加载，连接，初始化。</p>
-<h3 id="2-1-加载："><a href="#2-1-加载：" class="headerlink" title="2.1 加载："></a>2.1 加载：</h3><ul>
-<li>类加载指的是将class文件读入内存，并为之创建一个<code>java.lang.Class</code> 对象，即程序中使用的任何类时，系统都会为之建立一个<code>java.lang.Class</code> 对象。系统中所有类都是由这个对象实现的。</li>
-<li>类的加载由类加载器完成，JVM提供的类加载器叫做系统类加载器(System Class-Loader)，此外还可以通过继承ClassLoader基类来自定义类加载器。</li>
-<li>通常可以用下面几种方式加载类的二进制数据：<ol>
-<li>从本地文件系统加载class文件。</li>
-<li>从jar包中加载class文件，如jar包的数据库启驱动类。</li>
-<li>通过网络加载class文件。</li>
-<li>把一个Java源文件动态编译并执行加载。</li>
-</ol>
-</li>
-</ul>
-<h3 id="2-2-连接"><a href="#2-2-连接" class="headerlink" title="2.2 连接"></a>2.2 连接</h3><p><strong>连接阶段负责把类的二进制数据合并到JRE中，其有可分为如下三个阶段：</strong></p>
-<ol>
-<li>验证：确保加载到类信息符合JVM规范，无安全问题。</li>
-<li>准备：为类的静态Field分配内存，并设置初始值。</li>
-<li>解析：将类的二进制数据中的符号引用替换成直接引用。</li>
-</ol>
-<h3 id="2-3-初始化"><a href="#2-3-初始化" class="headerlink" title="2.3 初始化"></a>2.3 初始化</h3><ul>
-<li><p><strong>该阶段主要是对静态Field进行初始化，在Java类中对静态Field指定初始值有两种方式：</strong></p>
-<ol>
-<li>声明时即指定初始值，如 <code>staric int a = 5;</code></li>
-<li>用静态代码块为静态Field指定初始值，如<code>static { b = 5;}</code></li>
-</ol>
-</li>
-<li><p>JVM初始化一个类包含如下步骤：</p>
-<ol>
-<li>如果这个类还没被加载或连接，则程序先加载并连接该类。</li>
-<li>如果该类的直接父类还没被初始化，则先初始化其父类。</li>
-<li>如果类中有初始化语句，则系统一次执行这些初始化语句。</li>
-</ol>
-<p>所以JVM总是最先初始化<code>java.lang.Object</code>类<del>2333333</del>。</p>
-</li>
-<li><p><strong>类初始化的时机(对类进行主动引用时)</strong></p>
-<ol>
-<li>创建类的实例时(new，反射，反序列化)</li>
-<li>调用某个类的静态方法时。</li>
-<li>使用某个类或接口的静态Field或对该Field赋值时</li>
-<li>使用反射来强制创建某个类或接口对应的java.lang.Class对象，如<code>Class.forName(&quot;Person&quot;)</code></li>
-<li>初始化某个类的子类时，此时该子类的所有父类都会被初始化。</li>
-<li>直接使用java.exe运行某个主类时。</li>
-</ol>
-</li>
-</ul>
-<h2 id="3-类加载器及加载机制"><a href="#3-类加载器及加载机制" class="headerlink" title="3. 类加载器及加载机制"></a>3. 类加载器及加载机制</h2><img src="/2019/09/28/JVM类加载机制/object.png" title="类加载器负责将class文件读入内存并为之生成对应的java.lang.Class对象">
-
-<p>对于任意一个类，都需要由它的类加载器和这个类本身一同确定其在 JVM 中的唯一性。也就是说，如果两个类的加载器不同，即使两个类来源于同一个字节码文件，那这两个类就必定不相等（两个类的 Class 对象不 <code>equals</code>）。</p>
-<p>Java类加载器可分为三种：</p>
-<ol>
-<li><p><strong>根（又叫启动，引导）类加载器(Bootstrap Class-Loader)</strong></p>
-<p>它负责加载Java核心类（比如String，System类）。它比较特殊，因为它是由原生C++实现的，并不是<code>java.lang.ClassLoader</code> 的子类，所以下面运行为null。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestJdkCl</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(String.class.getClassLoader());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ol>
-<ol start="2">
-<li><p><strong>扩展类加载器(Extension Class-Loader)，加载<code>jre/lib/ext</code> 包下面的jar文件。我们可以通过把自己开发的类打包成JAR文件放入扩展目录来为Java扩展核心类以外的新功能。</strong></p>
-</li>
-<li><p><strong>应用(系统)类加载器(Application or System Class-Loader)，根据程序的类路径(classpath)来加载Java类。</strong></p>
-<p>它负责在JVM启动时加载来自Java命令的-classpath选项，java.class.path系统属性，或CLASSPATH环境变量所指定的JAR包和类路径。程序可以通过ClassLoader的静态方法getSystemClassLoader来获取系统类加载器：</p>
-</li>
-</ol>
-<p>例子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ClassLoader loader = Test.class.getClassLoader();</span><br><span class="line">        <span class="keyword">while</span> (loader != <span class="keyword">null</span>) &#123;</span><br><span class="line">            System.out.println(loader.toString());</span><br><span class="line">            loader = loader.getParent();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>每个 Java 类都维护着一个指向定义它的类加载器的引用，通过 <code>类名.class.getClassLoader()</code> 可以获取到此引用；然后通过 <code>loader.getParent()</code> 可以获取类加载器的上层类加载器。</p>
-<p>这段代码的输出结果如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jdk.internal.loader.ClassLoaders$AppClassLoader@<span class="number">3</span>d4eac69</span><br><span class="line">jdk.internal.loader.ClassLoaders$PlatformClassLoader@<span class="number">38</span>af3868</span><br></pre></td></tr></table></figure>
-
-<p>第一行输出为 Test 的类加载器，即应用类加载器，它是 <code>jdk.internal.loader.ClassLoaders$AppClassLoader</code> 类的实例；第二行输出为启动类加载器，是 <code>jdk.internal.loader.ClassLoaders$PlatformClassLoader@38af3868</code> 类的实例。</p>
-<h3 id="3-1-类加载机制"><a href="#3-1-类加载机制" class="headerlink" title="3.1 类加载机制"></a>3.1 类加载机制</h3><img src="/2019/09/28/JVM类加载机制/classlevel.jpg" title="层级关系">
-
-<p>Java类加载机制主要由以下三种：</p>
-<ul>
-<li>双亲委派模型：如果一个类加载器收到了加载类的请求，它会先把请求委托给父类加载器去完成，依次递归，一直到最顶层的启动类加载器；只有在父类加载器无法完成类的加载工作时，当前类加载器才会自己去加载这个类。（注意：类加载器中的父子关系并不是类继承上的父子关系，而是类加载器实例之间的关系）</li>
-<li>全盘负责：当一个类加载器加载某个Class时，该Class所依赖和引用的其他Class也将由该类加载器载入，除非显式的使用另外一个类加载器来载入。</li>
-<li>缓存机制：缓存机制会保证所有加载过的Class都会被缓存，当程序中需要使用某个类时，类加载器先从缓冲区搜索该类，若搜寻不到将读取该类的二进制数据并转换成Class对象存入缓冲区中。这就是为什么修改了Class后需重启JVM才能生效的原因。</li>
-</ul>
-<h2 id="JAVA9的改变"><a href="#JAVA9的改变" class="headerlink" title="JAVA9的改变"></a>JAVA9的改变</h2><img src="/2019/09/28/JVM类加载机制/java9cg.png" title="changed">\
-
-<p>可见，在JDK 9中，应用程序类加载器可以委托给平台类加载器以及引导类加载器；平台类加载器可以委托给引导类加载器和应用程序类加载器。 </p>
-<p>此外，JDK 9不再支持扩展机制。 但是，它将扩展类加载器保留在名为平台类加载器的新名称下。 ClassLoader类包含一个名为getPlatformClassLoader()的静态方法，该方法返回对平台类加载器的引用。</p>
-<p>在JDK 9之前，扩展类加载器和应用程序类加载器都是java.net.URLClassLoader类的一个实例。 而在JDK 9中，平台类加载器（以前的扩展类加载器）和应用程序类加载器是内部JDK类的实例。 如果你的代码依赖于URLClassLoader类的特定方法，代码可能会在JDK 9中崩溃。</p>
-<p>JDK 9中的类加载机制有所改变。 三个内置的类加载器一起协作来加载类。</p>
-<p>JDK 9中的类加载机制有所改变。 三个内置的类加载器一起协作来加载类。 </p>
-<p><strong>JDK 9中的类加载机制有所改变。 三个内置的类加载器一起协作来加载类。</strong></p>
-<ul>
-<li>当应用程序类加载器需要加载类时，它将搜索定义到所有类加载器的模块。 如果有合适的模块定义在这些类加载器中，则该类加载器将加载类，这意味着应用程序类加载器现在可以委托给引导类加载器和平台类加载器。 如果在为这些类加载器定义的命名模块中找不到类，则应用程序类加载器将委托给其父类，即平台类加载器。 如果类尚未加载，则应用程序类加载器将搜索类路径。 如果它在类路径中找到类，它将作为其未命名模块的成员加载该类。 如果在类路径中找不到类，则抛出ClassNotFoundException异常。</li>
-<li>当平台类加载器需要加载类时，它将搜索定义到所有类加载器的模块。 如果一个合适的模块被定义为这些类加载器中，则该类加载器加载该类。 这意味着平台类加载器可以委托给引导类加载器以及应用程序类加载器。 如果在为这些类加载器定义的命名模块中找不到一个类，那么平台类加载器将委托给它的父类，即引导类加载器。</li>
-<li>当引导类加载器需要加载一个类时，它会搜索自己的命名模块列表。 如果找不到类，它将通过命令行选项-Xbootclasspath/a指定的文件和目录列表进行搜索。 如果它在引导类路径上找到一个类，它将作为其未命名模块的成员加载该类。</li>
-</ul>
+      
 
       
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
         
+          
+          Java类加载机制参考
+1. 字节码源码：
+test.java
+12345678package Test;/*这个文件主要用来做java课程作业*/public class test &#123;	public static void main(String[] args)&#123;		Syste
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/28/JVM类加载机制/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+      <div>    
+ 
+ 
+</div>
+    </footer>
+  </div>
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2019/09/28/hexo3图片无法显示解决/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Sober ChenZhuo">
-      <meta itemprop="description" content="Keep looking,and don't settle">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/1.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="陈某人的基地">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/09/28/hexo3图片无法显示解决/" class="post-title-link" itemprop="url">hexo3图片无法显示解决</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/28/hexo3图片无法显示解决/" itemprop="url">hexo3图片无法显示解决</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-28T22:11:07+08:00">
+                2019-09-28
+              </time>
+            
 
-              <time title="Created: 2019-09-28 22:11:07" itemprop="dateCreated datePublished" datetime="2019-09-28T22:11:07+08:00">2019-09-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-10-16 21:14:11" itemprop="dateModified" datetime="2019-10-16T21:14:11+08:00">2019-10-16</time>
-              </span>
-            <span class="post-meta-item">
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Hexo/" itemprop="url" rel="index">
                     <span itemprop="name">Hexo</span>
                   </a>
                 </span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/09/28/hexo3图片无法显示解决/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/09/28/hexo3图片无法显示解决/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -985,72 +1364,143 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="男默女泣！喜大普奔！终于解决图片显示问题了！！"><a href="#男默女泣！喜大普奔！终于解决图片显示问题了！！" class="headerlink" title="男默女泣！喜大普奔！终于解决图片显示问题了！！"></a>男默女泣！喜大普奔！终于解决图片显示问题了！！</h1><p><a href="https://blog.csdn.net/xjm850552586/article/details/84101345" target="_blank" rel="noopener">参考+转载</a></p>
-<p>之前一直按照教程安装hexo的图片插件hexo-asset-image，但是找了诸多教程全部都gg，今天心血来潮决定要解决一下这个bug，<strong>终于解决了！！</strong></p>
-<h3 id="主要是hexo-asset-image这个插件里有bug"><a href="#主要是hexo-asset-image这个插件里有bug" class="headerlink" title="主要是hexo-asset-image这个插件里有bug"></a>主要是hexo-asset-image这个插件里有bug</h3><p>每次上传照片后都会出现一个莫名其妙的Link——/io/xxxx</p>
-<p>不知道为啥会给我的url前面加个io，绝了，然后我就在页面检查了一下源码，结果真就给我图片链接中插了个io呗，wdnmd（<del>玩电脑慢点</del>），然后知道是博客下的_config.yml文件中url出了问题，刚开始我觉得只要把它的url改成/就可以解决问题(<del>自己都觉得傻缺</del>)，乖乖baidu去知道了问题。</p>
-<p><strong>在hexo-asset-image文件中的index.js文件中出bug了</strong></p>
-<p>将index.js内容替换为以下内容</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"><span class="keyword">var</span> cheerio = <span class="built_in">require</span>(<span class="string">'cheerio'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// http://stackoverflow.com/questions/14480345/how-to-get-the-nth-occurrence-in-a-string</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPosition</span>(<span class="params">str, m, i</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> version = <span class="built_in">String</span>(hexo.version).split(<span class="string">'.'</span>);</span><br><span class="line">hexo.extend.filter.register(<span class="string">'after_post_render'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> config = hexo.config;</span><br><span class="line">  <span class="keyword">if</span>(config.post_asset_folder)&#123;</span><br><span class="line">    	<span class="keyword">var</span> link = data.permalink;</span><br><span class="line">	<span class="keyword">if</span>(version.length &gt; <span class="number">0</span> &amp;&amp; <span class="built_in">Number</span>(version[<span class="number">0</span>]) == <span class="number">3</span>)</span><br><span class="line">	   <span class="keyword">var</span> beginPos = getPosition(link, <span class="string">'/'</span>, <span class="number">1</span>) + <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	   <span class="keyword">var</span> beginPos = getPosition(link, <span class="string">'/'</span>, <span class="number">3</span>) + <span class="number">1</span>;</span><br><span class="line">	<span class="comment">// In hexo 3.1.1, the permalink of "about" page is like ".../about/index.html".</span></span><br><span class="line">	<span class="keyword">var</span> endPos = link.lastIndexOf(<span class="string">'/'</span>) + <span class="number">1</span>;</span><br><span class="line">    link = link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> toprocess = [<span class="string">'excerpt'</span>, <span class="string">'more'</span>, <span class="string">'content'</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      <span class="keyword">var</span> key = toprocess[i];</span><br><span class="line"> </span><br><span class="line">      <span class="keyword">var</span> $ = cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: <span class="literal">false</span>,</span><br><span class="line">        xmlMode: <span class="literal">false</span>,</span><br><span class="line">        lowerCaseTags: <span class="literal">false</span>,</span><br><span class="line">        decodeEntities: <span class="literal">false</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(<span class="string">'img'</span>).each(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="keyword">if</span> ($(<span class="keyword">this</span>).attr(<span class="string">'src'</span>))&#123;</span><br><span class="line">			<span class="comment">// For windows style path, we replace '\' to '/'.</span></span><br><span class="line">			<span class="keyword">var</span> src = $(<span class="keyword">this</span>).attr(<span class="string">'src'</span>).replace(<span class="string">'\\'</span>, <span class="string">'/'</span>);</span><br><span class="line">			<span class="keyword">if</span>(!<span class="regexp">/http[s]*.*|\/\/.*/</span>.test(src) &amp;&amp;</span><br><span class="line">			   !<span class="regexp">/^\s*\//</span>.test(src)) &#123;</span><br><span class="line">			  <span class="comment">// For "about" page, the first part of "src" can't be removed.</span></span><br><span class="line">			  <span class="comment">// In addition, to support multi-level local directory.</span></span><br><span class="line">			  <span class="keyword">var</span> linkArray = link.split(<span class="string">'/'</span>).filter(<span class="function"><span class="keyword">function</span>(<span class="params">elem</span>)</span>&#123;</span><br><span class="line">				<span class="keyword">return</span> elem != <span class="string">''</span>;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  <span class="keyword">var</span> srcArray = src.split(<span class="string">'/'</span>).filter(<span class="function"><span class="keyword">function</span>(<span class="params">elem</span>)</span>&#123;</span><br><span class="line">				<span class="keyword">return</span> elem != <span class="string">''</span> &amp;&amp; elem != <span class="string">'.'</span>;</span><br><span class="line">			  &#125;);</span><br><span class="line">			  <span class="keyword">if</span>(srcArray.length &gt; <span class="number">1</span>)</span><br><span class="line">				srcArray.shift();</span><br><span class="line">			  src = srcArray.join(<span class="string">'/'</span>);</span><br><span class="line">			  $(<span class="keyword">this</span>).attr(<span class="string">'src'</span>, config.root + link + src);</span><br><span class="line">			  <span class="built_in">console</span>.info&amp;&amp;<span class="built_in">console</span>.info(<span class="string">"update link as:--&gt;"</span>+config.root + link + src);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="built_in">console</span>.info&amp;&amp;<span class="built_in">console</span>.info(<span class="string">"no src attr, skipped..."</span>);</span><br><span class="line">			<span class="built_in">console</span>.info&amp;&amp;<span class="built_in">console</span>.info($(<span class="keyword">this</span>));</span><br><span class="line">		&#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] = $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">————————————————</span><br><span class="line">版权声明：本文为CSDN博主「Ericam_」的原创文章，遵循 CC <span class="number">4.0</span> BY-SA 版权协议，转载请附上原文出处链接及本声明。</span><br><span class="line">原文链接：https:<span class="comment">//blog.csdn.net/xjm850552586/article/details/84101345</span></span><br></pre></td></tr></table></figure>
-
-<p>然后将_config.yml文件中url改成平台网址就好 <code>url: /chenzhuo233.github.io</code> </p>
-<h2 id="然后要注意的是"><a href="#然后要注意的是" class="headerlink" title="然后要注意的是"></a><strong>然后要注意的是</strong></h2><p>在文章中引用图片的格式是：</p>
-<p><code>格式如下：图片名字：test.png，图片注释为This is an test image                                    </code></p>
-<p>这个表示，我在该文章相应文件夹下有一个名为test.png的图片，然后给这个图片加的解释是<code>This is an test image</code> </p>
-<h2 id="时隔好几个月终于解决了阿啊阿啊阿啊！！！"><a href="#时隔好几个月终于解决了阿啊阿啊阿啊！！！" class="headerlink" title="时隔好几个月终于解决了阿啊阿啊阿啊！！！"></a>时隔好几个月终于解决了阿啊阿啊阿啊！！！</h2><p>试一下！</p>
-<img src="/2019/09/28/hexo3图片无法显示解决/ahhhh.jpg" title="啊哈哈哈哈哈">
-
+      
 
       
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
         
+          
+          男默女泣！喜大普奔！终于解决图片显示问题了！！参考+转载
+之前一直按照教程安装hexo的图片插件hexo-asset-image，但是找了诸多教程全部都gg，今天心血来潮决定要解决一下这个bug，终于解决了！！
+主要是hexo-asset-image这个插件里有bug每次上传照片后都会出现一个莫名其
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/28/hexo3图片无法显示解决/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+      <div>    
+ 
+ 
+</div>
+    </footer>
+  </div>
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2019/09/28/B-树和B-树/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Sober ChenZhuo">
-      <meta itemprop="description" content="Keep looking,and don't settle">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/1.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="陈某人的基地">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/09/28/B-树和B-树/" class="post-title-link" itemprop="url">B-树和B+树</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/28/B-树和B-树/" itemprop="url">B-树和B+树</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
               
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-28T21:49:46+08:00">
+                2019-09-28
+              </time>
+            
 
-              <time title="Created: 2019-09-28 21:49:46 / Modified: 22:10:14" itemprop="dateCreated datePublished" datetime="2019-09-28T21:49:46+08:00">2019-09-28</time>
-            </span>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/09/28/B-树和B-树/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/09/28/B-树和B-树/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -1058,75 +1508,164 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="B-树和B-树"><a href="#B-树和B-树" class="headerlink" title="B-树和B+树"></a>B-树和B+树</h1><p><a href="https://www.jianshu.com/p/cf7dba86c391" target="_blank" rel="noopener">参考</a></p>
-<h2 id="B-树"><a href="#B-树" class="headerlink" title="B-树"></a>B-树</h2>
+      
+
+      
+        
+          
+          B-树和B+树参考
+B-树
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/28/B-树和B-树/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
+    
+    
+    
 
     
+
     
+
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
+      
+      <div>    
+ 
+ 
+</div>
+    </footer>
+  </div>
+  
+  
+  
   </article>
+
+
+    
+      
+
+  
+
   
   
   
 
-        
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2019/09/12/JAVA并发编程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Sober ChenZhuo">
-      <meta itemprop="description" content="Keep looking,and don't settle">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/1.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="陈某人的基地">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/09/12/JAVA并发编程/" class="post-title-link" itemprop="url">JAVA并发编程</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/12/JAVA并发编程/" itemprop="url">JAVA并发编程</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-12T14:10:06+08:00">
+                2019-09-12
+              </time>
+            
 
-              <time title="Created: 2019-09-12 14:10:06" itemprop="dateCreated datePublished" datetime="2019-09-12T14:10:06+08:00">2019-09-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-02 01:07:50" itemprop="dateModified" datetime="2019-11-02T01:07:50+08:00">2019-11-02</time>
-              </span>
-            <span class="post-meta-item">
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Java/" itemprop="url" rel="index">
                     <span itemprop="name">Java</span>
                   </a>
                 </span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/09/12/JAVA并发编程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/09/12/JAVA并发编程/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -1134,146 +1673,168 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="并发编程与多线程"><a href="#并发编程与多线程" class="headerlink" title="并发编程与多线程"></a>并发编程与多线程</h1><h2 id="1-1-基本概念"><a href="#1-1-基本概念" class="headerlink" title="1.1 基本概念"></a>1.1 基本概念</h2><ol>
-<li><p><a href="https://blog.csdn.net/cisco_huang/article/details/87104427" target="_blank" rel="noopener"><strong>什么是并发编程</strong></a></p>
-</li>
-<li><p>什么是线程：</p>
-<blockquote>
-<p>线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源.<br>一个线程可以创建和撤销另一个线程;同一个进程中的多个线程之间可以并发执行</p>
-</blockquote>
-</li>
-<li><p><a href="https://www.cnblogs.com/wzhua/p/7453694.html" target="_blank" rel="noopener">什么是多线程及一些例子：</a></p>
-</li>
-</ol>
-<h2 id="1-2-Java多线程"><a href="#1-2-Java多线程" class="headerlink" title="1.2 Java多线程"></a>1.2 Java多线程</h2><p>线程生命周期一共有五种状态：创建、就绪、运行、阻塞、终止。</p>
-<ol>
-<li>创建状态：<code>new Thread(Runnable ， &quot;thread&#39;name&quot;)</code> </li>
-<li>就绪状态：已创建好一个线程等待运行。</li>
-<li>运行：<code>run()</code> 开始运行。</li>
-<li>阻塞。</li>
-<li>终止。</li>
-</ol>
-<p>快速创建一个线程：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*Thread1.java*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Thread1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">m1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">" is start!"</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(<span class="number">5000</span>);</span><br><span class="line">        &#125;<span class="keyword">catch</span> (InterruptedException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(Thread.currentThread().getName()  + <span class="string">" is end.."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span>  <span class="comment">/*synchronized*/</span> <span class="function"><span class="keyword">void</span> <span class="title">m2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">" is start!!"</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(<span class="number">100</span>);</span><br><span class="line"></span><br><span class="line">        &#125;<span class="keyword">catch</span> (InterruptedException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"I want to use t1"</span>);</span><br><span class="line">        m1();</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">" is end"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] arges)</span></span>&#123;</span><br><span class="line">        Thread1 t = <span class="keyword">new</span> Thread1();</span><br><span class="line">        <span class="keyword">new</span> Thread(t :: m1 , <span class="string">"t1"</span>).start();</span><br><span class="line">        <span class="keyword">new</span> Thread(t :: m2,<span class="string">"t2"</span>).start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>out：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">t1 is start!</span><br><span class="line">t2 is start!!</span><br><span class="line">I want to use t1</span><br><span class="line">t1 is end..</span><br><span class="line">t2 is start!</span><br><span class="line">t2 is end..</span><br><span class="line">t2 is end</span><br></pre></td></tr></table></figure>
-
-<p><strong>synchronized线程同步</strong></p>
-<p>这里同时启动了两个线程：t1和t2，并且这两个线程分别使用了m1和m2方法，在m1方法上我使用了<code>synchronized</code> ，<code>synchronized</code> 是给这个方法加锁：在t1线程使用m1方法时，其他线程无法在t1线程执行m1方法时再用m1方法，必须等t1线程结束后，释放掉锁，其他线程才可以使用加了锁的m1方法。</p>
-<p><strong>死锁</strong></p>
-<p>当两个线程调用对方已加锁的方法，就会形成死锁，比如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*Thread1.java*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Thread1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">m1</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">" is start!"</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">        &#125;<span class="keyword">catch</span> (InterruptedException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        m2();</span><br><span class="line">        System.out.println(Thread.currentThread().getName()  + <span class="string">" is end.."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">m2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">" is start!!"</span>);</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(<span class="number">100</span>);</span><br><span class="line"></span><br><span class="line">        &#125;<span class="keyword">catch</span> (InterruptedException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">"I want to use t1"</span>);</span><br><span class="line">        m1();</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">" is end"</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] arges)</span></span>&#123;</span><br><span class="line">        Thread1 t = <span class="keyword">new</span> Thread1();</span><br><span class="line">        <span class="keyword">new</span> Thread(t :: m1 , <span class="string">"t1"</span>).start();</span><br><span class="line">        <span class="keyword">new</span> Thread(t :: m2,<span class="string">"t2"</span>).start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这段代码中，t1.m1方法在睡了两秒后开始调用t2线程加锁了的m2方法，由于锁的原因，t1进入阻塞状态等待m2锁被t2释放，但在t2线程的m2方法睡了一秒后开始调用已被t1加锁的m1方法，也进入阻塞等待m1锁被t1释放，于是就出现两个线程互相调用互相阻塞的情况，死锁。</p>
-<p><strong>当线程抛出异常时会自动释放锁</strong>。</p>
-<p>如果不希望释放锁但又不确定会不会抛出异常：</p>
-<ol>
-<li>多跑几次试试</li>
-<li><code>try{}catch(){}</code></li>
-</ol>
-<h3 id="1-2-1"><a href="#1-2-1" class="headerlink" title="1.2.1"></a>1.2.1</h3><p><strong>volatile共享变量</strong></p>
-<p>理解volatile需要点JMM的知识，volatile就是线程之间数据更新变化可检测性，也是多处理器共享数据的可见性，意思就是当一个线程修改了他们的共享数据时，另一个线程也可以读到修改的值。在JMM中存在一个主内存，而创建出的线程每个是从主线程中读取数据，每个线程会有自己的一块CPU和缓存区，如果没有volatile，线程会在运行时把从主线程读到的数据放到自己的缓存区然后执行自己的任务，这时，如果主线程的数据更改的话，线程内部自己的数据是不会改变的，但有volatile的话，就相当于所有（使用这个数据的）线程检测到数据需要updata然后就读到新值。volatile使一个变量在多线程中可见。</p>
-<p><strong>volatile并不能保证多个线程共同修改变量所带来不一致的问题，也就是说volatile不能代替synchronized</strong></p>
-<p><a href="http://www.cnblogs.com/nexiyi/p/java_memory_model_and_thread.html" target="_blank" rel="noopener">深入理解java内存模型和高并发</a></p>
-<p><strong>AtomicInteger原子操作</strong></p>
-<p>对于Java中的运算操作，例如自增或自减，若没有进行额外的同步操作，在多线程环境下就是线程不安全的。num++解析为num=num+1，明显，这个操作不具备原子性，多线程并发共享这个变量时必然会出现数据出错。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*定义一个原子初始值为0*/</span></span><br><span class="line">AtomicInteger count = <span class="keyword">new</span> AtomicInteger(<span class="number">0</span>);</span><br><span class="line"><span class="comment">/*自增操作，相当于++*/</span></span><br><span class="line">count.incrementAndGet();</span><br></pre></td></tr></table></figure>
-
-<p>多线程并发共享同一数据的时候，保证数据在同一时刻只被一个线程使用。</p>
-<p><strong>在实现AtomXXX类时，如果有多个Atom方法不构成其原子性</strong></p>
-<p>比如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(count.get() &lt; <span class="number">1000</span>)&#123;</span><br><span class="line">count.incrementAndGet();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这时在两个AtomXXX方法代码中，就可能有其他线程进入来更改数据。</p>
-<p>AtomXXX原子操作数据也和volatile一样多线程共享数据。</p>
-<p><strong>synchronized补充</strong></p>
-<p>synchronized优化，只对实际操作进行上锁，同步代码块中语句越少越好，比如只需要锁一个变量数据，就不要给整个方法加锁</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">m</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">	Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">	count++;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">	Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*上面这个方法实际只对count变量控制，但却给整个方法加锁，大大降低了执行效率，做以下优化*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">m</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">	Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">  <span class="keyword">synchronized</span>(<span class="keyword">this</span>)&#123;</span><br><span class="line">	count++;</span><br><span class="line">  &#125;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">	Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*采用细粒度的锁，可以使线程争用时间变短，从而提高效率*/</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>synchronized锁是锁在堆内存里的，不是锁在引用里的</strong></p>
-<p>不要以String常量作为锁定对象，比如有<code>String a=&quot;Hello&quot;;</code> 还有<code>String b=&quot;Hello&quot;;</code> 然后有两个方法分别对a和b加锁，但实际他们锁的是同一个对象，而且当引用某些类库的时候，在类库本身会出现对字符串加锁的情况，如果再锁有时候会出现很诡异的死锁阻塞。</p>
-<h3 id="1-2-2"><a href="#1-2-2" class="headerlink" title="1.2.2"></a>1.2.2</h3><h3 id="线程交互"><a href="#线程交互" class="headerlink" title="线程交互"></a>线程交互</h3><p><strong>wait和notify</strong></p>
-<p>wait()方法会让当前调用该方法的线程进入等待状态，<strong>并且释放锁，</strong>notify()需要在其他线程中调用，作用是唤醒当前正在等待状态的线程，<strong>但是notify不会释放锁</strong>，如果另一个线程被唤醒了，没有拿到锁，那么还是会在阻塞状态。</p>
-<p>notifyAll()作用是唤醒所有正在wait状态的线程。</p>
-<p><strong>门闩</strong></p>
-<p>countdownlatch/cyclicbarrier/semaphore</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/*创建一个门闩，内部定为1，countdown就是往下数为0时就开了*/</span><br><span class="line">CountDownLatch latch = new CountDownLatch(1);</span><br><span class="line">/*等待方法,也可以指定时间*/</span><br><span class="line">latch.await();	</span><br><span class="line">latch.await(2000);</span><br><span class="line">/*开门*/</span><br><span class="line">latch.countDown();</span><br></pre></td></tr></table></figure>
-
-<p>门闩不需要像synchronized会锁定任何东西。</p>
-<blockquote>
-<p>参考：</p>
-<p><a href="https://link.zhihu.com/?target=http%3A//mp.weixin.qq.com/s%3F__biz%3DMzI3NzM2OTQ5Mg%3D%3D%26mid%3D2247484289%26idx%3D1%26sn%3Dbdf6721e01c613bfb1458a8584e80800%26chksm%3Deb66047adc118d6c395c14e5b953686bfdfac93fd6fa8c0731bb89aadd7437bba800d034659d%26scene%3D21%23wechat_redirect" target="_blank" rel="noopener">volatile总结</a> （保证内存可见性：Lock前缀的指令、内存屏障禁止重排序）</p>
-<p><a href="https://link.zhihu.com/?target=http%3A//mp.weixin.qq.com/s%3F__biz%3DMzI3NzM2OTQ5Mg%3D%3D%26mid%3D2247484280%26idx%3D1%26sn%3D8de305338c5ab348c3e2a784084e4306%26chksm%3Deb660483dc118d95e9bcde15a01103f818ed2fd399989f36dc2d57740a305e91cf986d4f5a64%26scene%3D21%23wechat_redirect" target="_blank" rel="noopener">synchronized总结</a> （保证内存可见性和操作原子性：互斥锁；锁优化）</p>
-</blockquote>
+      
 
       
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
         
+          
+          并发编程与多线程1.1 基本概念
+什么是并发编程
+
+什么是线程：
+
+线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/09/12/JAVA并发编程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+      <div>    
+ 
+ 
+</div>
+    </footer>
+  </div>
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-Hans">
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2019/08/07/mongodb数据库/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Sober ChenZhuo">
-      <meta itemprop="description" content="Keep looking,and don't settle">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/1.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="陈某人的基地">
     </span>
+
+    
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2019/08/07/mongodb数据库/" class="post-title-link" itemprop="url">mongodb数据库</a>
-        </h1>
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/07/mongodb数据库/" itemprop="url">mongodb数据库</a></h1>
+        
 
         <div class="post-meta">
-            <span class="post-meta-item">
+          <span class="post-time">
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-07T19:41:05+08:00">
+                2019-08-07
+              </time>
+            
 
-              <time title="Created: 2019-08-07 19:41:05" itemprop="dateCreated datePublished" datetime="2019-08-07T19:41:05+08:00">2019-08-07</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-21 00:57:05" itemprop="dateModified" datetime="2019-08-21T00:57:05+08:00">2019-08-21</time>
-              </span>
-            <span class="post-meta-item">
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/mongodb/" itemprop="url" rel="index">
                     <span itemprop="name">mongodb</span>
                   </a>
                 </span>
+
+                
+                
+              
             </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/08/07/mongodb数据库/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/07/mongodb数据库/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
 
           
 
         </div>
       </header>
+    
 
     
     
@@ -1281,53 +1842,65 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="mongodb与mongoose"><a href="#mongodb与mongoose" class="headerlink" title="mongodb与mongoose"></a>mongodb与mongoose</h1><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p><code>brew install mongodb</code></p>
-<p>下载安装很简单，不多说，但如果下载源是官网的话会慢很多甚至下载不成功，所以我去修改了我的homebrew源，使用的中科大镜像源。</p>
-<p><a href="https://blog.csdn.net/tzjvon/article/details/79648825" target="_blank" rel="noopener">修改方法</a></p>
-<h3 id="启动运行mongodb"><a href="#启动运行mongodb" class="headerlink" title="启动运行mongodb"></a>启动运行mongodb</h3><p>刚开始如果直接在终端mongod的话基本都会报错，原因是没有找到data/db这个文件，因为默认文件路径是这个，所以我们要移动到系统根目录下<code>cd /</code>然后创建文件<code>mkdir -p data/db</code>，但是还不够，我们要添加环境变量这让我们在终端的任何地方都可以使用mongod的命令行： <code>vim ~/.zshrc</code> 因为我是zsh用户，所以直接编辑zshrc文件，在里面添加<code>export PATH=/usr/local/mongodb/bin:$PATH</code> 保存退出就好，最后记得<code>source ~/.zshrc</code>一下，然后就可以启动我们的mongodb了</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">~ mongod</span><br><span class="line">2019-08-07T19:31:12.795+0800 I CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols &apos;none&apos;</span><br><span class="line">2019-08-07T19:31:12.835+0800 I CONTROL  [initandlisten] MongoDB starting : pid=66667 port=27017 dbpath=/data/db 64-bit host=chenzhuodeMBP.lan</span><br><span class="line">2019-08-07T19:31:12.835+0800 I CONTROL  [initandlisten] db version v4.0.3</span><br><span class="line">2019-08-07T19:31:12.835+0800 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c</span><br><span class="line">2019-08-07T19:31:12.835+0800 I CONTROL  [initandlisten] allocator: system</span><br><span class="line">2019-08-07T19:31:12.835+0800 I CONTROL  [initandlisten] modules: none</span><br><span class="line">2019-08-07T19:31:12.835+0800 I CONTROL  [initandlisten] build environment:</span><br><span class="line">2019-08-07T19:31:12.835+0800 I CONTROL  [initandlisten]     distarch: x86_64</span><br><span class="line">2019-08-07T19:31:12.835+0800 I CONTROL  [initandlisten]     target_arch: x86_64</span><br><span class="line">2019-08-07T19:31:12.835+0800 I CONTROL  [initandlisten] options: &#123;&#125;</span><br><span class="line">2019-08-07T19:31:12.837+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),</span><br><span class="line">2019-08-07T19:31:13.323+0800 I STORAGE  [initandlisten] WiredTiger message [1565177473:323554][66667:0x1152525c0], txn-recover: Set global recovery timestamp: 0</span><br><span class="line">2019-08-07T19:31:13.366+0800 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)</span><br><span class="line">2019-08-07T19:31:13.409+0800 I CONTROL  [initandlisten]</span><br><span class="line">2019-08-07T19:31:13.409+0800 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.</span><br><span class="line">2019-08-07T19:31:13.409+0800 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.</span><br><span class="line">2019-08-07T19:31:13.409+0800 I CONTROL  [initandlisten]</span><br><span class="line">2019-08-07T19:31:13.409+0800 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.</span><br><span class="line">2019-08-07T19:31:13.409+0800 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server.</span><br><span class="line">2019-08-07T19:31:13.409+0800 I CONTROL  [initandlisten] **          Start the server with --bind_ip &lt;address&gt; to specify which IP</span><br><span class="line">2019-08-07T19:31:13.409+0800 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to</span><br><span class="line">2019-08-07T19:31:13.409+0800 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the</span><br><span class="line">2019-08-07T19:31:13.409+0800 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.</span><br><span class="line">2019-08-07T19:31:13.409+0800 I CONTROL  [initandlisten]</span><br><span class="line">2019-08-07T19:31:13.409+0800 I CONTROL  [initandlisten]</span><br><span class="line">2019-08-07T19:31:13.409+0800 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000</span><br><span class="line">2019-08-07T19:31:13.418+0800 I STORAGE  [initandlisten] createCollection: admin.system.version with provided UUID: 0f3360cb-eb57-4d52-a7eb-a9e0097f4116</span><br><span class="line">2019-08-07T19:31:13.465+0800 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 4.0</span><br><span class="line">2019-08-07T19:31:13.473+0800 I STORAGE  [initandlisten] createCollection: local.startup_log with generated UUID: 80abc387-e986-4779-af9a-ab07b71d7624</span><br><span class="line">2019-08-07T19:31:13.517+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory &apos;/data/db/diagnostic.data&apos;</span><br><span class="line">2019-08-07T19:31:13.522+0800 I NETWORK  [initandlisten] waiting for connections on port 27017</span><br><span class="line">2019-08-07T19:31:13.522+0800 I STORAGE  [LogicalSessionCacheRefresh] createCollection: config.system.sessions with generated UUID: c812a964-a9ff-42bc-8897-24d87db0c61e</span><br><span class="line">2019-08-07T19:31:13.603+0800 I INDEX    [LogicalSessionCacheRefresh] build index on: config.system.sessions properties: &#123; v: 2, key: &#123; lastUse: 1 &#125;, name: &quot;lsidTTLIndex&quot;, ns: &quot;config.system.sessions&quot;, expireAfterSeconds: 1800 &#125;</span><br><span class="line">2019-08-07T19:31:13.603+0800 I INDEX    [LogicalSessionCacheRefresh] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM</span><br><span class="line">2019-08-07T19:31:13.611+0800 I INDEX    [LogicalSessionCacheRefresh] build index done.  scanned 0 total records. 0 secs</span><br></pre></td></tr></table></figure>
-
-<p>当出现<code>2019-08-07T19:31:13.522+0800 I NETWORK  [initandlisten] waiting for connections on port 27017</code> 就代表启动成功了，并且可以在本地的27017端口访问到我们的数据库。</p>
-<h2 id="一些常用的mongodb命令"><a href="#一些常用的mongodb命令" class="headerlink" title="一些常用的mongodb命令"></a>一些常用的mongodb命令</h2><p>在终端mongo后就实现了本地与数据库的连接</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt; use mylab</span><br><span class="line">//表示移动到数据库mylab，如果没有则创建</span><br><span class="line">&gt; db</span><br><span class="line">//查看当前数据库</span><br><span class="line">&gt; show dbs</span><br><span class="line">//查看所有数据库</span><br><span class="line">&gt; db.dropDatabase()</span><br><span class="line">//删除当前数据库</span><br><span class="line">&gt; show tables</span><br><span class="line">//查看当前集合</span><br><span class="line">&gt; db.createCollection(&quot;lab&quot;)</span><br><span class="line">//创建一个叫lab的集合</span><br><span class="line">&gt; db.collection.drop()</span><br><span class="line">//删除当前集合</span><br></pre></td></tr></table></figure>
-
-<p>这些事创建数据库的方法，在终端上操作，对于数据库中数据的操作我们可以在mongoose中实现</p>
-<h2 id="mongoose"><a href="#mongoose" class="headerlink" title="mongoose"></a>mongoose</h2><p>mongoose是可以让node.js操作mongodb的插件。</p>
-<p><a href="https://mongoosejs.com/docs/guide.html" target="_blank" rel="noopener">mongoose官方文档</a></p>
-<p><strong>安装</strong></p>
-<p><code>yarn add mongoose</code></p>
-<p><strong>1.定义架构</strong></p>
-<p>mongoose所有的内容都从Schema开头，相当于定义了一个模式：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mongoose = <span class="built_in">require</span>(<span class="string">'mongoose'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> schema = mongoose.Schema(&#123;</span><br><span class="line">    name:&#123;</span><br><span class="line">        type:<span class="built_in">String</span>,</span><br><span class="line">        required:<span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    email:&#123;</span><br><span class="line">        type:<span class="built_in">String</span>,</span><br><span class="line">        required:<span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    password:&#123;</span><br><span class="line">        type:<span class="built_in">String</span>,</span><br><span class="line">        required:<span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    data:&#123;</span><br><span class="line">        type:Data,</span><br><span class="line">        <span class="keyword">default</span>:<span class="built_in">Date</span>.now</span><br><span class="line">    &#125;,</span><br><span class="line">    access:&#123;</span><br><span class="line">        type:<span class="built_in">String</span>,</span><br><span class="line">        required:<span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    identity:&#123;</span><br><span class="line">        type:<span class="built_in">String</span>,</span><br><span class="line">        required:<span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = mongoose.model(<span class="string">'Users'</span> , schema);</span><br></pre></td></tr></table></figure>
-
-<p>这是我定义的一个users的模版，首先引入mongoose，然后定义一个<code>mongoose.Schema</code>对象，其中定义了user的数据模型，比如有name是一个String，email也是一个string，然后<code>required：true</code>表示用来验证，这里我直接都给true，然后需要导出模块，导出时需要的是一个model对象，名字为Users，然后使用刚刚创建的Schema。</p>
-<p><strong>2.本地连接数据库</strong></p>
-<p>本地连接很简单，一个固定格式<code>mongodb://localhost/dbname</code>，然后需要安装mongoose的依赖，然后在app.js中引入，连接数据库的函数<code>mongoose.connect</code> 我在使用的时候promise一下，在console会返回一个状态，如果失败则抛出异常：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var mongoose = require(&apos;mongoose&apos;);</span><br><span class="line"></span><br><span class="line">mongoose.connect(&apos;mongodb://localhost/test&apos; , &#123; useNewUrlParser: true &#125;</span><br><span class="line">  ).then(()=&gt;&#123;</span><br><span class="line">    console.log(&quot;Database is connected&quot;);</span><br><span class="line">  &#125;).catch(err =&gt; console.log(err));</span><br></pre></td></tr></table></figure>
-
-<p><strong>3.使用数据模型</strong></p>
-<p>由于我们在导出了我们的数据模型模块Users，我们在使用数据模型时只需要引入即可</p>
-<p><code>var User = require(&#39;../module/Users&#39;);</code> </p>
+      
 
       
+        
+          
+          mongodb与mongoose安装brew install mongodb
+下载安装很简单，不多说，但如果下载源是官网的话会慢很多甚至下载不成功，所以我去修改了我的homebrew源，使用的中科大镜像源。
+修改方法
+启动运行mongodb刚开始如果直接在终端mongod的话基本都会报错，原因是没有
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/07/mongodb数据库/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
     </div>
+    
+    
+    
 
     
+
     
+
     
-      <footer class="post-footer">
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
         <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
+      
+      <div>    
+ 
+ 
+</div>
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1335,92 +1908,156 @@
           </div>
           
 
+
+          
+
         </div>
+        
           
   
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
   </div>
 
-  <aside class="sidebar">
+  <aside id="sidebar" class="sidebar">
+    
     <div class="sidebar-inner">
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
+      
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
+      
 
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">Sober ChenZhuo</p>
-  <div class="site-description" itemprop="description">Keep looking,and don't settle</div>
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">27</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-        <span class="site-state-item-count">12</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-        <span class="site-state-item-count">10</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/1.png" alt="Sober ChenZhuo">
+            
+              <p class="site-author-name" itemprop="name">Sober ChenZhuo</p>
+              <p class="site-description motion-element" itemprop="description">Keep looking,and don't settle</p>
+          </div>
 
+          <nav class="site-state motion-element">
 
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
 
-      </div>
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chenzhuo233" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:schatten.cz@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
 
     </div>
   </aside>
-  <div id="sidebar-dimmer"></div>
 
 
+        
       </div>
     </main>
 
-    <footer class="footer">
+    <footer id="footer" class="footer">
       <div class="footer-inner">
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; Thu Apr 25 2019 08:00:00 GMT+0800 (GMT+08:00) &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Sober ChenZhuo</span>
+
+  
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0
-  </div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.5.0
-  </div>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+<div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style="display:none">
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style="display:none">
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+
 
         
-
 
 
 
@@ -1431,15 +2068,143 @@
         
       </div>
     </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
   </div>
 
   
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
-<script src="/js/schemes/muse.js"></script>
-<script src="/js/next-boot.js"></script>
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
 
 
 
@@ -1454,11 +2219,363 @@
 
 
 
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'lh9YCjvegKoT8lcDQ0uiDuAe-gzGzoHsz',
+        appKey: '8nKXru1PdyPiKpkUmTUDu6fw',
+        placeholder: '客官您来写点啥呗',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
 
 
 
 
 
+  
+
+  
+
+  
+
+  
+  
+
+  
 
   
 
