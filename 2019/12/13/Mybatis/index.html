@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="MyBatismyBatis bolg myBatis 配置解析 使用注解 映射注解 Results 用于填写结果集的多个字段的映射关系 Result 用于填写结果集的单个字段映射关系 ResultMap 根据ID关联XML里的 &amp;lt;resultMap&amp;gt;  Lombok Project Lombok is a java library that automatically plugs i">
+<meta name="description" content="MyBatismyBatis bolg myBatis 配置解析 使用注解 映射注解 Results 用于填写结果集的多个字段的映射关系 Result 用于填写结果集的单个字段映射关系 ResultMap 根据ID关联XML里的 &amp;lt;resultMap&amp;gt;  其中property表示实体对象的属性名，column表示对应的数据库字段名 123456789@Results(&amp;#123;	@R">
 <meta name="keywords" content="数据库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mybatis">
 <meta property="og:url" content="/chenzhuo233.github.io/2019/12/13/Mybatis/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="MyBatismyBatis bolg myBatis 配置解析 使用注解 映射注解 Results 用于填写结果集的多个字段的映射关系 Result 用于填写结果集的单个字段映射关系 ResultMap 根据ID关联XML里的 &amp;lt;resultMap&amp;gt;  Lombok Project Lombok is a java library that automatically plugs i">
+<meta property="og:description" content="MyBatismyBatis bolg myBatis 配置解析 使用注解 映射注解 Results 用于填写结果集的多个字段的映射关系 Result 用于填写结果集的单个字段映射关系 ResultMap 根据ID关联XML里的 &amp;lt;resultMap&amp;gt;  其中property表示实体对象的属性名，column表示对应的数据库字段名 123456789@Results(&amp;#123;	@R">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-17T13:10:20.881Z">
+<meta property="og:updated_time" content="2019-12-17T15:34:27.983Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mybatis">
-<meta name="twitter:description" content="MyBatismyBatis bolg myBatis 配置解析 使用注解 映射注解 Results 用于填写结果集的多个字段的映射关系 Result 用于填写结果集的单个字段映射关系 ResultMap 根据ID关联XML里的 &amp;lt;resultMap&amp;gt;  Lombok Project Lombok is a java library that automatically plugs i">
+<meta name="twitter:description" content="MyBatismyBatis bolg myBatis 配置解析 使用注解 映射注解 Results 用于填写结果集的多个字段的映射关系 Result 用于填写结果集的单个字段映射关系 ResultMap 根据ID关联XML里的 &amp;lt;resultMap&amp;gt;  其中property表示实体对象的属性名，column表示对应的数据库字段名 123456789@Results(&amp;#123;	@R">
 
 
 
@@ -407,6 +407,9 @@
 <li>Result 用于填写结果集的单个字段映射关系</li>
 <li>ResultMap 根据ID关联XML里的 <code>&lt;resultMap&gt;</code></li>
 </ul>
+<p>其中property表示实体对象的属性名，column表示对应的数据库字段名</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Results</span>(&#123;</span><br><span class="line">	<span class="meta">@Result</span>(property = <span class="string">"userId"</span> , column = <span class="string">"USER_ID"</span>),</span><br><span class="line">	<span class="meta">@Result</span>(property = <span class="string">"username"</span> , column = <span class="string">"USERNANME"</span>),</span><br><span class="line">	<span class="meta">@Result</span>(property = <span class="string">"password"</span> , column = <span class="string">"PASSWORD"</span>),</span><br><span class="line">	<span class="meta">@Result</span>(property = <span class="string">"mobileNum"</span> , column = <span class="string">"PHONE_NUM"</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="meta">@Select</span>(<span class="string">"select * form t_user"</span>)</span><br><span class="line"><span class="function">List&lt;User&gt; <span class="title">list</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
 <h2 id="Lombok"><a href="#Lombok" class="headerlink" title="Lombok"></a>Lombok</h2><blockquote>
 <p>Project Lombok is a java library that automatically plugs into your editor and build tools, spicing up your java.<br>Never write another getter or equals method again, with one annotation your class has a fully featured builder, Automate your logging variables, and much more.</p>
 </blockquote>
