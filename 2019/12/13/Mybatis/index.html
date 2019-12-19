@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="陈某人的基地">
 <meta property="og:description" content="MyBatismyBatis bolg myBatis 配置解析 使用注解 映射注解 Results 用于填写结果集的多个字段的映射关系 Result 用于填写结果集的单个字段映射关系 ResultMap 根据ID关联XML里的 &amp;lt;resultMap&amp;gt;  其中property表示实体对象的属性名，column表示对应的数据库字段名 123456789@Results(&amp;#123;	@R">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-17T15:34:27.983Z">
+<meta property="og:updated_time" content="2019-12-17T16:07:41.785Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mybatis">
 <meta name="twitter:description" content="MyBatismyBatis bolg myBatis 配置解析 使用注解 映射注解 Results 用于填写结果集的多个字段的映射关系 Result 用于填写结果集的单个字段映射关系 ResultMap 根据ID关联XML里的 &amp;lt;resultMap&amp;gt;  其中property表示实体对象的属性名，column表示对应的数据库字段名 123456789@Results(&amp;#123;	@R">
@@ -499,6 +499,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserProvider</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">list22</span><span class="params">()</span></span>&#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">"select * from t_user"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>type表示工具类，method表示工具类的某个方法，用来返回具体的sql字符串。</p>
+<p>补充：当sql传参数有多个的时候必须用@param和#{}来配合使用，如果有${}会报错，如果不加@param也会报错。</p>
 <p><a href="https://blog.kuangstudy.com/index.php/archives/508/" target="_blank" rel="noopener">缓存</a></p>
 
       
