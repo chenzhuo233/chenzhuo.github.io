@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/1.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/1.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/1.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="JAVA,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Guave使用引入依赖 maven： 12345&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;com.google.guava&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;guava&amp;lt;/artifactId&amp;gt;    &amp;lt;version&amp;gt;28.1-jre&amp;lt;/version&amp;gt;&amp;lt;/dependency&amp;gt">
+<meta name="keywords" content="JAVA">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Guava">
+<meta property="og:url" content="/chenzhuo233.github.io/2019/12/21/Guava/index.html">
+<meta property="og:site_name" content="陈某人的基地">
+<meta property="og:description" content="Guave使用引入依赖 maven： 12345&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;com.google.guava&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;guava&amp;lt;/artifactId&amp;gt;    &amp;lt;version&amp;gt;28.1-jre&amp;lt;/version&amp;gt;&amp;lt;/dependency&amp;gt">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-12-22T11:14:02.169Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Guava">
+<meta name="twitter:description" content="Guave使用引入依赖 maven： 12345&amp;lt;dependency&amp;gt;    &amp;lt;groupId&amp;gt;com.google.guava&amp;lt;/groupId&amp;gt;    &amp;lt;artifactId&amp;gt;guava&amp;lt;/artifactId&amp;gt;    &amp;lt;version&amp;gt;28.1-jre&amp;lt;/version&amp;gt;&amp;lt;/dependency&amp;gt">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="/chenzhuo233.github.io/2019/12/21/Guava/">
+
+
+
+
+
+  <title>Guava | 陈某人的基地</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?440a995f45f4a1188f77ead3242666e9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">陈某人的基地</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2019/12/21/Guava/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sober ChenZhuo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/1.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈某人的基地">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Guava</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-21T19:50:11+08:00">
+                2019-12-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/12/21/Guava/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/12/21/Guava/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_value_page_pv"></span>次阅读
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Guave"><a href="#Guave" class="headerlink" title="Guave"></a>Guave</h1><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>引入依赖</p>
+<p>maven：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.google.guava<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>guava<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>28.1-jre<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>gradle:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile &apos;com.google.guava:guava:28.1-jre&apos;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://github.com/google/guava/wiki" target="_blank" rel="noopener">官方文档</a></p>
+<h2 id="集合操作"><a href="#集合操作" class="headerlink" title="集合操作"></a>集合操作</h2><p><a href="https://github.com/google/guava/wiki/NewCollectionTypesExplained" target="_blank" rel="noopener">New Collection</a></p>
+<h3 id="创建不可变集合Immutable（不可变）对象"><a href="#创建不可变集合Immutable（不可变）对象" class="headerlink" title="创建不可变集合Immutable（不可变）对象"></a><strong>创建不可变集合Immutable（不可变）对象</strong></h3><ul>
+<li>在多线程操作下，是线程安全的</li>
+<li>所有不可变集合会比可变集合更有效的利用资源</li>
+<li>中途不可改变</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ImmutableList&lt;String&gt; immutableList=ImmutableList.of(<span class="string">"1"</span>,<span class="string">"2"</span>,<span class="string">"3"</span>,<span class="string">"4"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>当需要一个map中包含key为string，value为list类型时，使用guava是这样的：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Multimap&lt;String,Integer&gt; map = ArrayListMultimap.create();      </span><br><span class="line">map.put(<span class="string">"aa"</span>, <span class="number">1</span>);</span><br><span class="line">map.put(<span class="string">"aa"</span>, <span class="number">2</span>);</span><br><span class="line">System.out.println(map.get(<span class="string">"aa"</span>));  <span class="comment">//[1, 2]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="集合"><a href="#集合" class="headerlink" title="集合"></a><strong>集合</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">MultiSet: 无序+可重复</span><br><span class="line"><span class="comment">//创建方式:</span></span><br><span class="line">Multiset&lt;String&gt; set = HashMultiset.create();</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 当把Multiset看成普通的Collection时，它表现得就像无序的ArrayList：</span></span><br><span class="line"><span class="comment">* add(E) 添加单个给定元素</span></span><br><span class="line"><span class="comment">* iterator() 返回一个迭代器，包含Multiset的所有元素（包括重复的元素）</span></span><br><span class="line"><span class="comment">* size() 返回所有元素的总个数（包括重复的元素）</span></span><br><span class="line"><span class="comment">* 当把Multiset看作Map&lt;E, Integer&gt;时，它也提供了符合性能期望的查询操作</span></span><br><span class="line"><span class="comment">* count(Object) 返回给定元素的计数。HashMultiset.count的复杂度为O(1)，TreeMultiset.count的复杂度为O(log n)。</span></span><br><span class="line"><span class="comment">* entrySet() 返回Set&lt;Multiset.Entry&lt;E&gt;&gt;，和Map的entrySet类似。</span></span><br><span class="line"><span class="comment">* elementSet() 返回所有不重复元素的Set&lt;E&gt;，和Map的keySet()类似。</span></span><br><span class="line"><span class="comment">* Multiset.addAll(Collection)可以添加Collection中的所有元素并进行计数</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">Multimap: key-value  key可以重复  </span><br><span class="line"><span class="comment">//创建方式:</span></span><br><span class="line">Multimap&lt;String, String&gt; teachers = ArrayListMultimap.create();</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* put(K, V)	添加键到单个值的映射		等价于 multimap.get(key).add(value)</span></span><br><span class="line"><span class="comment">* putAll(K, Iterable&lt;V&gt;)	依次添加键到多个值的映射	 等价于 Iterables.addAll(multimap.get(key), values)</span></span><br><span class="line"><span class="comment">* remove(K, V)	移除键到值的映射；如果有这样的键值并成功移除，返回true。	等价于 multimap.get(key).remove(value)</span></span><br><span class="line"><span class="comment">* removeAll(K)	清除键对应的所有值，返回的集合包含所有之前映射到K的值，但修改这个集合就不会影响Multimap了。	等价于 multimap.get(key).clear()</span></span><br><span class="line"><span class="comment">* replaceValues(K, Iterable&lt;V&gt;)	清除键对应的所有值，并重新把key关联到Iterable中的每个元素。返回的集合包含所有之前映射到K的值。	等价于  multimap.get(key).clear();Iterables.addAll(multimap.get(key), values);</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">BiMap: 双向Map(Bidirectional Map) 键与值都不能重复</span><br><span class="line"><span class="comment">//创建方式:  </span></span><br><span class="line">BiMap&lt;String, String&gt; biMap = HashBiMap.create();</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* BiMap&lt;K, V&gt;是特殊的Map：</span></span><br><span class="line"><span class="comment">* 可以用 inverse()反转BiMap&lt;K, V&gt;的键值映射</span></span><br><span class="line"><span class="comment">* 保证值是唯一的，因此 values()返回Set而不是普通的Collection</span></span><br><span class="line"><span class="comment">* 实现方法：</span></span><br><span class="line"><span class="comment">* 键-值        ｜ 值-键			 ｜ 对应BiMap实现</span></span><br><span class="line"><span class="comment">* HashMap			 | HashMap		 |HashBiMap</span></span><br><span class="line"><span class="comment">* ImmutableMap | ImmutableMap|ImmutableBiMap</span></span><br><span class="line"><span class="comment">* EnumMap			 | EnumMap		 ｜EnumBiMap</span></span><br><span class="line"><span class="comment">* EnumMap			 | HashMap	   ｜EnumHashBiMap</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line">Table: 双键的Map Map--&gt; Table--&gt;rowKey+columnKey+value</span><br><span class="line"><span class="comment">//和sql中的联合主键有点像</span></span><br><span class="line"><span class="comment">//创建方式:</span></span><br><span class="line">Table&lt;String, String, Integer&gt; tables = HashBasedTable.create();</span><br><span class="line">tables.put(<span class="string">"v1"</span>, <span class="string">"v2"</span>, <span class="number">4</span>);</span><br><span class="line">tables.put(<span class="string">"v1"</span>, <span class="string">"v3"</span>, <span class="number">20</span>);</span><br><span class="line">tables.put(<span class="string">"v2"</span>, <span class="string">"v3"</span>, <span class="number">5</span>);</span><br><span class="line">tables.row(v1); <span class="comment">// returns a Map mapping v2 to 4, v3 to 20</span></span><br><span class="line">tables.column(v3); <span class="comment">// returns a Map mapping v1 to 20, v2 to 5</span></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* rowMap()：用Map&lt;R, Map&lt;C, V&gt;&gt;表现Table&lt;R, C, V&gt;。同样的， rowKeySet()返回”行”的集合Set&lt;R&gt;。</span></span><br><span class="line"><span class="comment">* row(r) ：用Map&lt;C, V&gt;返回给定”行”的所有列，对这个map进行的写操作也将写入Table中。</span></span><br><span class="line"><span class="comment">类似的列访问方法：columnMap()、columnKeySet()、column(c)。（基于列的访问会比基于的行访问稍微低效点）</span></span><br><span class="line"><span class="comment">* cellSet()：用元素类型为Table.Cell&lt;R, C, V&gt;的Set表现Table&lt;R, C, V&gt;。Cell类似于Map.Entry，但它是用行和列两个键区分的。</span></span><br><span class="line"><span class="comment">* 实现方式：</span></span><br><span class="line"><span class="comment">* HashBasedTable,TreeBasedTable,ImmutableTable,ArrayTable</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="集合过滤"><a href="#集合过滤" class="headerlink" title="集合过滤"></a>集合过滤</h3><h4 id="Predicate（断言）"><a href="#Predicate（断言）" class="headerlink" title="Predicate（断言）"></a>Predicate（断言）</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//按照条件过滤</span></span><br><span class="line">ImmutableList&lt;String&gt; names = ImmutableList.of(<span class="string">"begin"</span>, <span class="string">"code"</span>, <span class="string">"Guava"</span>, <span class="string">"Java"</span>);</span><br><span class="line"><span class="comment">/*Predicates.equalTo（）来表达需要过滤的元素</span></span><br><span class="line"><span class="comment">* 看一下equalTo方法源码：</span></span><br><span class="line"><span class="comment">* public static &lt;T&gt; Predicate&lt;T&gt; equalTo(@Nullable T target) &#123;</span></span><br><span class="line"><span class="comment">* return (Predicate)(target == null ? isNull() : new Predicates.IsEqualToPredicate(target));&#125;</span></span><br><span class="line"><span class="comment">* 然后用Predicates.or聚合所有条件然后过滤出来。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">Iterable&lt;String&gt; fitered = Iterables.filter(names, Predicates.or(Predicates.equalTo(<span class="string">"Guava"</span>), Predicates.equalTo(<span class="string">"Java"</span>)));</span><br><span class="line">System.out.println(fitered); <span class="comment">// [Guava, Java]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//自定义过滤条件   使用自定义回调方法对Map的每个Value进行操作</span></span><br><span class="line">ImmutableMap&lt;String, Integer&gt; m = ImmutableMap.of(<span class="string">"begin"</span>, <span class="number">12</span>, <span class="string">"code"</span>, <span class="number">15</span>);</span><br><span class="line">        <span class="comment">// Function&lt;F, T&gt; F表示apply()方法input的类型，T表示apply()方法返回类型</span></span><br><span class="line">        Map&lt;String, Integer&gt; m2 = Maps.transformValues(m, <span class="keyword">new</span> Function&lt;Integer, Integer&gt;() &#123;</span><br><span class="line">            <span class="function"><span class="keyword">public</span> Integer <span class="title">apply</span><span class="params">(Integer input)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(input&gt;<span class="number">12</span>)&#123;</span><br><span class="line">                    <span class="keyword">return</span> input;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    <span class="keyword">return</span> input+<span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">System.out.println(m2);   <span class="comment">//&#123;begin=13, code=15&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="集合-交、并、差集"><a href="#集合-交、并、差集" class="headerlink" title="集合 交、并、差集"></a>集合 交、并、差集</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*set*/</span></span><br><span class="line">HashSet setA = newHashSet(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>);  </span><br><span class="line">HashSet setB = newHashSet(<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>);  </span><br><span class="line"><span class="comment">//并集</span></span><br><span class="line">SetView union = Sets.union(setA, setB);    </span><br><span class="line">System.out.println(<span class="string">"union:"</span>);  </span><br><span class="line"><span class="keyword">for</span> (Integer integer : union)  </span><br><span class="line">    System.out.println(integer);           <span class="comment">//union 并集:12345867</span></span><br><span class="line"><span class="comment">//差集</span></span><br><span class="line">SetView difference = Sets.difference(setA, setB);<span class="comment">//difference 差集:123</span></span><br><span class="line"><span class="comment">//交集</span></span><br><span class="line">SetView intersection = Sets.intersection(setA, setB);<span class="comment">//intersection 交集:45</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*map*/</span></span><br><span class="line">HashMap&lt;String, Integer&gt; mapA = Maps.newHashMap();</span><br><span class="line">mapA.put(<span class="string">"a"</span>, <span class="number">1</span>);</span><br><span class="line">mapA.put(<span class="string">"b"</span>, <span class="number">2</span>);</span><br><span class="line">mapA.put(<span class="string">"c"</span>, <span class="number">3</span>);</span><br><span class="line"></span><br><span class="line">HashMap&lt;String, Integer&gt; mapB = Maps.newHashMap();</span><br><span class="line">mapB.put(<span class="string">"b"</span>, <span class="number">20</span>);</span><br><span class="line">mapB.put(<span class="string">"c"</span>, <span class="number">3</span>);</span><br><span class="line">mapB.put(<span class="string">"d"</span>, <span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">MapDifference differenceMap = Maps.difference(mapA, mapB);</span><br><span class="line">differenceMap.areEqual();</span><br><span class="line">Map entriesDiffering = differenceMap.entriesDiffering();</span><br><span class="line">Map entriesOnlyLeft = differenceMap.entriesOnlyOnLeft();</span><br><span class="line">Map entriesOnlyRight = differenceMap.entriesOnlyOnRight();</span><br><span class="line">Map entriesInCommon = differenceMap.entriesInCommon();</span><br><span class="line"></span><br><span class="line">System.out.println(entriesDiffering);   <span class="comment">// &#123;b=(2, 20)&#125;</span></span><br><span class="line">System.out.println(entriesOnlyLeft);    <span class="comment">// &#123;a=1&#125;</span></span><br><span class="line">System.out.println(entriesOnlyRight);   <span class="comment">// &#123;d=4&#125;</span></span><br><span class="line">System.out.println(entriesInCommon);    <span class="comment">// &#123;c=3&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="集合转化特定字符串"><a href="#集合转化特定字符串" class="headerlink" title="集合转化特定字符串"></a>集合转化特定字符串</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//list -&gt; String</span></span><br><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">list.add(<span class="string">"aa"</span>);</span><br><span class="line">list.add(<span class="string">"bb"</span>);</span><br><span class="line">list.add(<span class="string">"cc"</span>);</span><br><span class="line">String result = Joiner.on(<span class="string">"-"</span>).join(list);</span><br><span class="line"><span class="comment">//result为  aa-bb-cc</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//map -&gt; String </span></span><br><span class="line">Map&lt;String, Integer&gt; map = Maps.newHashMap();</span><br><span class="line">map.put(<span class="string">"xiaoming"</span>, <span class="number">12</span>);</span><br><span class="line">map.put(<span class="string">"xiaohong"</span>,<span class="number">13</span>);</span><br><span class="line">String result = Joiner.on(<span class="string">","</span>).withKeyValueSeparator(<span class="string">"="</span>).join(map);</span><br><span class="line"><span class="comment">// result为 xiaoming=12,xiaohong=13</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="字符串转化特定集合"><a href="#字符串转化特定集合" class="headerlink" title="字符串转化特定集合"></a><strong>字符串转化特定集合</strong></h3><h4 id="字符串转化list"><a href="#字符串转化list" class="headerlink" title="字符串转化list"></a>字符串转化list</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//java String -&gt; list</span></span><br><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;String&gt;();</span><br><span class="line">String a = <span class="string">"1-2-3-4-5-6"</span>;</span><br><span class="line">String[] strs = a.split(<span class="string">"-"</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;strs.length; i++)&#123;</span><br><span class="line">    list.add(strs[i]);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//guava String -&gt; list</span></span><br><span class="line">String str = <span class="string">"1-2-3-4-5-6"</span>;</span><br><span class="line">List&lt;String&gt; list = Splitter.on(<span class="string">"-"</span>).splitToList(str);</span><br><span class="line"><span class="comment">//list为  [1, 2, 3, 4, 5, 6]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*guava还可以使用 omitEmptyStrings().trimResults() 去除空串与空格*/</span></span><br><span class="line">String str = <span class="string">"1-2-3-4-  5-  6   "</span>;  </span><br><span class="line">List&lt;String&gt; list = Splitter.on(<span class="string">"-"</span>).omitEmptyStrings().trimResults().splitToList(str);</span><br><span class="line">System.out.println(list);</span><br></pre></td></tr></table></figure>
+
+<h4 id="字符串转为map"><a href="#字符串转为map" class="headerlink" title="字符串转为map"></a>字符串转为map</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//string -&gt; map</span></span><br><span class="line">String str = <span class="string">"xiaoming=11,xiaohong=23"</span>;</span><br><span class="line">Map&lt;String,String&gt; map = Splitter.on(<span class="string">","</span>).withKeyValueSeparator(<span class="string">"="</span>).split(str);</span><br></pre></td></tr></table></figure>
+
+<h2 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h2><p>在Splitter类中实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 判断匹配结果</span></span><br><span class="line"><span class="keyword">boolean</span> result = CharMatcher.inRange(<span class="string">'a'</span>, <span class="string">'z'</span>).or(CharMatcher.inRange(<span class="string">'A'</span>, <span class="string">'Z'</span>)).matches(<span class="string">'K'</span>); <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 保留数字文本  CharMatcher.digit() 已过时   retain 保留</span></span><br><span class="line"><span class="comment">//String s1 = CharMatcher.digit().retainFrom("abc 123 efg"); //123</span></span><br><span class="line">String s1 = CharMatcher.inRange(<span class="string">'0'</span>, <span class="string">'9'</span>).retainFrom(<span class="string">"abc 123 efg"</span>); <span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除数字文本  remove 删除</span></span><br><span class="line"><span class="comment">// String s2 = CharMatcher.digit().removeFrom("abc 123 efg");    //abc  efg</span></span><br><span class="line">String s2 = CharMatcher.inRange(<span class="string">'0'</span>, <span class="string">'9'</span>).removeFrom(<span class="string">"abc 123 efg"</span>); <span class="comment">// abc  efg</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="检查参数"><a href="#检查参数" class="headerlink" title="检查参数"></a>检查参数</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">/use java</span><br><span class="line"><span class="keyword">if</span>(list!=<span class="keyword">null</span> &amp;&amp; list.size()&gt;<span class="number">0</span>)</span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string">if(str!=null &amp;&amp; str.length()&gt;0)</span></span><br><span class="line"><span class="string">'</span><span class="string">''</span></span><br><span class="line"><span class="keyword">if</span>(str !=<span class="keyword">null</span> &amp;&amp; !str.isEmpty())</span><br><span class="line"></span><br><span class="line"><span class="comment">//use guava</span></span><br><span class="line"><span class="keyword">if</span>(!Strings.isNullOrEmpty(str))</span><br><span class="line"></span><br><span class="line"><span class="comment">//use java</span></span><br><span class="line"><span class="keyword">if</span> (count &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"must be positive: "</span> + count);         </span><br><span class="line">&#125;    </span><br><span class="line"></span><br><span class="line"><span class="comment">//use guava</span></span><br><span class="line">Preconditions.checkArgument(count &gt; <span class="number">0</span>, <span class="string">"must be positive: %s"</span>, count);</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>方法声明（不包括额外参数）</th>
+<th>描述</th>
+<th>检查失败时抛出的异常</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>checkArgument(boolean)</td>
+<td>检查boolean是否为true，用来检查传递给方法的参数。</td>
+<td>IllegalArgumentException</td>
+</tr>
+<tr>
+<td>checkNotNull(T)</td>
+<td>检查value是否为null，该方法直接返回value，因此可以内嵌使用checkNotNull。</td>
+<td>NullPointerException</td>
+</tr>
+<tr>
+<td>checkState(boolean)</td>
+<td>用来检查对象的某些状态。</td>
+<td>IllegalStateException</td>
+</tr>
+<tr>
+<td>checkElementIndex(int index, int size)</td>
+<td>检查index作为索引值对某个列表、字符串或数组是否有效。 index &gt; 0 &amp;&amp; index &lt; size</td>
+<td>IndexOutOfBoundsException</td>
+</tr>
+<tr>
+<td>checkPositionIndexes(int start, int end, int size)</td>
+<td>检查[start,end]表示的位置范围对某个列表、字符串或数组是否有效</td>
+<td>IndexOutOfBoundsException</td>
+</tr>
+</tbody></table>
+<p>然后看一下checkNotNull(T) 方法的源码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@CanIgnoreReturnValue</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">T <span class="title">checkNotNull</span><span class="params">(T reference)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (reference == <span class="keyword">null</span>) &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> reference;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>就是封装了一下判空和抛出异常。</p>
+<h2 id="Ordering排序器"><a href="#Ordering排序器" class="headerlink" title="Ordering排序器"></a>Ordering排序器</h2><p>排序器[Ordering]是Guava流畅风格比较器[Comparator]的实现，它可以用来为构建复杂的比较器，以完成集合排序的功能。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">natural()   对可排序类型做自然排序，如数字按大小，日期按先后排序</span><br><span class="line">usingToString() 按对象的字符串形式做字典排序[lexicographical ordering]</span><br><span class="line">from(Comparator)    把给定的Comparator转化为排序器</span><br><span class="line">reverse()   获取语义相反的排序器</span><br><span class="line">nullsFirst()    使用当前排序器，但额外把<span class="keyword">null</span>值排到最前面。</span><br><span class="line">nullsLast() 使用当前排序器，但额外把<span class="keyword">null</span>值排到最后面。</span><br><span class="line">compound(Comparator)    合成另一个比较器，以处理当前排序器中的相等情况。</span><br><span class="line">lexicographical()   基于处理类型T的排序器，返回该类型的可迭代对象Iterable&lt;T&gt;的排序器。</span><br><span class="line">onResultOf(Function)    对集合中元素调用Function，再按返回值用当前排序器排序。<span class="number">123456789</span></span><br></pre></td></tr></table></figure>
+
+<p>示例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Person person = <span class="keyword">new</span> Person(<span class="string">"aa"</span>,<span class="number">14</span>);  <span class="comment">//String name  ,Integer age</span></span><br><span class="line">Person ps = <span class="keyword">new</span> Person(<span class="string">"bb"</span>,<span class="number">13</span>);</span><br><span class="line">Ordering&lt;Person&gt; byOrdering = Ordering.natural().nullsFirst().onResultOf(<span class="keyword">new</span> Function&lt;Person,String&gt;()&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">apply</span><span class="params">(Person person)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> person.age.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">byOrdering.compare(person, ps);</span><br><span class="line">System.out.println(byOrdering.compare(person, ps)); <span class="comment">//1      person的年龄比ps大 所以输出1</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="计算中间代码的运行时间"><a href="#计算中间代码的运行时间" class="headerlink" title="计算中间代码的运行时间"></a>计算中间代码的运行时间</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Stopwatch stopwatch = Stopwatch.createStarted();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="number">100000</span>; i++)&#123;</span><br><span class="line">    <span class="comment">// do some thing</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">long</span> nanos = stopwatch.elapsed(TimeUnit.MILLISECONDS);</span><br><span class="line">System.out.println(nanos);</span><br></pre></td></tr></table></figure>
+
+<p>TimeUnit 可以指定时间输出精确到多少时间</p>
+<h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">File file = <span class="keyword">new</span> File(<span class="string">"test.txt"</span>);</span><br><span class="line">List&lt;String&gt; list = <span class="keyword">null</span>;</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    list = Files.readLines(file, Charsets.UTF_8);</span><br><span class="line">&#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Files.copy(from,to);  <span class="comment">//复制文件</span></span><br><span class="line">Files.deleteDirectoryContents(File directory); <span class="comment">//删除文件夹下的内容(包括文件与子文件夹)  </span></span><br><span class="line">Files.deleteRecursively(File file); <span class="comment">//删除文件或者文件夹  </span></span><br><span class="line">Files.move(File from, File to); <span class="comment">//移动文件</span></span><br><span class="line">URL url = Resources.getResource(<span class="string">"abc.xml"</span>); <span class="comment">//获取classpath根下的abc.xml文件url</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="guava缓存"><a href="#guava缓存" class="headerlink" title="guava缓存"></a>guava缓存</h2><p>guava的缓存设计的比较巧妙，可以很精巧的使用。guava缓存创建分为两种，一种是CacheLoader,另一种则是callback方式</p>
+<p>CacheLoader:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">LoadingCache&lt;String,String&gt; cahceBuilder=CacheBuilder</span><br><span class="line">                .newBuilder()</span><br><span class="line">                .build(<span class="keyword">new</span> CacheLoader&lt;String, String&gt;()&#123;</span><br><span class="line">                    <span class="meta">@Override</span></span><br><span class="line">                    <span class="function"><span class="keyword">public</span> String <span class="title">load</span><span class="params">(String key)</span> <span class="keyword">throws</span> Exception </span>&#123;        </span><br><span class="line">                        String strProValue=<span class="string">"hello "</span>+key+<span class="string">"!"</span>;                </span><br><span class="line">                        <span class="keyword">return</span> strProValue;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);        </span><br><span class="line">System.out.println(cahceBuilder.get(<span class="string">"begincode"</span>));  <span class="comment">//hello begincode!</span></span><br><span class="line">System.out.println(cahceBuilder.get(<span class="string">"wen"</span>)); <span class="comment">//hello wen!</span></span><br><span class="line">System.out.println(cahceBuilder.get(<span class="string">"da"</span>));<span class="comment">//hello da!</span></span><br><span class="line">cahceBuilder.put(<span class="string">"begin"</span>, <span class="string">"code"</span>);</span><br><span class="line">System.out.println(cahceBuilder.get(<span class="string">"begin"</span>)); <span class="comment">//code</span></span><br></pre></td></tr></table></figure>
+
+<p>callback方式:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Cache&lt;String, String&gt; cache = CacheBuilder.newBuilder().maximumSize(<span class="number">1000</span>).build();  </span><br><span class="line">           String resultVal = cache.get(<span class="string">"code"</span>, <span class="keyword">new</span> Callable&lt;String&gt;() &#123;  </span><br><span class="line">               <span class="function"><span class="keyword">public</span> String <span class="title">call</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">                   String strProValue=<span class="string">"begin "</span>+<span class="string">"code"</span>+<span class="string">"!"</span>;                </span><br><span class="line">                   <span class="keyword">return</span> strProValue;</span><br><span class="line">               &#125;  </span><br><span class="line">           &#125;);  </span><br><span class="line">System.out.println(<span class="string">"value : "</span> + resultVal); <span class="comment">//value : begin code!</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/JAVA/" rel="tag"># JAVA</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/16/Java-反射/" rel="next" title="Java:反射">
+                <i class="fa fa-chevron-left"></i> Java:反射
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+      <div>    
+ 
+ 
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+      <strong>本文作者：</strong>Sober ChenZhuo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="/2019/12/21/Guava/" title="Guava">2019/12/21/Guava/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权： </strong>
+    本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+  </li>
+</ul>
+
+</div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/1.png" alt="Sober ChenZhuo">
+            
+              <p class="site-author-name" itemprop="name">Sober ChenZhuo</p>
+              <p class="site-description motion-element" itemprop="description">Keep looking,and don't settle</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chenzhuo233" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:schatten.cz@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Guave"><span class="nav-number">1.</span> <span class="nav-text">Guave</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">1.1.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合操作"><span class="nav-number">1.2.</span> <span class="nav-text">集合操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建不可变集合Immutable（不可变）对象"><span class="nav-number">1.2.1.</span> <span class="nav-text">创建不可变集合Immutable（不可变）对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合"><span class="nav-number">1.2.2.</span> <span class="nav-text">集合</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合过滤"><span class="nav-number">1.2.3.</span> <span class="nav-text">集合过滤</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Predicate（断言）"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">Predicate（断言）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集合-交、并、差集"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">集合 交、并、差集</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合转化特定字符串"><span class="nav-number">1.2.4.</span> <span class="nav-text">集合转化特定字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串转化特定集合"><span class="nav-number">1.2.5.</span> <span class="nav-text">字符串转化特定集合</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串转化list"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">字符串转化list</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串转为map"><span class="nav-number">1.2.5.2.</span> <span class="nav-text">字符串转为map</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符串操作"><span class="nav-number">1.3.</span> <span class="nav-text">字符串操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查参数"><span class="nav-number">1.4.</span> <span class="nav-text">检查参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ordering排序器"><span class="nav-number">1.5.</span> <span class="nav-text">Ordering排序器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算中间代码的运行时间"><span class="nav-number">1.6.</span> <span class="nav-text">计算中间代码的运行时间</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件操作"><span class="nav-number">1.7.</span> <span class="nav-text">文件操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#guava缓存"><span class="nav-number">1.8.</span> <span class="nav-text">guava缓存</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; Thu Apr 25 2019 08:00:00 GMT+0800 (GMT+08:00) &mdash; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sober ChenZhuo</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+<div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style="display:none">
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style="display:none">
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'lh9YCjvegKoT8lcDQ0uiDuAe-gzGzoHsz',
+        appKey: '8nKXru1PdyPiKpkUmTUDu6fw',
+        placeholder: '客官您来写点啥呗',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+<script type="text/javascript" color="0,0,255" opacity="0.7" zindex="-2" count="169" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+</body>
+</html>

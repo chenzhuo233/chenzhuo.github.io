@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="陈某人的基地">
 <meta property="og:description" content="Spring-bootMaven国内镜像123456789&amp;lt;mirrors&amp;gt;　　&amp;lt;mirror&amp;gt;　　　　&amp;lt;id&amp;gt;alimaven&amp;lt;/id&amp;gt;　　　　&amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt;　　　　&amp;lt;name&amp;gt;aliyun maven&amp;lt;/name&amp;gt;　　　　&amp;lt;url&amp;gt;http://">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-19T15:17:16.862Z">
+<meta property="og:updated_time" content="2019-12-23T17:44:00.363Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringBoot">
 <meta name="twitter:description" content="Spring-bootMaven国内镜像123456789&amp;lt;mirrors&amp;gt;　　&amp;lt;mirror&amp;gt;　　　　&amp;lt;id&amp;gt;alimaven&amp;lt;/id&amp;gt;　　　　&amp;lt;mirrorOf&amp;gt;central&amp;lt;/mirrorOf&amp;gt;　　　　&amp;lt;name&amp;gt;aliyun maven&amp;lt;/name&amp;gt;　　　　&amp;lt;url&amp;gt;http://">
@@ -543,7 +543,14 @@
 <p>json字符串中，如果value为null的话，后端对应收到的就是null。</p>
 <p>如果某个参数没有value的话，在传json字符串给后端时，要么干脆就不把该字段写到json字符串中；要么写value时， 必须有值，null  或””都行。千万不能有类似”stature”:，这样的写法<br>————————————————<br>版权声明：本文为CSDN博主「justry_deng」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/justry_deng/article/details/80972817" target="_blank" rel="noopener">https://blog.csdn.net/justry_deng/article/details/80972817</a></p>
 </blockquote>
-<h2 id="Shiro"><a href="#Shiro" class="headerlink" title="Shiro"></a>Shiro</h2>
+<h2 id="Shiro"><a href="#Shiro" class="headerlink" title="Shiro"></a>Shiro</h2><p>Subject    用户    </p>
+<p>SecurityManager    管理所有用户</p>
+<p>Realm    连接数据</p>
+<p><strong>导入</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.shiro<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>shiro-spring<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>开始</strong></p>
+
       
     </div>
     
@@ -685,7 +692,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">33</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
