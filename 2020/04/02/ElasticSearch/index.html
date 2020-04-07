@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="陈某人的基地">
 <meta property="og:description" content="ElasticSearch版本：ElasticSearch 7.6.1  分词器 ik Restful草走 CRUD SpringBoot集成 爬虫 实战，全文检索  Lucene 是一套信息检索工具包，不包含搜索引擎 包含：索引结构工具类。 Lucene 和 ElasticSearch 关系： Els是基于Lucene 做了封装和增强。  概述  ES，开源的高扩展的分布式全文检索引擎，可以处理">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-07T13:09:28.385Z">
+<meta property="og:updated_time" content="2020-04-07T16:36:27.925Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ElasticSearch">
 <meta name="twitter:description" content="ElasticSearch版本：ElasticSearch 7.6.1  分词器 ik Restful草走 CRUD SpringBoot集成 爬虫 实战，全文检索  Lucene 是一套信息检索工具包，不包含搜索引擎 包含：索引结构工具类。 Lucene 和 ElasticSearch 关系： Els是基于Lucene 做了封装和增强。  概述  ES，开源的高扩展的分布式全文检索引擎，可以处理">
@@ -492,6 +492,7 @@
 <p>tika爬电影，音乐</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取请求 url</span></span><br><span class="line">String url = <span class="string">"http://xxx.com"</span>;</span><br><span class="line"><span class="comment">//解析网页,jsoup返回的document就是浏览器的Document对象</span></span><br><span class="line">Document document = Jsoup.parse(<span class="keyword">new</span> URL(url),<span class="number">30000</span>);</span><br><span class="line"><span class="comment">//所有在js中使用的方法都可以用</span></span><br><span class="line">Element element = document.getElementById(<span class="string">"div的id"</span>);</span><br><span class="line"><span class="comment">//获取所有的li元素</span></span><br><span class="line">element.getElementsByTag(<span class="string">"li"</span>);</span><br><span class="line"><span class="comment">//获取元素内容</span></span><br><span class="line"><span class="keyword">for</span>(Element el:elements)&#123;</span><br><span class="line">  <span class="comment">//图片获取不到可能放在懒加载路径中</span></span><br><span class="line">  String img = el.getElementByTag(<span class="string">"img"</span>).eq(<span class="number">0</span>).attr(<span class="string">"src"</span>);</span><br><span class="line">  String price = el.getElementByClass(<span class="string">"p-price"</span>).eq(<span class="number">0</span>).text();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p>（待完善。</p>
 
       
     </div>
