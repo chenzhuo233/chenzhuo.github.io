@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/1.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/1.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/1.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="elasticSearch,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="ElasticSearch版本：ElasticSearch 7.6.1  分词器 ik Restful草走 CRUD SpringBoot集成 爬虫 实战，全文检索  Lucene 是一套信息检索工具包，不包含搜索引擎 包含：索引结构工具类。 Lucene 和 ElasticSearch 关系： Els是基于Lucene 做了封装和增强。  概述  ES，开源的高扩展的分布式全文检索引擎，可以处理">
+<meta name="keywords" content="elasticSearch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ElasticSearch">
+<meta property="og:url" content="/chenzhuo233.github.io/2020/04/02/ElasticSearch/index.html">
+<meta property="og:site_name" content="陈某人的基地">
+<meta property="og:description" content="ElasticSearch版本：ElasticSearch 7.6.1  分词器 ik Restful草走 CRUD SpringBoot集成 爬虫 实战，全文检索  Lucene 是一套信息检索工具包，不包含搜索引擎 包含：索引结构工具类。 Lucene 和 ElasticSearch 关系： Els是基于Lucene 做了封装和增强。  概述  ES，开源的高扩展的分布式全文检索引擎，可以处理">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-04-07T13:09:28.385Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ElasticSearch">
+<meta name="twitter:description" content="ElasticSearch版本：ElasticSearch 7.6.1  分词器 ik Restful草走 CRUD SpringBoot集成 爬虫 实战，全文检索  Lucene 是一套信息检索工具包，不包含搜索引擎 包含：索引结构工具类。 Lucene 和 ElasticSearch 关系： Els是基于Lucene 做了封装和增强。  概述  ES，开源的高扩展的分布式全文检索引擎，可以处理">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="/chenzhuo233.github.io/2020/04/02/ElasticSearch/">
+
+
+
+
+
+  <title>ElasticSearch | 陈某人的基地</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?440a995f45f4a1188f77ead3242666e9";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">陈某人的基地</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2020/04/02/ElasticSearch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sober ChenZhuo">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/1.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="陈某人的基地">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ElasticSearch</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-02T19:56:16+08:00">
+                2020-04-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/04/02/ElasticSearch/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/04/02/ElasticSearch/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span id="busuanzi_value_page_pv"></span>次阅读
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="ElasticSearch"><a href="#ElasticSearch" class="headerlink" title="ElasticSearch"></a>ElasticSearch</h1><p>版本：ElasticSearch 7.6.1</p>
+<ol>
+<li>分词器 ik</li>
+<li>Restful草走</li>
+<li>CRUD</li>
+<li>SpringBoot集成</li>
+<li>爬虫</li>
+<li>实战，全文检索</li>
+</ol>
+<p>Lucene 是一套信息检索工具包，不包含搜索引擎</p>
+<p>包含：索引结构工具类。</p>
+<p>Lucene 和 ElasticSearch 关系：</p>
+<p>Els是基于Lucene 做了封装和增强。</p>
+<blockquote>
+<p>概述</p>
+</blockquote>
+<p>ES，开源的高扩展的分布式全文检索引擎，可以处理PB级别的数据，目的是通过RESTfulAPI来隐藏Lucene的复杂性，让全文搜索变得简单。</p>
+<blockquote>
+<p>简介</p>
+</blockquote>
+<p>实时分布式搜索和分析引擎，用于全文搜索，结构化搜索，分析。</p>
+<blockquote>
+<p>对比solr</p>
+</blockquote>
+<ol>
+<li>使用简单</li>
+<li>索引增加solr会很慢</li>
+<li>es只支持json</li>
+<li>es维护很快更新快</li>
+<li>es更适合新兴的实时搜索系统</li>
+</ol>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>jdk1.8最低要求，客户端，界面工具</p>
+<p>华为云镜像下载</p>
+<p>可视化界面：es head</p>
+<p>界面工具跨域问题配置解决</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">http.cors.enabled:true</span></span><br><span class="line"><span class="string">http.cors.allow-origin:"*"</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><blockquote>
+<p>ELK</p>
+</blockquote>
+<p>elasticsearch、Logstash、Kibana也被称为Elastic Stack。</p>
+<p>logstash提供数据源服务</p>
+<p>kibana 可视化工具</p>
+<blockquote>
+<p>概念</p>
+</blockquote>
+<ol>
+<li>索引</li>
+<li>字段类型</li>
+<li>文档</li>
+</ol>
+<blockquote>
+<p>倒排索引</p>
+</blockquote>
+<p>采用Lucene倒排位为底层，适用于快速全文搜索。</p>
+<p>不完全搜索全文关键字，获取所有索引（库）比较出现权重，过滤掉无关数据提高效率。es是由多个lucene的索引组合。</p>
+<h3 id="IK分词器插件"><a href="#IK分词器插件" class="headerlink" title="IK分词器插件"></a>IK分词器插件</h3><p>把一段中文划分成一个个关键字，组合分别搜索</p>
+<p>下载ES的IK分词器插件解压到pulg文件下。</p>
+<p>ik_smart    ik_max_word</p>
+<p>可以自己配置dlc文件。</p>
+<h3 id="RESTful风格操作"><a href="#RESTful风格操作" class="headerlink" title="RESTful风格操作"></a>RESTful风格操作</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Put testdb</span><br><span class="line">&#123;</span><br><span class="line">	<span class="attr">"mappings"</span>:&#123;</span><br><span class="line">		<span class="attr">"properties"</span>:&#123;</span><br><span class="line">			<span class="attr">"name"</span>:&#123;</span><br><span class="line">				<span class="attr">"type"</span>:<span class="string">"text"</span></span><br><span class="line">			&#125;,</span><br><span class="line">			<span class="attr">"desc"</span>:&#123;</span><br><span class="line">				<span class="attr">"type"</span>:<span class="string">"keyword"</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><p>should   must_not  must 查询条件</p>
+<p>filter 查询过滤条件 gt：大于，gte：大于等于，lt：小于，lte：小于等于。</p>
+<p>模糊查询tags，可用空格隔开，可以控制_score分权重。</p>
+<p>精确查询，term 直接通过倒排索引指定词条惊醒精度查找。</p>
+<p>关于分词：</p>
+<ul>
+<li>term，直接查询精确的</li>
+<li>match，会使用分词器解析</li>
+</ul>
+<p>term：</p>
+<ul>
+<li>匹配</li>
+<li>按条件匹配</li>
+<li>精确匹配</li>
+<li>范围匹配</li>
+<li>多条件查询</li>
+<li>匹配字段过滤</li>
+</ul>
+<h2 id="集成Springboot"><a href="#集成Springboot" class="headerlink" title="集成Springboot"></a>集成Springboot</h2><blockquote>
+<p>文档</p>
+</blockquote>
+<p>客户端相关，Java Rest Client。</p>
+<p>找maven依赖，使用完需要关闭client.close()。</p>
+<p>pom自定义es版本，7.6.1，jdk1.8以上。</p>
+<p>编写配置类</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ElasticSearchClientConfig</span></span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="meta">@Bean</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> RestHighLeveClient <span class="title">restHighLevelClient</span><span class="params">()</span></span>&#123;</span><br><span class="line">    RestHighLevenClient client <span class="keyword">new</span> Res..(</span><br><span class="line">      RestClient.builder(</span><br><span class="line">    <span class="keyword">new</span> HttpHost(<span class="string">"127.0.0.1"</span>,<span class="number">9200</span>,<span class="string">"http"</span>)));</span><br><span class="line">    <span class="keyword">return</span> client;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>分析源码</p>
+<p>xxxAutoConfigration xxxProperties</p>
+<h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> RestHighclient client;</span><br><span class="line"></span><br><span class="line"><span class="comment">//创建索引xxx请求</span></span><br><span class="line">CreateIndexRequest request = <span class="keyword">new</span> CreateIndexRequest(<span class="string">"xxx"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//客户端执行请求 ,请求后获得响应</span></span><br><span class="line">	CreateIndexResponse createResponse = client.indices().create(request,RequestOptions.DEFAULT);</span><br><span class="line"></span><br><span class="line"><span class="comment">//测试获取索引xxx</span></span><br><span class="line">GetIndexRequest request = <span class="keyword">new</span> GetIndexRequest(<span class="string">"xxx"</span>);</span><br><span class="line"><span class="comment">//判断索引是否存在</span></span><br><span class="line">client.indices().exists(request,RequestOption.DEFAULT);</span><br><span class="line"><span class="comment">//删除索引</span></span><br><span class="line">DeleteIndexRequest request = <span class="keyword">new</span> DeleteIndexRequest(<span class="string">"xxx"</span>);</span><br><span class="line">  <span class="comment">//判断删除成功</span></span><br><span class="line">AcknowledgeResponse response = indices().delete(request,RequestOption.DEFAULT);</span><br></pre></td></tr></table></figure>
+
+<p>测试添加</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建对象</span></span><br><span class="line">User user - <span class="keyword">new</span> User(<span class="string">"chen"</span>);</span><br><span class="line"><span class="comment">//创建请求</span></span><br><span class="line">IndexRequest request = <span class="keyword">new</span> Indexrequest(<span class="string">"xxx"</span>);</span><br><span class="line"><span class="comment">//将数据放入请求 json</span></span><br><span class="line">request.source(JSON.toJSONString(user),XContentType.JSON);</span><br><span class="line"><span class="comment">//客户端发送请求获取响应结果</span></span><br><span class="line">CreateIndexResponse createResponse = client.indices().create(request,RequestOptions.DEFAULT);</span><br></pre></td></tr></table></figure>
+
+<p>获取文档，判断是否存在 get</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//判断1号文档是否存在</span></span><br><span class="line">GeyRequest getRequest = <span class="keyword">new</span> GetRequest(<span class="string">"xxx"</span>,<span class="string">"1"</span>);</span><br><span class="line"><span class="comment">//不获取返回的_source 的上下文</span></span><br><span class="line">getRequest.fetchSourceContext(<span class="keyword">new</span> FetchSourceContext(<span class="keyword">false</span>));</span><br><span class="line">getRequest.storedFields(<span class="string">"_nonw_"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>获取文档信息</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">GetRequest getRequest = <span class="keyword">new</span> GetRequest(<span class="string">"xxx"</span>,<span class="number">1</span>);</span><br><span class="line">GetResponse getResponse = client.get(getRequest,RequestOption.DEFAULT);</span><br><span class="line"><span class="comment">//打印文档信息</span></span><br><span class="line">getResponse,getSourceAsString().sout</span><br></pre></td></tr></table></figure>
+
+<p>更新文档信息</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">UpdateRequest updateRequest = <span class="keyword">new</span> UpdateRequest(<span class="string">"xxx"</span>,<span class="string">"1"</span>);</span><br><span class="line">User user = <span class="keyword">new</span> User();</span><br><span class="line">updateRequest.doc(JSON.toJSONSTring(user).XContentType.JSON);</span><br><span class="line"></span><br><span class="line">UpdateResponse response = client.update(updateRequest,RequestOption.DEFAULT);</span><br><span class="line">updateResponse.status().sout;</span><br></pre></td></tr></table></figure>
+
+<p>特殊的，一般会批量插入数据</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">BulkRequest bulkRequest = <span class="keyword">new</span> B();</span><br><span class="line">bulkRequest.tiomeout(<span class="string">"10s"</span>);</span><br><span class="line"></span><br><span class="line">userList</span><br><span class="line"><span class="comment">//批量更新和批量删除就好</span></span><br><span class="line"><span class="keyword">for</span>(i)&#123;</span><br><span class="line">  bulkRequest.add(<span class="keyword">new</span> IndexRequest(<span class="string">"xxx"</span>).id(<span class="string">""</span>+(i+<span class="number">1</span>)).source(JSON.toJSONSrting(userList.get(i),XContentType.JSON));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>查询</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> SeachRequest.<span class="keyword">var</span>;</span><br><span class="line"><span class="comment">//构建搜索条件</span></span><br><span class="line"><span class="keyword">new</span> SearchSourceBuilder.<span class="keyword">var</span>;</span><br><span class="line"><span class="comment">//查询条件，使用qb工具</span></span><br><span class="line"><span class="comment">//QuerBuilders.termQuery()精确查询</span></span><br><span class="line"><span class="comment">//matchAllQuery() 匹配所有</span></span><br><span class="line">QueryBuilders.termQuery(<span class="string">"name"</span>,<span class="string">"chenzhuo"</span>).<span class="keyword">var</span>；</span><br><span class="line"> sourceBuilder.query(temQueryBuilder);</span><br><span class="line"><span class="comment">//设置查询时间</span></span><br><span class="line">sourceBuilder.timeout(<span class="keyword">new</span> TimeValue(<span class="number">60</span>,TimeUnit.SECONDS));</span><br><span class="line"></span><br><span class="line">searchRequest.source(sourceBuilder);</span><br><span class="line"></span><br><span class="line">searchresponse = cilent.search(searchResquest,RequestOption.DEFAULT);</span><br><span class="line"><span class="comment">//查询的数据</span></span><br><span class="line">JSON.toJSONString(searchResponse.getHirs()).sout;</span><br></pre></td></tr></table></figure>
+
+<h2 id="实战使用"><a href="#实战使用" class="headerlink" title="实战使用"></a>实战使用</h2><p>解析网页jsoup</p>
+<p>tika爬电影，音乐</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取请求 url</span></span><br><span class="line">String url = <span class="string">"http://xxx.com"</span>;</span><br><span class="line"><span class="comment">//解析网页,jsoup返回的document就是浏览器的Document对象</span></span><br><span class="line">Document document = Jsoup.parse(<span class="keyword">new</span> URL(url),<span class="number">30000</span>);</span><br><span class="line"><span class="comment">//所有在js中使用的方法都可以用</span></span><br><span class="line">Element element = document.getElementById(<span class="string">"div的id"</span>);</span><br><span class="line"><span class="comment">//获取所有的li元素</span></span><br><span class="line">element.getElementsByTag(<span class="string">"li"</span>);</span><br><span class="line"><span class="comment">//获取元素内容</span></span><br><span class="line"><span class="keyword">for</span>(Element el:elements)&#123;</span><br><span class="line">  <span class="comment">//图片获取不到可能放在懒加载路径中</span></span><br><span class="line">  String img = el.getElementByTag(<span class="string">"img"</span>).eq(<span class="number">0</span>).attr(<span class="string">"src"</span>);</span><br><span class="line">  String price = el.getElementByClass(<span class="string">"p-price"</span>).eq(<span class="number">0</span>).text();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/elasticSearch/" rel="tag"># elasticSearch</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/03/30/Redis/" rel="next" title="Redis">
+                <i class="fa fa-chevron-left"></i> Redis
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+      <div>    
+ 
+ 
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+      <strong>本文作者：</strong>Sober ChenZhuo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="/2020/04/02/ElasticSearch/" title="ElasticSearch">2020/04/02/ElasticSearch/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权： </strong>
+    本站文章均采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0 CN</a> 许可协议，请勿用于商业，转载注明出处！
+  </li>
+</ul>
+
+</div>
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/1.png" alt="Sober ChenZhuo">
+            
+              <p class="site-author-name" itemprop="name">Sober ChenZhuo</p>
+              <p class="site-description motion-element" itemprop="description">Keep looking,and don't settle</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/chenzhuo233" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:schatten.cz@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ElasticSearch"><span class="nav-number">1.</span> <span class="nav-text">ElasticSearch</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始"><span class="nav-number">1.2.</span> <span class="nav-text">开始</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#IK分词器插件"><span class="nav-number">1.2.1.</span> <span class="nav-text">IK分词器插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RESTful风格操作"><span class="nav-number">1.2.2.</span> <span class="nav-text">RESTful风格操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询"><span class="nav-number">1.3.</span> <span class="nav-text">查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集成Springboot"><span class="nav-number">1.4.</span> <span class="nav-text">集成Springboot</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#API"><span class="nav-number">1.4.1.</span> <span class="nav-text">API</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实战使用"><span class="nav-number">1.5.</span> <span class="nav-text">实战使用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; Thu Apr 25 2019 08:00:00 GMT+0800 (GMT+08:00) &mdash; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sober ChenZhuo</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+<div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv" style="display:none">
+    本站总访问量 <span id="busuanzi_value_site_pv"></span> 次
+    <span class="post-meta-divider">|</span>
+</span>
+<span id="busuanzi_container_site_uv" style="display:none">
+    有<span id="busuanzi_value_site_uv"></span>人看过我的博客啦
+</span>
+</div>
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'lh9YCjvegKoT8lcDQ0uiDuAe-gzGzoHsz',
+        appKey: '8nKXru1PdyPiKpkUmTUDu6fw',
+        placeholder: '客官您来写点啥呗',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+<script type="text/javascript" color="0,0,255" opacity="0.7" zindex="-2" count="169" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+</body>
+</html>
