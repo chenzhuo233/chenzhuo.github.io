@@ -92,7 +92,7 @@
 <meta property="og:image" content="/2020/03/30/Redis/aof.jpg">
 <meta property="og:image" content="/2020/03/30/Redis/bl.jpeg">
 <meta property="og:image" content="/2020/03/30/Redis/hcxb.jpeg">
-<meta property="og:updated_time" content="2020-04-07T16:31:20.578Z">
+<meta property="og:updated_time" content="2020-04-07T16:39:46.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis">
 <meta name="twitter:description" content="RedisNosql，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。key-value不仅仅是key-value。 官网 安装（Mac） 使用Homebrew下载redis brew search redis 找到最新版，现在稳定版为redis@4.0 brew install redis@4.0，等待下载完成即可 下载完后会有提示If you need to have redi">
@@ -630,7 +630,7 @@
 <li>订阅关注(微信，直播平台订阅功能…)</li>
 </ol>
 <p>配合MQ使用</p>
-<h2 id="Redis主从复制"><a href="#Redis主从复制" class="headerlink" title="Redis主从复制"></a>Redis主从复制</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>主从复制，是将一台redis的服务器的数据复制到其他redis服务器，前者主节点master，后者从节点slave，数据复制是单向的。读写分离，主机以写为主，从机以从机为主，可以减缓服务器压力，至少三台。</p>
+<h2 id="Redis主从复制"><a href="#Redis主从复制" class="headerlink" title="Redis主从复制"></a>Redis主从复制</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>主从复制，是将一台redis的服务器的数据复制到其他redis服务器，前者主节点master，后者从节点slave，数据复制是单向的。读写分离，主机以写为主，从机以读为主，可以减缓服务器压力，至少三台。</p>
 <h3 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h3><ol>
 <li>数据冗余</li>
 <li>故障恢复</li>
