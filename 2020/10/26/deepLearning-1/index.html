@@ -88,8 +88,9 @@
 <meta property="og:description" content="[TOC] 数据操作 numpy数据操作 创建数组 12345678910111213141516171819202122232425262728import numpy as np# 给定值创建x = np.array([1,2,3])print(x)&amp;gt; [1,2,3]# 创建未初始化array 随机值 dtype指定数据类型x = np.empty([3,2],dtype=int)pri">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="/.io/2020//10/26/deepLearning-1/linear.jpg">
+<meta property="og:image" content="/.io/2020//10/26/deepLearning-1/func.jpg">
 <meta property="og:image" content="/.io/2020//10/26/deepLearning-1/op.jpeg">
-<meta property="og:updated_time" content="2020-11-29T06:24:28.320Z">
+<meta property="og:updated_time" content="2020-11-29T06:50:15.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DeepLearning(1)">
 <meta name="twitter:description" content="[TOC] 数据操作 numpy数据操作 创建数组 12345678910111213141516171819202122232425262728import numpy as np# 给定值创建x = np.array([1,2,3])print(x)&amp;gt; [1,2,3]# 创建未初始化array 随机值 dtype指定数据类型x = np.empty([3,2],dtype=int)pri">
@@ -413,6 +414,7 @@
 <p>$$<br>
 Loss = (\frac1N)\displaystyle\sum^N_iloss_i｜\begin{bmatrix}\hat{loss_1}\\hat{loss_2}\\hat{loss_3}\\vdots \end{bmatrix} = ( \begin{bmatrix}\hat{y_1}\\hat{y_2}\\hat{y_3}\\vdots \end{bmatrix} - \begin{bmatrix}{y_1}\{y_2}\{y_3}\\vdots \end{bmatrix})^2<br>
 $$</p>
+<img src="/.io/2020//10/26/deepLearning-1/func.jpg" title="markdown渲染数学公式失败">
 <p>这1/N可有可无，就是对所有损失做一个均值，这个在使用函数中有参数选择：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># size_average 是否求均值，默认为True		reduce 是否求和，默认为True</span></span><br><span class="line">criterion = torch.nn.MSELoss(size_average=<span class="literal">True</span>,reduce=<span class="literal">True</span>)</span><br><span class="line"><span class="comment"># 使用时需要两个参数 输出值 和 实际值  -&gt; Tensor</span></span><br><span class="line">criterion(y_perd,y)</span><br></pre></td></tr></table></figure>
 <p>还有很多常用的损失函数：</p>
