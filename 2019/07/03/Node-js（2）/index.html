@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="express框架express是node.js的一个服务器端框架 下载安装express：npm install express 配置，接收请求，响应。 开始与原生代码不同的是 非侵入式req 原生： res.write(); res.end(); express: res.send(); 保留了原生功能，添加了一些方法（send） 使用express已经将整个需要的模块与文件全部创建好了，只需">
+<meta name="description" content="express框架 express是node.js的一个服务器端框架 下载安装express：npm install express 配置，接收请求，响应。 开始 与原生代码不同的是 非侵入式req 原生： res.write(); res.end(); express: res.send(); 保留了原生功能，添加了一些方法（send） 使用 express已经将整个需要的模块与文件全部创建好了">
 <meta name="keywords" content="学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Node.js（2）">
 <meta property="og:url" content="/chenzhuo233.github.io/2019/07/03/Node-js（2）/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="express框架express是node.js的一个服务器端框架 下载安装express：npm install express 配置，接收请求，响应。 开始与原生代码不同的是 非侵入式req 原生： res.write(); res.end(); express: res.send(); 保留了原生功能，添加了一些方法（send） 使用express已经将整个需要的模块与文件全部创建好了，只需">
+<meta property="og:description" content="express框架 express是node.js的一个服务器端框架 下载安装express：npm install express 配置，接收请求，响应。 开始 与原生代码不同的是 非侵入式req 原生： res.write(); res.end(); express: res.send(); 保留了原生功能，添加了一些方法（send） 使用 express已经将整个需要的模块与文件全部创建好了">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-09-28T14:42:39.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js（2）">
-<meta name="twitter:description" content="express框架express是node.js的一个服务器端框架 下载安装express：npm install express 配置，接收请求，响应。 开始与原生代码不同的是 非侵入式req 原生： res.write(); res.end(); express: res.send(); 保留了原生功能，添加了一些方法（send） 使用express已经将整个需要的模块与文件全部创建好了，只需">
+<meta name="twitter:description" content="express框架 express是node.js的一个服务器端框架 下载安装express：npm install express 配置，接收请求，响应。 开始 与原生代码不同的是 非侵入式req 原生： res.write(); res.end(); express: res.send(); 保留了原生功能，添加了一些方法（send） 使用 express已经将整个需要的模块与文件全部创建好了">
 
 
 
@@ -399,10 +399,12 @@
       
 
       
-        <h2 id="express框架"><a href="#express框架" class="headerlink" title="express框架"></a>express框架</h2><p>express是node.js的一个服务器端框架</p>
+        <h2 id="express框架">express框架</h2>
+<p>express是node.js的一个服务器端框架</p>
 <p>下载安装express：<code>npm install express</code></p>
 <p>配置，接收请求，响应。</p>
-<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><p>与原生代码不同的是</p>
+<h3 id="开始">开始</h3>
+<p>与原生代码不同的是</p>
 <p>非侵入式req</p>
 <p>原生：</p>
 <p><code>res.write();</code></p>
@@ -410,7 +412,8 @@
 <p>express:</p>
 <p><code>res.send();</code></p>
 <p>保留了原生功能，添加了一些方法（send）</p>
-<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>express已经将整个需要的模块与文件全部创建好了，只需要添加自己所需要的依赖和模块了。</p>
+<h3 id="使用">使用</h3>
+<p>express已经将整个需要的模块与文件全部创建好了，只需要添加自己所需要的依赖和模块了。</p>
 <p>创建一个目录，然后cd到这个目录下<code>express app</code>就完成创建后端框架了。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">create : app/</span><br><span class="line">  create : app/public/</span><br><span class="line">  create : app/public/javascripts/</span><br><span class="line">  create : app/public/images/</span><br><span class="line">  create : app/public/stylesheets/</span><br><span class="line">  create : app/public/stylesheets/style.css</span><br><span class="line">  create : app/routes/</span><br><span class="line">  create : app/routes/index.js</span><br><span class="line">  create : app/routes/users.js</span><br><span class="line">  create : app/views/</span><br><span class="line">  create : app/views/error.jade</span><br><span class="line">  create : app/views/index.jade</span><br><span class="line">  create : app/views/layout.jade</span><br><span class="line">  create : app/app.js</span><br><span class="line">  create : app/package.json</span><br><span class="line">  create : app/bin/</span><br><span class="line">  create : app/bin/www</span><br></pre></td></tr></table></figure>
 <p><em>end</em></p>

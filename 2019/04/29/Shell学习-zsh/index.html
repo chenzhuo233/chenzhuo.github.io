@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Linux命令学习1.前面关于shell，在大一上学期放寒假期间学习了一段时间，但当时由于数据结构啊算法啊都还没有学，于是老师让我开始学shell，学习时同时也学会了虚拟机的使用(学习环境:Linux ubuntu系统，virtualbox，oh-my-zsh)，搭建博客后决定整理一些平时常用的shell命令避免之后使用的时候忘掉，和方便忘掉后查找。 参考文章 这里包含了大多数关于文件的操作命令">
+<meta name="description" content="Linux命令学习 1.前面 关于shell，在大一上学期放寒假期间学习了一段时间，但当时由于数据结构啊算法啊都还没有学，于是老师让我开始学shell，学习时同时也学会了虚拟机的使用(学习环境:Linux ubuntu系统，virtualbox，oh-my-zsh)，搭建博客后决定整理一些平时常用的shell命令避免之后使用的时候忘掉，和方便忘掉后查找。 参考文章 这里包含了大多数关于文件的操作命">
 <meta name="keywords" content="学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Shell学习-zsh">
 <meta property="og:url" content="/chenzhuo233.github.io/2019/04/29/Shell学习-zsh/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="Linux命令学习1.前面关于shell，在大一上学期放寒假期间学习了一段时间，但当时由于数据结构啊算法啊都还没有学，于是老师让我开始学shell，学习时同时也学会了虚拟机的使用(学习环境:Linux ubuntu系统，virtualbox，oh-my-zsh)，搭建博客后决定整理一些平时常用的shell命令避免之后使用的时候忘掉，和方便忘掉后查找。 参考文章 这里包含了大多数关于文件的操作命令">
+<meta property="og:description" content="Linux命令学习 1.前面 关于shell，在大一上学期放寒假期间学习了一段时间，但当时由于数据结构啊算法啊都还没有学，于是老师让我开始学shell，学习时同时也学会了虚拟机的使用(学习环境:Linux ubuntu系统，virtualbox，oh-my-zsh)，搭建博客后决定整理一些平时常用的shell命令避免之后使用的时候忘掉，和方便忘掉后查找。 参考文章 这里包含了大多数关于文件的操作命">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2020-11-13T10:05:07.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Shell学习-zsh">
-<meta name="twitter:description" content="Linux命令学习1.前面关于shell，在大一上学期放寒假期间学习了一段时间，但当时由于数据结构啊算法啊都还没有学，于是老师让我开始学shell，学习时同时也学会了虚拟机的使用(学习环境:Linux ubuntu系统，virtualbox，oh-my-zsh)，搭建博客后决定整理一些平时常用的shell命令避免之后使用的时候忘掉，和方便忘掉后查找。 参考文章 这里包含了大多数关于文件的操作命令">
+<meta name="twitter:description" content="Linux命令学习 1.前面 关于shell，在大一上学期放寒假期间学习了一段时间，但当时由于数据结构啊算法啊都还没有学，于是老师让我开始学shell，学习时同时也学会了虚拟机的使用(学习环境:Linux ubuntu系统，virtualbox，oh-my-zsh)，搭建博客后决定整理一些平时常用的shell命令避免之后使用的时候忘掉，和方便忘掉后查找。 参考文章 这里包含了大多数关于文件的操作命">
 
 
 
@@ -399,16 +399,20 @@
       
 
       
-        <h2 id="Linux命令学习"><a href="#Linux命令学习" class="headerlink" title="Linux命令学习"></a>Linux命令学习</h2><h3 id="1-前面"><a href="#1-前面" class="headerlink" title="1.前面"></a>1.前面</h3><p>关于shell，在大一上学期放寒假期间学习了一段时间，但当时由于数据结构啊算法啊都还没有学，于是老师让我开始学shell，学习时同时也学会了虚拟机的使用(学习环境:Linux ubuntu系统，virtualbox，oh-my-zsh)，搭建博客后决定整理一些平时常用的shell命令<del>避免之后使用的时候忘掉，和方便忘掉后查找</del>。</p>
+        <h2 id="Linux命令学习">Linux命令学习</h2>
+<h3 id="1-前面">1.前面</h3>
+<p>关于shell，在大一上学期放寒假期间学习了一段时间，但当时由于数据结构啊算法啊都还没有学，于是老师让我开始学shell，学习时同时也学会了虚拟机的使用(学习环境:Linux ubuntu系统，virtualbox，oh-my-zsh)，搭建博客后决定整理一些平时常用的shell命令<s>避免之后使用的时候忘掉，和方便忘掉后查找</s>。</p>
 <p><strong><a href="https://www.cnblogs.com/qq350760546/p/7890680.html" target="_blank" rel="noopener">参考文章</a> 这里包含了大多数关于文件的操作命令</strong></p>
 <ul>
-<li><p>命令ls——列出文件</p>
+<li>
+<p>命令ls——列出文件</p>
 <p><code>ls -a</code> 给出当前目录下所有文件，包括“隐藏”文件(a=all)</p>
 <p><code>ls a*</code> 列出当前目录下以字母a开头的所有文件</p>
 <p><code>ls -l</code> 可以查看各文件权限</p>
 <p><code>ls -al</code> 上面两个连起来</p>
 </li>
-<li><p>命令cd——切换到指定目录</p>
+<li>
+<p>命令cd——切换到指定目录</p>
 <p><code>cd ~</code> 切换到主目录</p>
 <p><code>cd /123</code> 切换到目录/123</p>
 <p><code>cd root</code> 切换到当前目录下的root目录</p>
@@ -416,40 +420,56 @@
 <p><code>cd ..</code> 切换到到上一级目录</p>
 <p><code>cd ../..</code> 切换到上二级目录</p>
 </li>
-<li><p>命令mkdir——创建一个目录</p>
+<li>
+<p>命令mkdir——创建一个目录</p>
 <p><code>mkdir 123</code> 建立一个名为123的目录</p>
 </li>
-<li><p>命令mv——移动和重命名文件</p>
+<li>
+<p>命令mv——移动和重命名文件</p>
 <p><code>mv a b</code> 将a文件重命名为b</p>
 <p><code>mv a /root</code> 把当前目录下的a文件移动到/tmp/目录下</p>
 </li>
-<li><p>命令rm——删除文件和目录</p>
+<li>
+<p>命令rm——删除文件和目录</p>
 <p><code>rm a</code> 删除文件a</p>
 <p><code>rm *</code> 删除当前目录下的所有文件（未隐藏文件）。rm命令不删除目录，除非也指定了-r(递归)参数。</p>
 <p><code>rm -rf .git</code> 强制删除git(可以删除隐藏文件)目录以及其所有内容</p>
 </li>
-<li><p>命令mv——移动文件</p>
+<li>
+<p>命令mv——移动文件</p>
 <p><code>mv ./123 ../</code> 将当前目录下的123文件移动到上一层目录</p>
 </li>
-<li><p>命令chmod——更改文件权限</p>
+<li>
+<p>命令chmod——更改文件权限</p>
 <p><code>”drwxrwxrwx“</code>=<code>4+2+1 4+2+1 4+2+1</code>=<code>777</code></p>
 <p>读、写、运行三项权限可以用数字表示，r=4,w=2,x=1</p>
 <p><code>777</code>就是rwxrwxrwx，意思是该登录用户（可以用命令id查看）、他所在的组和其他人都有这个文件的最高权限</p>
 <p><code>chmod 777 123.md</code>这个命令表示给123这个md文件最高权限</p>
 </li>
-<li><p>命令touch——创建文件</p>
+<li>
+<p>命令touch——创建文件</p>
 <p><code>touch 123.txt</code> 创建一个名为123的txt文件</p>
 </li>
-<li><p>命令grep——搜索文件<br>例:grep bible /etc/exports  (表示在文件exports中查找包含bible的所有类)</p>
-<p><strong>常用参数</strong><br><code>-c</code> 计算找到 ‘搜寻字符串’(即 pattern) 的次数<br><code>-i</code>忽略大小写的不同，所以大小写视为相同<br><code>-n</code> 输出行号<br><code>-v</code> 反向选择，打印不匹配的行<br><code>-r</code> 递归搜索<br><code>--color=auto</code> 将找到的关键词部分加上颜色显示</p>
+<li>
+<p>命令grep——搜索文件<br>
+例:grep bible /etc/exports  (表示在文件exports中查找包含bible的所有类)</p>
+<p><strong>常用参数</strong><br>
+<code>-c</code> 计算找到 ‘搜寻字符串’(即 pattern) 的次数<br>
+<code>-i</code>忽略大小写的不同，所以大小写视为相同<br>
+<code>-n</code> 输出行号<br>
+<code>-v</code> 反向选择，打印不匹配的行<br>
+<code>-r</code> 递归搜索<br>
+<code>--color=auto</code> 将找到的关键词部分加上颜色显示</p>
 </li>
-<li><p>命令vim——编辑文件</p>
+<li>
+<p>命令vim——编辑文件</p>
 <p>进入后<code>i</code>进入编辑插入模式</p>
 <p>ESC退出编辑模式</p>
 <p><code>:wq</code>w是保存，q是退出(切记加冒号！！！)</p>
 </li>
 </ul>
-<h3 id="记录一下方便忘了后回来查看2333"><a href="#记录一下方便忘了后回来查看2333" class="headerlink" title="记录一下方便忘了后回来查看2333"></a>记录一下<del>方便忘了后回来查看2333</del></h3>
+<h3 id="记录一下方便忘了后回来查看2333">记录一下<s>方便忘了后回来查看2333</s></h3>
+
       
     </div>
     

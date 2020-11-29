@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="滑窗算法滑窗算法是通过使用特定大小的子列表，在遍历完整列表的同时进行特定的操作，以达到降低了循环的嵌套深度。 一般在找无重复最长子串，连续元素最大和等。  双指针移动，遍历时不嵌套循环所有值，外层遍历代表整个窗口向右滑动，每次减去失效值（重复值）加上最新值，比较长度。 例子：  给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。 示例 1: 输入: “abcabcbb”输出: 3解释">
+<meta name="description" content="滑窗算法 滑窗算法是通过使用特定大小的子列表，在遍历完整列表的同时进行特定的操作，以达到降低了循环的嵌套深度。 一般在找无重复最长子串，连续元素最大和等。  双指针移动，遍历时不嵌套循环所有值，外层遍历代表整个窗口向右滑动，每次减去失效值（重复值）加上最新值，比较长度。 例子：  给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。 示例 1: 输入: “abcabcbb” 输出: 3">
 <meta name="keywords" content="算法学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sliding-window-algorithm算法">
 <meta property="og:url" content="/chenzhuo233.github.io/2019/11/03/sliding-window-algorithm算法/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="滑窗算法滑窗算法是通过使用特定大小的子列表，在遍历完整列表的同时进行特定的操作，以达到降低了循环的嵌套深度。 一般在找无重复最长子串，连续元素最大和等。  双指针移动，遍历时不嵌套循环所有值，外层遍历代表整个窗口向右滑动，每次减去失效值（重复值）加上最新值，比较长度。 例子：  给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。 示例 1: 输入: “abcabcbb”输出: 3解释">
+<meta property="og:description" content="滑窗算法 滑窗算法是通过使用特定大小的子列表，在遍历完整列表的同时进行特定的操作，以达到降低了循环的嵌套深度。 一般在找无重复最长子串，连续元素最大和等。  双指针移动，遍历时不嵌套循环所有值，外层遍历代表整个窗口向右滑动，每次减去失效值（重复值）加上最新值，比较长度。 例子：  给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。 示例 1: 输入: “abcabcbb” 输出: 3">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="/.io/2019//11/03/sliding-window-algorithm算法/sws.png">
 <meta property="og:updated_time" content="2020-02-07T05:54:17.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sliding-window-algorithm算法">
-<meta name="twitter:description" content="滑窗算法滑窗算法是通过使用特定大小的子列表，在遍历完整列表的同时进行特定的操作，以达到降低了循环的嵌套深度。 一般在找无重复最长子串，连续元素最大和等。  双指针移动，遍历时不嵌套循环所有值，外层遍历代表整个窗口向右滑动，每次减去失效值（重复值）加上最新值，比较长度。 例子：  给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。 示例 1: 输入: “abcabcbb”输出: 3解释">
+<meta name="twitter:description" content="滑窗算法 滑窗算法是通过使用特定大小的子列表，在遍历完整列表的同时进行特定的操作，以达到降低了循环的嵌套深度。 一般在找无重复最长子串，连续元素最大和等。  双指针移动，遍历时不嵌套循环所有值，外层遍历代表整个窗口向右滑动，每次减去失效值（重复值）加上最新值，比较长度。 例子：  给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。 示例 1: 输入: “abcabcbb” 输出: 3">
 <meta name="twitter:image" content="/.io/2019//11/03/sliding-window-algorithm算法/sws.png">
 
 
@@ -401,7 +401,8 @@
       
 
       
-        <h1 id="滑窗算法"><a href="#滑窗算法" class="headerlink" title="滑窗算法"></a>滑窗算法</h1><p>滑窗算法是通过使用特定大小的子列表，在遍历完整列表的同时进行特定的操作，以达到降低了循环的嵌套深度。</p>
+        <h1>滑窗算法</h1>
+<p>滑窗算法是通过使用特定大小的子列表，在遍历完整列表的同时进行特定的操作，以达到降低了循环的嵌套深度。</p>
 <p>一般在找无重复最长子串，连续元素最大和等。</p>
 <img src="/.io/2019//11/03/sliding-window-algorithm算法/sws.png">
 <p>双指针移动，遍历时不嵌套循环所有值，外层遍历代表整个窗口向右滑动，每次减去失效值（重复值）加上最新值，比较长度。</p>
@@ -409,7 +410,9 @@
 <blockquote>
 <p>给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</p>
 <p>示例 1:</p>
-<p>输入: “abcabcbb”<br>输出: 3<br>解释: 因为无重复字符的最长子串是 “abc”，所以其长度为 3。</p>
+<p>输入: “abcabcbb”<br>
+输出: 3<br>
+解释: 因为无重复字符的最长子串是 “abc”，所以其长度为 3。</p>
 </blockquote>
 <p>解法：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">        Set&lt;Character&gt; NoSameChar = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(left &lt; s.length() &amp;&amp; right &lt; s.length())&#123;</span><br><span class="line">            <span class="keyword">if</span>(!NoSameChar.contains(s.charAt(right)))&#123;</span><br><span class="line">                NoSameChar.add(s.charAt(right));</span><br><span class="line">                right++;</span><br><span class="line">                max = max &gt; right-left ? max : right - left;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                NoSameChar.remove(s.charAt(left));</span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -629,7 +632,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#滑窗算法"><span class="nav-number">1.</span> <span class="nav-text">滑窗算法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">滑窗算法</span></a></li></ol></div>
             
 
           </div>

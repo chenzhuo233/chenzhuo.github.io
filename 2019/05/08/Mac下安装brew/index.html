@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="1.前面之前一直不知道brew是什么东西，虽然一直都在安装列表中，但是一直没有去安装下载  什么是brew？ brew全称Homebrew，官方解释：  Homebrew is the easiest and most flexible way to install the UNIX tools Apple didn’t include with OS X.  brew是一个包管理器，用于在Mac">
+<meta name="description" content="1.前面 之前一直不知道brew是什么东西，虽然一直都在安装列表中，但是一直没有去安装下载  什么是brew？ brew全称Homebrew，官方解释：  Homebrew is the easiest and most flexible way to install the UNIX tools Apple didn’t include with OS X.  brew是一个包管理器，用于在Ma">
 <meta name="keywords" content="macbook">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac下安装brew">
 <meta property="og:url" content="/chenzhuo233.github.io/2019/05/08/Mac下安装brew/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="1.前面之前一直不知道brew是什么东西，虽然一直都在安装列表中，但是一直没有去安装下载  什么是brew？ brew全称Homebrew，官方解释：  Homebrew is the easiest and most flexible way to install the UNIX tools Apple didn’t include with OS X.  brew是一个包管理器，用于在Mac">
+<meta property="og:description" content="1.前面 之前一直不知道brew是什么东西，虽然一直都在安装列表中，但是一直没有去安装下载  什么是brew？ brew全称Homebrew，官方解释：  Homebrew is the easiest and most flexible way to install the UNIX tools Apple didn’t include with OS X.  brew是一个包管理器，用于在Ma">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-06-11T09:35:26.409Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac下安装brew">
-<meta name="twitter:description" content="1.前面之前一直不知道brew是什么东西，虽然一直都在安装列表中，但是一直没有去安装下载  什么是brew？ brew全称Homebrew，官方解释：  Homebrew is the easiest and most flexible way to install the UNIX tools Apple didn’t include with OS X.  brew是一个包管理器，用于在Mac">
+<meta name="twitter:description" content="1.前面 之前一直不知道brew是什么东西，虽然一直都在安装列表中，但是一直没有去安装下载  什么是brew？ brew全称Homebrew，官方解释：  Homebrew is the easiest and most flexible way to install the UNIX tools Apple didn’t include with OS X.  brew是一个包管理器，用于在Ma">
 
 
 
@@ -377,7 +377,8 @@
       
 
       
-        <h2 id="1-前面"><a href="#1-前面" class="headerlink" title="1.前面"></a>1.前面</h2><p><del>之前一直不知道brew是什么东西，虽然一直都在安装列表中，但是一直没有去安装下载</del></p>
+        <h2 id="1-前面">1.前面</h2>
+<p><s>之前一直不知道brew是什么东西，虽然一直都在安装列表中，但是一直没有去安装下载</s></p>
 <hr>
 <p>什么是brew？</p>
 <p>brew全称Homebrew，官方解释：</p>
@@ -393,7 +394,13 @@
 <p>后面需要点一下回车，等待安装即可</p>
 <p>安装好了之后<code>brew -v</code>检查一下，显示版本信息和位置就说明安装成功了。</p>
 <p>其他命令</p>
-<p>brew list 显示已安装的包<br>brew home [] 用浏览器打开相关包的页面<br>brew info [] 显示包信息<br>brew deps [] 显示包依赖<br>brew server 启动web服务器，可以通过浏览器访问<br><a href="http://localhost:4567/" target="_blank" rel="noopener">http://localhost:4567/</a> 来同网页来管理包<br>brew -h brew帮助</p>
+<p>brew list 显示已安装的包<br>
+brew home [] 用浏览器打开相关包的页面<br>
+brew info [] 显示包信息<br>
+brew deps [] 显示包依赖<br>
+brew server 启动web服务器，可以通过浏览器访问<br>
+<a href="http://localhost:4567/" target="_blank" rel="noopener">http://localhost:4567/</a> 来同网页来管理包<br>
+brew -h brew帮助</p>
 <p>下面参考下网友的总结：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">//查看brew的帮助</span><br><span class="line">brew –<span class="built_in">help</span></span><br><span class="line">//安装软件</span><br><span class="line">brew install git</span><br><span class="line">//卸载软件</span><br><span class="line">brew uninstall git</span><br><span class="line">//搜索软件</span><br><span class="line">brew search git</span><br><span class="line">//显示已经安装软件列表</span><br><span class="line">brew list</span><br><span class="line">//更新软件，把所有的Formula目录更新，并且会对本机已经安装并有更新的软件用*标明。</span><br><span class="line">brew update</span><br><span class="line">//更新某具体软件</span><br><span class="line">brew upgrade git</span><br><span class="line">//查看软件信息</span><br><span class="line">brew [info | home] [FORMULA...]</span><br><span class="line">//删除程序，和upgrade一样，单个软件删除和所有程序老版删除。</span><br><span class="line">brew cleanup git </span><br><span class="line">brew cleanup</span><br><span class="line">//查看那些已安装的程序需要更新</span><br><span class="line">brew outdated</span><br><span class="line"></span><br><span class="line">//其它Homebrew指令:</span><br><span class="line">brew list   //—列出已安装的软件</span><br><span class="line">brew update   //—更新Homebrew</span><br><span class="line">brew home *   //—用浏览器打开</span><br><span class="line">brew info *   //—显示软件内容信息</span><br><span class="line">brew deps *    //—显示包依赖</span><br><span class="line">brew server *  //—启动web服务器，可以通过浏览器访问</span><br><span class="line">brew -h brew   //—帮助</span><br></pre></td></tr></table></figure>
 <p>然后如果用到不爽了</p>

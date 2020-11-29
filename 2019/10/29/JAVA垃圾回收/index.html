@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="Garbage Collection，GC简单介绍Java内存虚拟机内存运行时的数据区主要有三块：  堆（Heap）：存放对象实例和数组。全局共享 栈（Stack）：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有 方法区（Method Area）：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同   堆：最大的最重要的部分，逻辑堆。对应图中Ja">
+<meta name="description" content="Garbage Collection，GC 简单介绍Java内存 虚拟机内存运行时的数据区主要有三块：  堆（Heap）：存放对象实例和数组。全局共享 栈（Stack）：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有 方法区（Method Area）：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同   **堆：**最大的最重要的部分，逻辑堆。">
 <meta name="keywords" content="JAVA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JAVA垃圾回收">
 <meta property="og:url" content="/chenzhuo233.github.io/2019/10/29/JAVA垃圾回收/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="Garbage Collection，GC简单介绍Java内存虚拟机内存运行时的数据区主要有三块：  堆（Heap）：存放对象实例和数组。全局共享 栈（Stack）：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有 方法区（Method Area）：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同   堆：最大的最重要的部分，逻辑堆。对应图中Ja">
+<meta property="og:description" content="Garbage Collection，GC 简单介绍Java内存 虚拟机内存运行时的数据区主要有三块：  堆（Heap）：存放对象实例和数组。全局共享 栈（Stack）：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有 方法区（Method Area）：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同   **堆：**最大的最重要的部分，逻辑堆。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="/.io/2019//10/29/JAVA垃圾回收/gc.jpeg">
 <meta property="og:image" content="/.io/2019//10/29/JAVA垃圾回收/gc1.jpg">
@@ -95,7 +95,7 @@
 <meta property="og:updated_time" content="2019-11-02T13:18:12.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA垃圾回收">
-<meta name="twitter:description" content="Garbage Collection，GC简单介绍Java内存虚拟机内存运行时的数据区主要有三块：  堆（Heap）：存放对象实例和数组。全局共享 栈（Stack）：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有 方法区（Method Area）：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同   堆：最大的最重要的部分，逻辑堆。对应图中Ja">
+<meta name="twitter:description" content="Garbage Collection，GC 简单介绍Java内存 虚拟机内存运行时的数据区主要有三块：  堆（Heap）：存放对象实例和数组。全局共享 栈（Stack）：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有 方法区（Method Area）：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同   **堆：**最大的最重要的部分，逻辑堆。">
 <meta name="twitter:image" content="/.io/2019//10/29/JAVA垃圾回收/gc.jpeg">
 
 
@@ -405,49 +405,61 @@
       
 
       
-        <h1 id="Garbage-Collection，GC"><a href="#Garbage-Collection，GC" class="headerlink" title="Garbage Collection，GC"></a>Garbage Collection，GC</h1><h2 id="简单介绍Java内存"><a href="#简单介绍Java内存" class="headerlink" title="简单介绍Java内存"></a>简单介绍Java内存</h2><p>虚拟机内存<strong>运行时的数据区</strong>主要有三块：</p>
+        <h1>Garbage Collection，GC</h1>
+<h2 id="简单介绍Java内存">简单介绍Java内存</h2>
+<p>虚拟机内存<strong>运行时的数据区</strong>主要有三块：</p>
 <ol>
 <li><strong>堆（Heap）</strong>：存放对象实例和数组。全局共享</li>
 <li><strong>栈（Stack）</strong>：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有</li>
 <li><strong>方法区（Method Area）</strong>：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同</li>
 </ol>
 <img src="/.io/2019//10/29/JAVA垃圾回收/gc.jpeg">
-<p><strong>堆：</strong>最大的最重要的部分，逻辑堆。对应图中Java Heaps区。</p>
-<p><strong>方法区：</strong>永生代，主要由类加载器ClassLoader加载类信息。用于储存类的元数据，常量池，字段，静态变量，方法内的局部变量，已编译好的字节码。线程共享。JDK8后类的静态变量和内部字符串分离到逻辑堆。</p>
+<p>**堆：**最大的最重要的部分，逻辑堆。对应图中Java Heaps区。</p>
+<p>**方法区：**永生代，主要由类加载器ClassLoader加载类信息。用于储存类的元数据，常量池，字段，静态变量，方法内的局部变量，已编译好的字节码。线程共享。JDK8后类的静态变量和内部字符串分离到逻辑堆。</p>
 <p><strong>栈：</strong> 对象的引用，八种基本数据类型。</p>
 <p><strong>PC 寄存器：</strong> 用来给每个线程分配本机进程编号。</p>
-<h2 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h2><h3 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h3><p>分为“年轻代”与“老年代”。年轻代分为<strong>“Eden”（伊甸园）区</strong>和两个大小对等的Servivor区：<strong>from区</strong>和<strong>to区</strong>。在Java内存模型中堆中有详细介绍。这里主要记录回收算法。</p>
+<h2 id="垃圾回收">垃圾回收</h2>
+<h3 id="堆">堆</h3>
+<p>分为“年轻代”与“老年代”。年轻代分为**“Eden”（伊甸园）区<strong>和两个大小对等的Servivor区：<strong>from区</strong>和</strong>to区**。在Java内存模型中堆中有详细介绍。这里主要记录回收算法。</p>
 <img src="/.io/2019//10/29/JAVA垃圾回收/gc1.jpg">
 <p><strong>年轻代垃圾回收</strong></p>
 <p><strong>Mark—Sweep</strong>算法，也就是标记清除算法。标记出活着的实例，清除未标记实例。</p>
 <ol>
-<li><p>标记存活实例</p>
+<li>
+<p>标记存活实例</p>
 <p>寻找根对象，遍历所有和根对象有直接或间接引用关系的实例。</p>
 <blockquote>
 <p><a href="https://link.zhihu.com/?target=http%3A//www.dynatrace.com/en/javabook/how-garbage-collection-works.html" target="_blank" rel="noopener">根对象参考</a></p>
 </blockquote>
 <p>根对象主要包括四类对象：</p>
 <ol>
-<li><p><strong>stack栈中引用对象</strong>：就是指存储在JVM栈中的对象引用。</p>
+<li>
+<p><strong>stack栈中引用对象</strong>：就是指存储在JVM栈中的对象引用。</p>
 <img src="/.io/2019//10/29/JAVA垃圾回收/gc2.jpg">
 </li>
-<li><p><strong>static静态变量：</strong>静态方法和变量不产生实例，直接由类引用。Java的类是由类加载器加载（<strong>java.lang.ClassLoader</strong>），类的数据都不在逻辑堆，而是在永生代（Metaspace方法区），类本身一旦被GC清除。他所有的静态变量也一并释放。</p>
+<li>
+<p>**static静态变量：**静态方法和变量不产生实例，直接由类引用。Java的类是由类加载器加载（<strong>java.lang.ClassLoader</strong>），类的数据都不在逻辑堆，而是在永生代（Metaspace方法区），类本身一旦被GC清除。他所有的静态变量也一并释放。</p>
 </li>
-<li><p><strong>mian thread：</strong> main方法就是一个thread线程。java里线程也都是继承自基类，所以自身也是一个大实例。</p>
+<li>
+<p><strong>mian thread：</strong> main方法就是一个thread线程。java里线程也都是继承自基类，所以自身也是一个大实例。</p>
 </li>
-<li><p><strong>JNI引用：</strong> JNI是支持其他编程语言的本机码和Java字节码相互调用的程序。</p>
+<li>
+<p><strong>JNI引用：</strong> JNI是支持其他编程语言的本机码和Java字节码相互调用的程序。</p>
 </li>
 </ol>
 <blockquote>
 <p><a href="https://link.zhihu.com/?target=http%3A//www.jianshu.com/p/b0f5d21fe031" target="_blank" rel="noopener">参考</a></p>
 <p>概念补充：</p>
 <ol>
-<li><p>mutator:指除了垃圾收集器以外的部分。mutator指责一般是new（分配内存），read（从内存读取），write（内容写入内存）。</p>
+<li>
+<p>mutator:指除了垃圾收集器以外的部分。mutator指责一般是new（分配内存），read（从内存读取），write（内容写入内存）。</p>
 <p>collector：垃圾收集器。回收不再使用的内存供mutator使用</p>
 </li>
-<li><p>mutator roots(mutator根对象),mutator根对象一般指的是分配在堆内存之外，可以直接被mutator直接访问到的对象，一般是指静态/全局变量以及Thread-Local变量(在Java中，存储在java.lang.ThreadLocal中的变量和分配在栈上的变量 - 方法内部的临时变量等都属于此类).</p>
+<li>
+<p>mutator roots(mutator根对象),mutator根对象一般指的是分配在堆内存之外，可以直接被mutator直接访问到的对象，一般是指静态/全局变量以及Thread-Local变量(在Java中，存储在java.lang.ThreadLocal中的变量和分配在栈上的变量 - 方法内部的临时变量等都属于此类).</p>
 </li>
-<li><p>可达对象的定义，从mutator根对象开始进行遍历，可以被访问到的对象都称为是可达对象。这些对象也是mutator(你的应用程序)正在使用的对象。</p>
+<li>
+<p>可达对象的定义，从mutator根对象开始进行遍历，可以被访问到的对象都称为是可达对象。这些对象也是mutator(你的应用程序)正在使用的对象。</p>
 </li>
 </ol>
 </blockquote>
@@ -462,9 +474,6 @@
 <p>当minor gc发生时，如果Tenured区没有空间容纳新对象时，触发老年代垃圾回收（Major Garbage Collection）。老年代垃圾回收算法取决于JVM用什么垃圾回收器，有三种：Parallel Scavenge(PS),Concurrent Mark Sweep(CMS)还有最新的Garbage First(G1)垃圾收集器。</p>
 <p><strong>Garbage First</strong></p>
 <p><a href="https://www.cnblogs.com/wjh123/p/11146195.html" target="_blank" rel="noopener">G1垃圾收集器是什么</a></p>
-<blockquote id="fn_end">
-<sup>end</sup>.  end<a href="#reffn_end" title="Jump back to footnote [end] in the text."> &#8617;</a>
-</blockquote>
 
       
     </div>
@@ -678,7 +687,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Garbage-Collection，GC"><span class="nav-number">1.</span> <span class="nav-text">Garbage Collection，GC</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单介绍Java内存"><span class="nav-number">1.1.</span> <span class="nav-text">简单介绍Java内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#垃圾回收"><span class="nav-number">1.2.</span> <span class="nav-text">垃圾回收</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#堆"><span class="nav-number">1.2.1.</span> <span class="nav-text">堆</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">Garbage Collection，GC</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单介绍Java内存"><span class="nav-number">1.1.</span> <span class="nav-text">简单介绍Java内存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#垃圾回收"><span class="nav-number">1.2.</span> <span class="nav-text">垃圾回收</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#堆"><span class="nav-number">1.2.1.</span> <span class="nav-text">堆</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

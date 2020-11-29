@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="并发编程与多线程1.1 基本概念 什么是并发编程  什么是线程：  线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源.一个线程可以创建和撤销另一个线程;同一个进程中的多个线程之间可以并发执行   什么是多">
+<meta name="description" content="并发编程与多线程 1.1 基本概念   什么是并发编程   什么是线程：  线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源. 一个线程可以创建和撤销另一个线程;同一个进程中的多个线程之间可以并发执行">
 <meta name="keywords" content="学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JAVA并发编程">
 <meta property="og:url" content="/chenzhuo233.github.io/2019/09/12/JAVA并发编程/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="并发编程与多线程1.1 基本概念 什么是并发编程  什么是线程：  线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源.一个线程可以创建和撤销另一个线程;同一个进程中的多个线程之间可以并发执行   什么是多">
+<meta property="og:description" content="并发编程与多线程 1.1 基本概念   什么是并发编程   什么是线程：  线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源. 一个线程可以创建和撤销另一个线程;同一个进程中的多个线程之间可以并发执行">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-11-01T17:07:50.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA并发编程">
-<meta name="twitter:description" content="并发编程与多线程1.1 基本概念 什么是并发编程  什么是线程：  线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源.一个线程可以创建和撤销另一个线程;同一个进程中的多个线程之间可以并发执行   什么是多">
+<meta name="twitter:description" content="并发编程与多线程 1.1 基本概念   什么是并发编程   什么是线程：  线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源. 一个线程可以创建和撤销另一个线程;同一个进程中的多个线程之间可以并发执行">
 
 
 
@@ -399,20 +399,27 @@
       
 
       
-        <h1 id="并发编程与多线程"><a href="#并发编程与多线程" class="headerlink" title="并发编程与多线程"></a>并发编程与多线程</h1><h2 id="1-1-基本概念"><a href="#1-1-基本概念" class="headerlink" title="1.1 基本概念"></a>1.1 基本概念</h2><ol>
-<li><p><a href="https://blog.csdn.net/cisco_huang/article/details/87104427" target="_blank" rel="noopener"><strong>什么是并发编程</strong></a></p>
+        <h1>并发编程与多线程</h1>
+<h2 id="1-1-基本概念">1.1 基本概念</h2>
+<ol>
+<li>
+<p><a href="https://blog.csdn.net/cisco_huang/article/details/87104427" target="_blank" rel="noopener"><strong>什么是并发编程</strong></a></p>
 </li>
-<li><p>什么是线程：</p>
+<li>
+<p>什么是线程：</p>
 <blockquote>
-<p>线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源.<br>一个线程可以创建和撤销另一个线程;同一个进程中的多个线程之间可以并发执行</p>
+<p>线程是进程的一个实体,是CPU调度和分派的基本单位,它是比进程更小的能独立运行的基本单位.线程自己基本上不拥有系统资源,只拥有一点在运行中必不可少的资源(如程序计数器,一组寄存器和栈),但是它可与同属一个进程的其他的线程共享进程所拥有的全部资源.<br>
+一个线程可以创建和撤销另一个线程;同一个进程中的多个线程之间可以并发执行</p>
 </blockquote>
 </li>
-<li><p><a href="https://www.cnblogs.com/wzhua/p/7453694.html" target="_blank" rel="noopener">什么是多线程及一些例子：</a></p>
+<li>
+<p><a href="https://www.cnblogs.com/wzhua/p/7453694.html" target="_blank" rel="noopener">什么是多线程及一些例子：</a></p>
 </li>
 </ol>
-<h2 id="1-2-Java多线程"><a href="#1-2-Java多线程" class="headerlink" title="1.2 Java多线程"></a>1.2 Java多线程</h2><p>线程生命周期一共有五种状态：创建、就绪、运行、阻塞、终止。</p>
+<h2 id="1-2-Java多线程">1.2 Java多线程</h2>
+<p>线程生命周期一共有五种状态：创建、就绪、运行、阻塞、终止。</p>
 <ol>
-<li>创建状态：<code>new Thread(Runnable ， &quot;thread&#39;name&quot;)</code> </li>
+<li>创建状态：<code>new Thread(Runnable ， &quot;thread'name&quot;)</code></li>
 <li>就绪状态：已创建好一个线程等待运行。</li>
 <li>运行：<code>run()</code> 开始运行。</li>
 <li>阻塞。</li>
@@ -434,7 +441,8 @@
 <li>多跑几次试试</li>
 <li><code>try{}catch(){}</code></li>
 </ol>
-<h3 id="1-2-1"><a href="#1-2-1" class="headerlink" title="1.2.1"></a>1.2.1</h3><p><strong>volatile共享变量</strong></p>
+<h3 id="1-2-1">1.2.1</h3>
+<p><strong>volatile共享变量</strong></p>
 <p>理解volatile需要点JMM的知识，volatile就是线程之间数据更新变化可检测性，也是多处理器共享数据的可见性，意思就是当一个线程修改了他们的共享数据时，另一个线程也可以读到修改的值。在JMM中存在一个主内存，而创建出的线程每个是从主线程中读取数据，每个线程会有自己的一块CPU和缓存区，如果没有volatile，线程会在运行时把从主线程读到的数据放到自己的缓存区然后执行自己的任务，这时，如果主线程的数据更改的话，线程内部自己的数据是不会改变的，但有volatile的话，就相当于所有（使用这个数据的）线程检测到数据需要updata然后就读到新值。volatile使一个变量在多线程中可见。</p>
 <p><strong>volatile并不能保证多个线程共同修改变量所带来不一致的问题，也就是说volatile不能代替synchronized</strong></p>
 <p><a href="http://www.cnblogs.com/nexiyi/p/java_memory_model_and_thread.html" target="_blank" rel="noopener">深入理解java内存模型和高并发</a></p>
@@ -452,8 +460,10 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">m</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">	Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">	count++;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">	Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*上面这个方法实际只对count变量控制，但却给整个方法加锁，大大降低了执行效率，做以下优化*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">m</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">	Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">  <span class="keyword">synchronized</span>(<span class="keyword">this</span>)&#123;</span><br><span class="line">	count++;</span><br><span class="line">  &#125;</span><br><span class="line">	<span class="keyword">try</span>&#123;</span><br><span class="line">	Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">	&#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*采用细粒度的锁，可以使线程争用时间变短，从而提高效率*/</span></span><br></pre></td></tr></table></figure>
 <p><strong>synchronized锁是锁在堆内存里的，不是锁在引用里的</strong></p>
 <p>不要以String常量作为锁定对象，比如有<code>String a=&quot;Hello&quot;;</code> 还有<code>String b=&quot;Hello&quot;;</code> 然后有两个方法分别对a和b加锁，但实际他们锁的是同一个对象，而且当引用某些类库的时候，在类库本身会出现对字符串加锁的情况，如果再锁有时候会出现很诡异的死锁阻塞。</p>
-<h3 id="1-2-2"><a href="#1-2-2" class="headerlink" title="1.2.2"></a>1.2.2</h3><h3 id="线程交互"><a href="#线程交互" class="headerlink" title="线程交互"></a>线程交互</h3><p><strong>wait和notify</strong></p>
-<p>wait()方法会让当前调用该方法的线程进入等待状态，<strong>并且释放锁，</strong>notify()需要在其他线程中调用，作用是唤醒当前正在等待状态的线程，<strong>但是notify不会释放锁</strong>，如果另一个线程被唤醒了，没有拿到锁，那么还是会在阻塞状态。</p>
+<h3 id="1-2-2">1.2.2</h3>
+<h3 id="线程交互">线程交互</h3>
+<p><strong>wait和notify</strong></p>
+<p>wait()方法会让当前调用该方法的线程进入等待状态，**并且释放锁，**notify()需要在其他线程中调用，作用是唤醒当前正在等待状态的线程，<strong>但是notify不会释放锁</strong>，如果另一个线程被唤醒了，没有拿到锁，那么还是会在阻塞状态。</p>
 <p>notifyAll()作用是唤醒所有正在wait状态的线程。</p>
 <p><strong>门闩</strong></p>
 <p>countdownlatch/cyclicbarrier/semaphore</p>
@@ -677,7 +687,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#并发编程与多线程"><span class="nav-number">1.</span> <span class="nav-text">并发编程与多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Java多线程"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Java多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.2.1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2.2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程交互"><span class="nav-number">1.2.3.</span> <span class="nav-text">线程交互</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">并发编程与多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-Java多线程"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Java多线程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">1.2.1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-2"><span class="nav-number">1.2.2.</span> <span class="nav-text">1.2.2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#线程交互"><span class="nav-number">1.2.3.</span> <span class="nav-text">线程交互</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>

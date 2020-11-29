@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Vue 学习endvue v-on和v-bind后来在学习过程中突然感觉对这两个概念有点不清晰，在最后记录一下。 v-on表示绑定方法，因为vue不允许操作dom，所以v-on后面可以直接绑定方法，意思就是后面跟方法函数，比如v-on：click=&amp;quot;change&amp;quot;就表示一个绑定点击事件，相关绑定到vue中methods的方法实现中。 v-bind表示绑定属性值，也就是用来传递值">
+<meta name="description" content="Vue 学习end vue v-on和v-bind 后来在学习过程中突然感觉对这两个概念有点不清晰，在最后记录一下。 v-on表示绑定方法，因为vue不允许操作dom，所以v-on后面可以直接绑定方法，意思就是后面跟方法函数，比如v-on：click=&amp;quot;change&amp;quot;就表示一个绑定点击事件，相关绑定到vue中methods的方法实现中。 v-bind表示绑定属性值，也就是用来传">
 <meta name="keywords" content="学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue学习（5）">
 <meta property="og:url" content="/chenzhuo233.github.io/2019/08/04/Vue学习（5）/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="Vue 学习endvue v-on和v-bind后来在学习过程中突然感觉对这两个概念有点不清晰，在最后记录一下。 v-on表示绑定方法，因为vue不允许操作dom，所以v-on后面可以直接绑定方法，意思就是后面跟方法函数，比如v-on：click=&amp;quot;change&amp;quot;就表示一个绑定点击事件，相关绑定到vue中methods的方法实现中。 v-bind表示绑定属性值，也就是用来传递值">
+<meta property="og:description" content="Vue 学习end vue v-on和v-bind 后来在学习过程中突然感觉对这两个概念有点不清晰，在最后记录一下。 v-on表示绑定方法，因为vue不允许操作dom，所以v-on后面可以直接绑定方法，意思就是后面跟方法函数，比如v-on：click=&amp;quot;change&amp;quot;就表示一个绑定点击事件，相关绑定到vue中methods的方法实现中。 v-bind表示绑定属性值，也就是用来传">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-08-20T16:58:02.121Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue学习（5）">
-<meta name="twitter:description" content="Vue 学习endvue v-on和v-bind后来在学习过程中突然感觉对这两个概念有点不清晰，在最后记录一下。 v-on表示绑定方法，因为vue不允许操作dom，所以v-on后面可以直接绑定方法，意思就是后面跟方法函数，比如v-on：click=&amp;quot;change&amp;quot;就表示一个绑定点击事件，相关绑定到vue中methods的方法实现中。 v-bind表示绑定属性值，也就是用来传递值">
+<meta name="twitter:description" content="Vue 学习end vue v-on和v-bind 后来在学习过程中突然感觉对这两个概念有点不清晰，在最后记录一下。 v-on表示绑定方法，因为vue不允许操作dom，所以v-on后面可以直接绑定方法，意思就是后面跟方法函数，比如v-on：click=&amp;quot;change&amp;quot;就表示一个绑定点击事件，相关绑定到vue中methods的方法实现中。 v-bind表示绑定属性值，也就是用来传">
 
 
 
@@ -399,19 +399,23 @@
       
 
       
-        <h1 id="Vue-学习end"><a href="#Vue-学习end" class="headerlink" title="Vue 学习end"></a>Vue 学习end</h1><h3 id="vue-v-on和v-bind"><a href="#vue-v-on和v-bind" class="headerlink" title="vue v-on和v-bind"></a>vue v-on和v-bind</h3><p>后来在学习过程中突然感觉对这两个概念有点不清晰，在最后记录一下。</p>
+        <h1>Vue 学习end</h1>
+<h3 id="vue-v-on和v-bind">vue v-on和v-bind</h3>
+<p>后来在学习过程中突然感觉对这两个概念有点不清晰，在最后记录一下。</p>
 <p>v-on表示绑定方法，因为vue不允许操作dom，所以v-on后面可以直接绑定方法，意思就是后面跟方法函数，比如<code>v-on：click=&quot;change&quot;</code>就表示一个绑定点击事件，相关绑定到vue中methods的方法实现中。</p>
 <p>v-bind表示绑定属性值，也就是用来传递值或者属性的，比如<code>v-bind:href=</code>这样表示我在这个标签的属性里用v-bind绑定了一个href属性，而这个属性的值就在vue里可以拿到。</p>
-<h3 id="1-搭建vue-cli脚手架"><a href="#1-搭建vue-cli脚手架" class="headerlink" title="1.搭建vue-cli脚手架"></a>1.搭建vue-cli脚手架</h3><p>vue-cli 3.0x</p>
+<h3 id="1-搭建vue-cli脚手架">1.搭建vue-cli脚手架</h3>
+<p>vue-cli 3.0x</p>
 <p><strong>安装</strong></p>
 <p><code>yarn add -g vue/cli</code></p>
 <p>因为要在全局使用所以加-g。</p>
 <p><strong>创建vue项目文件</strong></p>
-<p><code>vue creat 文件名</code></p>
+<p><code>vue creat 文件名 </code></p>
 <p>然后会出现相关配置：有两个选项，第一个是默认配置，就是会将所有需要的依赖都安好，第二个是自定义配置。</p>
 <p>然后cd到该文件下<code>yarn install</code>安装依赖</p>
-<p><code>yarn serve</code>    启动项目。</p>
-<h3 id="2-使用脚手架以及router的使用"><a href="#2-使用脚手架以及router的使用" class="headerlink" title="2.使用脚手架以及router的使用"></a>2.使用脚手架以及router的使用</h3>
+<p><code>yarn serve</code>	启动项目。</p>
+<h3 id="2-使用脚手架以及router的使用">2.使用脚手架以及router的使用</h3>
+
       
     </div>
     
@@ -624,7 +628,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vue-学习end"><span class="nav-number">1.</span> <span class="nav-text">Vue 学习end</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-v-on和v-bind"><span class="nav-number">1.0.1.</span> <span class="nav-text">vue v-on和v-bind</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-搭建vue-cli脚手架"><span class="nav-number">1.0.2.</span> <span class="nav-text">1.搭建vue-cli脚手架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-使用脚手架以及router的使用"><span class="nav-number">1.0.3.</span> <span class="nav-text">2.使用脚手架以及router的使用</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">Vue 学习end</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vue-v-on和v-bind"><span class="nav-number">1.0.1.</span> <span class="nav-text">vue v-on和v-bind</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-搭建vue-cli脚手架"><span class="nav-number">1.0.2.</span> <span class="nav-text">1.搭建vue-cli脚手架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-使用脚手架以及router的使用"><span class="nav-number">1.0.3.</span> <span class="nav-text">2.使用脚手架以及router的使用</span></a></li></ol></li></ol></div>
             
 
           </div>

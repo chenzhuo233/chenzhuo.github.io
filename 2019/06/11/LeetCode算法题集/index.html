@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="目的扎实基本功 一周最少三道题 把思路和代码记录下来  Start 1. Two SumQ：给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。 示例: 给定 nums = [2, 7, 11, 15], target = 9 因为 nums[0]">
+<meta name="description" content="目的 扎实基本功 一周最少三道题 把思路和代码记录下来  Start  1. Two Sum Q：给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。 示例: 给定 nums = [2, 7, 11, 15], target = 9 因为 nums">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode算法题集">
 <meta property="og:url" content="/chenzhuo233.github.io/2019/06/11/LeetCode算法题集/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="目的扎实基本功 一周最少三道题 把思路和代码记录下来  Start 1. Two SumQ：给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。 示例: 给定 nums = [2, 7, 11, 15], target = 9 因为 nums[0]">
+<meta property="og:description" content="目的 扎实基本功 一周最少三道题 把思路和代码记录下来  Start  1. Two Sum Q：给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。 示例: 给定 nums = [2, 7, 11, 15], target = 9 因为 nums">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2020-11-13T10:04:31.112Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode算法题集">
-<meta name="twitter:description" content="目的扎实基本功 一周最少三道题 把思路和代码记录下来  Start 1. Two SumQ：给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。 示例: 给定 nums = [2, 7, 11, 15], target = 9 因为 nums[0]">
+<meta name="twitter:description" content="目的 扎实基本功 一周最少三道题 把思路和代码记录下来  Start  1. Two Sum Q：给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。 你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。 示例: 给定 nums = [2, 7, 11, 15], target = 9 因为 nums">
 
 
 
@@ -399,87 +399,156 @@
       
 
       
-        <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>扎实基本功</p>
+        <h2 id="目的">目的</h2>
+<p>扎实基本功</p>
 <p>一周最少三道题</p>
 <p>把思路和代码记录下来</p>
 <hr>
-<h1 id="Start"><a href="#Start" class="headerlink" title="Start"></a>Start</h1><blockquote>
-<h2 id="1-Two-Sum"><a href="#1-Two-Sum" class="headerlink" title="1. Two Sum"></a>1. Two Sum</h2><p>Q：给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
+<h1>Start</h1>
+<blockquote>
+<h2 id="1-Two-Sum">1. Two Sum</h2>
+<p>Q：给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
 <p>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p>
 <p>示例:</p>
 <p>给定 nums = [2, 7, 11, 15], target = 9</p>
-<p>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/two-sum" target="_blank" rel="noopener">https://leetcode-cn.com/problems/two-sum</a></p>
+<p>因为 nums[0] + nums[1] = 2 + 7 = 9<br>
+所以返回 [0, 1]</p>
+<p>来源：力扣（LeetCode）<br>
+链接：<a href="https://leetcode-cn.com/problems/two-sum" target="_blank" rel="noopener">https://leetcode-cn.com/problems/two-sum</a></p>
 </blockquote>
-<p><strong>思路一：</strong>遍历每个数据，查找是否有和这个target-nums[i]相等的数据。</p>
-<h5 id="code："><a href="#code：" class="headerlink" title="code："></a>code：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;nums.length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[j]==target-nums[i])&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;i,j&#125;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No two sum solution"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>**思路一：**遍历每个数据，查找是否有和这个target-nums[i]相等的数据。</p>
+<h5 id="code：">code：</h5>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>;j&lt;nums.length;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[j]==target-nums[i])&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;i,j&#125;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No two sum solution"</span>);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>时间复杂度:O(n^2)</p>
 <p>空间复杂度：O(1)</p>
 <hr>
-<p><strong>思路二：</strong>哈希表，牺牲空间换取速度，先将key与值绑定，然后进行检查。</p>
-<h5 id="code：-1"><a href="#code：-1" class="headerlink" title="code："></a>code：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        map.put(nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> complement = target - nums[i];</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(complement) &amp;&amp; map.get(complement) != i) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[] &#123; i, map.get(complement) &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No two sum solution"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>**思路二：**哈希表，牺牲空间换取速度，先将key与值绑定，然后进行检查。</p>
+<h5 id="code：-2">code：</h5>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">    Map&lt;Integer, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        map.put(nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> complement = target - nums[i];</span><br><span class="line">        <span class="keyword">if</span> (map.containsKey(complement) &amp;&amp; map.get(complement) != i) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[] &#123; i, map.get(complement) &#125;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No two sum solution"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>时间复杂度：O(n)</p>
 <p>空间复杂度：O(n)</p>
 <hr>
 <blockquote>
-<h2 id="905-Sort-Array-By-Parity"><a href="#905-Sort-Array-By-Parity" class="headerlink" title="905.Sort Array By Parity"></a>905.Sort Array By Parity</h2><p>Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.</p>
+<h2 id="905-Sort-Array-By-Parity">905.Sort Array By Parity</h2>
+<p>Given an array A of non-negative integers, return an array consisting of all the even elements of A, followed by all the odd elements of A.</p>
 <p>You may return any answer array that satisfies this condition.</p>
 <p>Example 1:</p>
-<p>Input: [3,1,2,4]<br>Output: [2,4,3,1]<br>The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted.</p>
+<p>Input: [3,1,2,4]<br>
+Output: [2,4,3,1]<br>
+The outputs [4,2,3,1], [2,4,1,3], and [4,2,1,3] would also be accepted.</p>
 <p>Note:</p>
-<p>1 &lt;= A.length &lt;= 5000<br>0 &lt;= A[i] &lt;= 5000</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/sort-array-by-parity" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sort-array-by-parity</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<p>1 &lt;= A.length &lt;= 5000<br>
+0 &lt;= A[i] &lt;= 5000</p>
+<p>来源：力扣（LeetCode）<br>
+链接：<a href="https://leetcode-cn.com/problems/sort-array-by-parity" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sort-array-by-parity</a><br>
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
 <p><strong>思路：</strong></p>
 <p><strong>code：</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] sortArrayByParity(<span class="keyword">int</span>[] A) &#123;</span><br><span class="line">        <span class="keyword">int</span> a[]=<span class="keyword">new</span> <span class="keyword">int</span>[A.length];</span><br><span class="line">        <span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;A.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(A[i]%<span class="number">2</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                a[j++]=A[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;A.length;k++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(A[k]%<span class="number">2</span>==<span class="number">1</span>)&#123;</span><br><span class="line">                a[j++]=A[k];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <blockquote>
-<h2 id="814-Binary-Tree-Pruning"><a href="#814-Binary-Tree-Pruning" class="headerlink" title="814. Binary Tree Pruning"></a>814. Binary Tree Pruning</h2><p>We are given the head node root of a binary tree, where additionally every node’s value is either a 0 or a 1.</p>
+<h2 id="814-Binary-Tree-Pruning">814. Binary Tree Pruning</h2>
+<p>We are given the head node root of a binary tree, where additionally every node’s value is either a 0 or a 1.</p>
 <p>Return the same tree where every subtree (of the given tree) not containing a 1 has been removed.</p>
 <p>(Recall that the subtree of a node X is X, plus every node that is a descendant of X.)</p>
-<p>Example 1:<br>Input: [1,null,0,0,1]<br>Output: [1,null,0,null,1]</p>
-<p>Explanation:<br>Only the red nodes satisfy the property “every subtree not containing a 1”.<br>The diagram on the right represents the answer.</p>
-<p>Example 2:<br>Input: [1,0,1,0,0,0,1]<br>Output: [1,null,1,null,1]</p>
-<p>Example 3:<br>Input: [1,1,0,1,1,0,1,0]<br>Output: [1,1,0,1,1,null,1]</p>
+<p>Example 1:<br>
+Input: [1,null,0,0,1]<br>
+Output: [1,null,0,null,1]</p>
+<p>Explanation:<br>
+Only the red nodes satisfy the property “every subtree not containing a 1”.<br>
+The diagram on the right represents the answer.</p>
+<p>Example 2:<br>
+Input: [1,0,1,0,0,0,1]<br>
+Output: [1,null,1,null,1]</p>
+<p>Example 3:<br>
+Input: [1,1,0,1,1,0,1,0]<br>
+Output: [1,1,0,1,1,null,1]</p>
 <p>Note:</p>
-<p>The binary tree will have at most 100 nodes.<br>The value of each node will only be 0 or 1.</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/binary-tree-pruning" target="_blank" rel="noopener">https://leetcode-cn.com/problems/binary-tree-pruning</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<p>The binary tree will have at most 100 nodes.<br>
+The value of each node will only be 0 or 1.</p>
+<p>来源：力扣（LeetCode）<br>
+链接：<a href="https://leetcode-cn.com/problems/binary-tree-pruning" target="_blank" rel="noopener">https://leetcode-cn.com/problems/binary-tree-pruning</a><br>
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
 <p><strong>思路：</strong></p>
 <p><strong>code：</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">pruneTree</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        root.right=pruneTree(root.right);</span><br><span class="line">        root.left=pruneTree(root.left);</span><br><span class="line">        <span class="keyword">if</span>(root.val==<span class="number">0</span>&amp;&amp;root.left==<span class="keyword">null</span>&amp;&amp;root.right==<span class="keyword">null</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">return</span> root;      </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <blockquote>
-<h2 id="48-Rotate-Image"><a href="#48-Rotate-Image" class="headerlink" title="48. Rotate Image"></a>48. Rotate Image</h2><p>You are given an n x n 2D matrix representing an image.</p>
+<h2 id="48-Rotate-Image">48. Rotate Image</h2>
+<p>You are given an n x n 2D matrix representing an image.</p>
 <p>Rotate the image by 90 degrees (clockwise).</p>
 <p>Note:</p>
 <p>You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.</p>
 <p>Example 1:</p>
-<p>Given input matrix =<br>[<br> [1,2,3],<br> [4,5,6],<br> [7,8,9]<br>],</p>
-<p>rotate the input matrix in-place such that it becomes:<br>[<br> [7,4,1],<br> [8,5,2],<br> [9,6,3]<br>]<br>Example 2:</p>
-<p>Given input matrix =<br>[<br> [ 5, 1, 9,11],<br> [ 2, 4, 8,10],<br> [13, 3, 6, 7],<br> [15,14,12,16]<br>], </p>
-<p>rotate the input matrix in-place such that it becomes:<br>[<br> [15,13, 2, 5],<br> [14, 3, 4, 1],<br> [12, 6, 8, 9],<br> [16, 7,10,11]<br>]</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/rotate-image" target="_blank" rel="noopener">https://leetcode-cn.com/problems/rotate-image</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<p>Given input matrix =<br>
+[<br>
+[1,2,3],<br>
+[4,5,6],<br>
+[7,8,9]<br>
+],</p>
+<p>rotate the input matrix in-place such that it becomes:<br>
+[<br>
+[7,4,1],<br>
+[8,5,2],<br>
+[9,6,3]<br>
+]<br>
+Example 2:</p>
+<p>Given input matrix =<br>
+[<br>
+[ 5, 1, 9,11],<br>
+[ 2, 4, 8,10],<br>
+[13, 3, 6, 7],<br>
+[15,14,12,16]<br>
+],</p>
+<p>rotate the input matrix in-place such that it becomes:<br>
+[<br>
+[15,13, 2, 5],<br>
+[14, 3, 4, 1],<br>
+[12, 6, 8, 9],<br>
+[16, 7,10,11]<br>
+]</p>
+<p>来源：力扣（LeetCode）<br>
+链接：<a href="https://leetcode-cn.com/problems/rotate-image" target="_blank" rel="noopener">https://leetcode-cn.com/problems/rotate-image</a><br>
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
 <p><strong>思路：</strong></p>
 <p><strong>code:</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">rotate</span><span class="params">(<span class="keyword">int</span>[][] matrix)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> l=matrix.length;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;l;i++)</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=i;j&lt;l;j++)&#123;</span><br><span class="line">                <span class="keyword">int</span> a=matrix[i][j];</span><br><span class="line">                matrix[i][j]=matrix[j][i];</span><br><span class="line">                matrix[j][i]=a;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; l; i++)&#123;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; l / <span class="number">2</span>; j++) &#123;</span><br><span class="line">        <span class="keyword">int</span> b = matrix[i][j];</span><br><span class="line">        matrix[i][j] = matrix[i][l - j - <span class="number">1</span>];</span><br><span class="line">        matrix[i][l - j - <span class="number">1</span>] = b;</span><br><span class="line">      &#125;</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <blockquote>
-<h2 id="Minimum-Number-of-Refueling-Stops"><a href="#Minimum-Number-of-Refueling-Stops" class="headerlink" title="Minimum Number of Refueling Stops"></a>Minimum Number of Refueling Stops</h2><p>A car travels from a starting position to a destination which is target miles east of the starting position.</p>
+<h2 id="Minimum-Number-of-Refueling-Stops">Minimum Number of Refueling Stops</h2>
+<p>A car travels from a starting position to a destination which is target miles east of the starting position.</p>
 <p>Along the way, there are gas stations.  Each station[i] represents a gas station that is station[i][0] miles east of the starting position, and has station[i][1] liters of gas.</p>
 <p>The car starts with an infinite tank of gas, which initially has startFuel liters of fuel in it.  It uses 1 liter of gas per 1 mile that it drives.</p>
 <p>When the car reaches a gas station, it may stop and refuel, transferring all the gas from the station into the car.</p>
 <p>What is the least number of refueling stops the car must make in order to reach its destination?  If it cannot reach the destination, return -1.</p>
 <p>Note that if the car reaches a gas station with 0 fuel left, the car can still refuel there.  If the car reaches the destination with 0 fuel left, it is still considered to have arrived.</p>
 <p>Example 1:</p>
-<p>Input: target = 1, startFuel = 1, stations = []<br>Output: 0<br>Explanation: We can reach the target without refueling.<br>Example 2:</p>
-<p>Input: target = 100, startFuel = 1, stations = [[10,100]]<br>Output: -1<br>Explanation: We can’t reach the target (or even the first gas station).<br>Example 3:</p>
-<p>Input: target = 100, startFuel = 10, stations = [[10,60],[20,30],[30,30],[60,40]]<br>Output: 2<br>Explanation:<br>We start with 10 liters of fuel.<br>We drive to position 10, expending 10 liters of fuel.  We refuel from 0 liters to 60 liters of gas.<br>Then, we drive from position 10 to position 60 (expending 50 liters of fuel),<br>and refuel from 10 liters to 50 liters of gas.  We then drive to and reach the target.<br>We made 2 refueling stops along the way, so we return 2.</p>
+<p>Input: target = 1, startFuel = 1, stations = []<br>
+Output: 0<br>
+Explanation: We can reach the target without refueling.<br>
+Example 2:</p>
+<p>Input: target = 100, startFuel = 1, stations = [[10,100]]<br>
+Output: -1<br>
+Explanation: We can’t reach the target (or even the first gas station).<br>
+Example 3:</p>
+<p>Input: target = 100, startFuel = 10, stations = [[10,60],[20,30],[30,30],[60,40]]<br>
+Output: 2<br>
+Explanation:<br>
+We start with 10 liters of fuel.<br>
+We drive to position 10, expending 10 liters of fuel.  We refuel from 0 liters to 60 liters of gas.<br>
+Then, we drive from position 10 to position 60 (expending 50 liters of fuel),<br>
+and refuel from 10 liters to 50 liters of gas.  We then drive to and reach the target.<br>
+We made 2 refueling stops along the way, so we return 2.</p>
 <p>Note:</p>
-<p>1 &lt;= target, startFuel, stations[i][1] &lt;= 10^9<br>0 &lt;= stations.length &lt;= 500<br>0 &lt; stations[0][0] &lt; stations[1][0] &lt; … &lt; stations[stations.length-1][0] &lt; target</p>
-<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/minimum-number-of-refueling-stops" target="_blank" rel="noopener">https://leetcode-cn.com/problems/minimum-number-of-refueling-stops</a><br>著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
+<p>1 &lt;= target, startFuel, stations[i][1] &lt;= 10^9<br>
+0 &lt;= stations.length &lt;= 500<br>
+0 &lt; stations[0][0] &lt; stations[1][0] &lt; … &lt; stations[stations.length-1][0] &lt; target</p>
+<p>来源：力扣（LeetCode）<br>
+链接：<a href="https://leetcode-cn.com/problems/minimum-number-of-refueling-stops" target="_blank" rel="noopener">https://leetcode-cn.com/problems/minimum-number-of-refueling-stops</a><br>
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</p>
 </blockquote>
 <p><strong>思路：</strong></p>
 <p>现在只有个思路，代码等过段时间尝试实现一下。</p>
@@ -698,7 +767,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目的"><span class="nav-number">1.</span> <span class="nav-text">目的</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Start"><span class="nav-number"></span> <span class="nav-text">Start</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Two-Sum"><span class="nav-number">1.</span> <span class="nav-text">1. Two Sum</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#code："><span class="nav-number">1.0.0.1.</span> <span class="nav-text">code：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#code：-1"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">code：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#905-Sort-Array-By-Parity"><span class="nav-number">2.</span> <span class="nav-text">905.Sort Array By Parity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#814-Binary-Tree-Pruning"><span class="nav-number">3.</span> <span class="nav-text">814. Binary Tree Pruning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#48-Rotate-Image"><span class="nav-number">4.</span> <span class="nav-text">48. Rotate Image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Minimum-Number-of-Refueling-Stops"><span class="nav-number">5.</span> <span class="nav-text">Minimum Number of Refueling Stops</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目的"><span class="nav-number">1.</span> <span class="nav-text">目的</span></a></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number"></span> <span class="nav-text">Start</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Two-Sum"><span class="nav-number">1.</span> <span class="nav-text">1. Two Sum</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#code："><span class="nav-number">1.0.0.1.</span> <span class="nav-text">code：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#code：-2"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">code：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#905-Sort-Array-By-Parity"><span class="nav-number">2.</span> <span class="nav-text">905.Sort Array By Parity</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#814-Binary-Tree-Pruning"><span class="nav-number">3.</span> <span class="nav-text">814. Binary Tree Pruning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#48-Rotate-Image"><span class="nav-number">4.</span> <span class="nav-text">48. Rotate Image</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Minimum-Number-of-Refueling-Stops"><span class="nav-number">5.</span> <span class="nav-text">Minimum Number of Refueling Stops</span></a></li></div>
             
 
           </div>
