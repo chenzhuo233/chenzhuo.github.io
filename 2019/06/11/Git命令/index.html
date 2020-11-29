@@ -404,20 +404,16 @@
 <h3 id="1-基本操作与命令"><a href="#1-基本操作与命令" class="headerlink" title="1.基本操作与命令"></a>1.基本操作与命令</h3><p>git config可以配置git的参数，可以使用<code>git config --list</code>查看已经配置的git参数。其中有三个级别的保存位置，<code>--system</code>、<code>--global</code>、<code>--local</code>，分别表示所有用户（本系统）、当前用户（全局）、本地配置（当前目录），默认使用<code>--local</code>。</p>
 <h4 id="1-1-配置用户名及邮箱"><a href="#1-1-配置用户名及邮箱" class="headerlink" title="1.1 配置用户名及邮箱"></a>1.1 配置用户名及邮箱</h4><p>在使用Git提交前，必须配置用户名和邮箱，这些信息会永久保存到历史记录中。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"xxxxx"</span></span><br><span class="line">git config --global user.email xxxx@xxx.com</span><br></pre></td></tr></table></figure>
-
 <h4 id="1-2-创建git仓库"><a href="#1-2-创建git仓库" class="headerlink" title="1.2 创建git仓库"></a>1.2 创建git仓库</h4><p><code>git init</code> 初始化当前目录，创建git仓库</p>
 <h4 id="1-3-获得git仓库"><a href="#1-3-获得git仓库" class="headerlink" title="1.3 获得git仓库"></a>1.3 获得git仓库</h4><p>如果需要克隆远程仓库，可以使用<code>git clone</code>，比如：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> http://www.purple.work:1234/chenzhuo/cat.git</span><br></pre></td></tr></table></figure>
-
 <h4 id="1-4-提交更新"><a href="#1-4-提交更新" class="headerlink" title="1.4 提交更新"></a>1.4 提交更新</h4><p>我们获取的Git仓库中的所有文件都是committed状态，如果你在本地修改了文件a，a的状态就变成modified的；如果使用<code>git add a</code>，a的状态变成staged；如果使用<code>git commit</code>，a的状态就变成commited。这种状态变化也说明复制代码是很方便的，但是提交更新请慎重。<br>当然还有一种文件状态，未跟踪状态（unversioned/untracked），通过使用<code>git add</code>可以把未跟踪状态变更为staged；通过<code>git rm</code>可以将staged或者committed状态变为未跟踪状态。</p>
 <p><strong>git status</strong></p>
 <p>这个命令可以在提交前检查一下修改了哪些内容，以及当前git目录下的各文件的状态。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line">On branch master</span><br><span class="line"></span><br><span class="line">Initial commit</span><br><span class="line"></span><br><span class="line">Untracked files:</span><br><span class="line">	(use <span class="string">"git add &lt;file&gt;..."</span> to include <span class="keyword">in</span> what will be committed)</span><br><span class="line">		Readme.md</span><br><span class="line">nothing added to commit but untracked files present (use <span class="string">"git add"</span> to track)</span><br></pre></td></tr></table></figure>
-
 <p><strong>git add</strong></p>
 <p>可以添加文件或目录，也可以使用通配符：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add Readme.md    <span class="comment"># add file only</span></span><br><span class="line">git add *.cpp        <span class="comment"># add all cpp files</span></span><br><span class="line">git add /home/code/  <span class="comment"># add all files in /home/code</span></span><br></pre></td></tr></table></figure>
-
 <p><strong>git diff</strong></p>
 <p><code>git diff</code>可以查看当前目录的所有修改。<br>提交之前，还是单独确认下处于staged状态的文件有哪些，并保证修改正确。在实际应用中，可能还需要使用<code>git diff</code>导出PATCH做代码走读。<br>可以使用<code>git diff --staged</code>或<code>git diff --cached</code>查看staged与上次提交快照之间的区别。</p>
 <p><strong>git commit</strong></p>
@@ -429,26 +425,21 @@
 <p><code>git remote add [short_name] [url]</code>可以添加新的远程仓库。</p>
 <p><strong>从远程仓库抓取数据</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull 可以把远程仓库最新的代码拉取下来。</span><br></pre></td></tr></table></figure>
-
 <p><strong>推送数据到远程仓库</strong></p>
 <p><code>git push</code><br>默认使用origin和master。</p>
 <p><strong>查看远程仓库信息</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote show origin</span><br></pre></td></tr></table></figure>
-
 <p><strong>远程仓库的删除和重命名</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote rename [old_name] [new_name]</span><br><span class="line">git remote rm [remote_name]</span><br></pre></td></tr></table></figure>
-
 <h4 id="1-6-git分支"><a href="#1-6-git分支" class="headerlink" title="1.6 git分支"></a>1.6 git分支</h4><p><strong>显示所有分支</strong></p>
-<p>使用<code>git branch</code>可显示当前所有分支。<br>可以使用–merged和–no-merged查看已经合并、未合并的分支。</p>
+<p>使用<code>git branch</code>可显示当前所有分支。<br>可以使用—merged和—no-merged查看已经合并、未合并的分支。</p>
 <p><strong>创建及切换分支</strong></p>
 <p>可以使用下面命令直接切换并创建分支<br><code>git checkout -b testing</code><br>等价于</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git branch testing    # 创建testing 分支</span><br><span class="line">$ git checkout testing  # 切换到testing分支</span><br></pre></td></tr></table></figure>
-
 <p>注意切换分支时请保持工作目录没有未提交的修改。Git鼓励使用分支，处理完问题之后合并分支即可。</p>
 <p><strong>分支合并</strong></p>
 <p>将hotfix分支合并到master（主分支）上，需要通过下面命令：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git checkout master</span><br><span class="line">$ git merge hotfix</span><br></pre></td></tr></table></figure>
-
 <p>合并之后可以使用<code>git branch -d hotfix</code>删除分支。<br>如果合并时存在冲突，需要手工修改。</p>
 <hr>
 <p>（转载自 <a href="https://www.cnblogs.com/tocy/p/git-command-line-manual.html）" target="_blank" rel="noopener">https://www.cnblogs.com/tocy/p/git-command-line-manual.html）</a></p>

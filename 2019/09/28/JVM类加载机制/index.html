@@ -79,22 +79,22 @@
 
 
 
-<meta name="description" content="Java类加载机制参考 1. 字节码源码： test.java 12345678package Test;/*这个文件主要用来做java课程作业*/public class test &amp;#123;	public static void main(String[] args)&amp;#123;		System.out.println(&quot;this is a test&quot;);	&amp;#125;&amp;#125;  编译成">
+<meta name="description" content="Java类加载机制参考 1. 字节码源码： test.java 12345678package Test;/*这个文件主要用来做java课程作业*/public class test &amp;#123;	public static void main(String[] args)&amp;#123;		System.out.println(&quot;this is a test&quot;);	&amp;#125;&amp;#125; 编译成功">
 <meta name="keywords" content="JAVA">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JVM类加载机制">
 <meta property="og:url" content="/chenzhuo233.github.io/2019/09/28/JVM类加载机制/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="Java类加载机制参考 1. 字节码源码： test.java 12345678package Test;/*这个文件主要用来做java课程作业*/public class test &amp;#123;	public static void main(String[] args)&amp;#123;		System.out.println(&quot;this is a test&quot;);	&amp;#125;&amp;#125;  编译成">
+<meta property="og:description" content="Java类加载机制参考 1. 字节码源码： test.java 12345678package Test;/*这个文件主要用来做java课程作业*/public class test &amp;#123;	public static void main(String[] args)&amp;#123;		System.out.println(&quot;this is a test&quot;);	&amp;#125;&amp;#125; 编译成功">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/2019/09/28/JVM类加载机制/object.png">
-<meta property="og:image" content="/2019/09/28/JVM类加载机制/classlevel.jpg">
-<meta property="og:image" content="/2019/09/28/JVM类加载机制/java9cg.png">
+<meta property="og:image" content="/.io/2019//09/28/JVM类加载机制/object.png">
+<meta property="og:image" content="/.io/2019//09/28/JVM类加载机制/classlevel.jpg">
+<meta property="og:image" content="/.io/2019//09/28/JVM类加载机制/java9cg.png">
 <meta property="og:updated_time" content="2019-10-29T07:26:21.969Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM类加载机制">
-<meta name="twitter:description" content="Java类加载机制参考 1. 字节码源码： test.java 12345678package Test;/*这个文件主要用来做java课程作业*/public class test &amp;#123;	public static void main(String[] args)&amp;#123;		System.out.println(&quot;this is a test&quot;);	&amp;#125;&amp;#125;  编译成">
-<meta name="twitter:image" content="/2019/09/28/JVM类加载机制/object.png">
+<meta name="twitter:description" content="Java类加载机制参考 1. 字节码源码： test.java 12345678package Test;/*这个文件主要用来做java课程作业*/public class test &amp;#123;	public static void main(String[] args)&amp;#123;		System.out.println(&quot;this is a test&quot;);	&amp;#125;&amp;#125; 编译成功">
+<meta name="twitter:image" content="/.io/2019//09/28/JVM类加载机制/object.png">
 
 
 
@@ -407,10 +407,8 @@
 <h2 id="1-字节码"><a href="#1-字节码" class="headerlink" title="1. 字节码"></a>1. 字节码</h2><p>源码：</p>
 <p>test.java</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Test;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*这个文件主要用来做java课程作业*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"this is a test"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>编译成功后，用<code>xxd test.class</code> 命令可以查看一下这个字节码文件</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">00000000: cafe babe 0000 0038 0010 0a00 0300 0d07  .......8........</span><br><span class="line">00000010: 000e 0700 0f01 0006 3c69 6e69 743e 0100  ........&lt;init&gt;..</span><br><span class="line">00000020: 0328 2956 0100 0443 6f64 6501 000f 4c69  .()V...Code...Li</span><br><span class="line">00000030: 6e65 4e75 6d62 6572 5461 626c 6501 0012  neNumberTable...</span><br><span class="line">00000040: 4c6f 6361 6c56 6172 6961 626c 6554 6162  LocalVariableTab</span><br><span class="line">00000050: 6c65 0100 0474 6869 7301 000b 4c54 6573  le...this...LTes</span><br><span class="line">00000060: 742f 7465 7374 3b01 000a 536f 7572 6365  t/test;...Source</span><br><span class="line">00000070: 4669 6c65 0100 0974 6573 742e 6a61 7661  File...test.java</span><br><span class="line">00000080: 0c00 0400 0501 0009 5465 7374 2f74 6573  ........Test/tes</span><br><span class="line">00000090: 7401 0010 6a61 7661 2f6c 616e 672f 4f62  t...java/lang/Ob</span><br><span class="line">000000a0: 6a65 6374 0021 0002 0003 0000 0000 0001  ject.!..........</span><br><span class="line">000000b0: 0001 0004 0005 0001 0006 0000 002f 0001  ............./..</span><br><span class="line">000000c0: 0001 0000 0005 2ab7 0001 b100 0000 0200  ......*.........</span><br><span class="line">000000d0: 0700 0000 0600 0100 0000 0400 0800 0000  ................</span><br><span class="line">000000e0: 0c00 0100 0000 0500 0900 0a00 0000 0100  ................</span><br><span class="line">000000f0: 0b00 0000 0200 0c                        .......</span><br></pre></td></tr></table></figure>
-
 <p>第一行<code>cafe babe</code>    被称为“魔数”，是JVM识别.class文件到标志。文件格式的定制者可以自由选择魔数值（只要没用过），比如说 .png 文件的魔数是 <code>8950 4e47</code>。</p>
 <h2 id="2-类加载"><a href="#2-类加载" class="headerlink" title="2. 类加载"></a>2. 类加载</h2><p>类加载分为三个步骤：加载，连接，初始化。</p>
 <h3 id="2-1-加载："><a href="#2-1-加载：" class="headerlink" title="2.1 加载："></a>2.1 加载：</h3><ul>
@@ -456,20 +454,16 @@
 </ol>
 </li>
 </ul>
-<h2 id="3-类加载器及加载机制"><a href="#3-类加载器及加载机制" class="headerlink" title="3. 类加载器及加载机制"></a>3. 类加载器及加载机制</h2><img src="/2019/09/28/JVM类加载机制/object.png" title="类加载器负责将class文件读入内存并为之生成对应的java.lang.Class对象">
-
+<h2 id="3-类加载器及加载机制"><a href="#3-类加载器及加载机制" class="headerlink" title="3. 类加载器及加载机制"></a>3. 类加载器及加载机制</h2><img src="/.io/2019//09/28/JVM类加载机制/object.png" title="类加载器负责将class文件读入内存并为之生成对应的java.lang.Class对象">
 <p>对于任意一个类，都需要由它的类加载器和这个类本身一同确定其在 JVM 中的唯一性。也就是说，如果两个类的加载器不同，即使两个类来源于同一个字节码文件，那这两个类就必定不相等（两个类的 Class 对象不 <code>equals</code>）。</p>
 <p>Java类加载器可分为三种：</p>
 <ol>
 <li><p><strong>根（又叫启动，引导）类加载器(Bootstrap Class-Loader)</strong></p>
 <p>它负责加载Java核心类（比如String，System类）。它比较特殊，因为它是由原生C++实现的，并不是<code>java.lang.ClassLoader</code> 的子类，所以下面运行为null。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestJdkCl</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(String.class.getClassLoader());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
 </li>
 </ol>
-<ol start="2">
+<ol>
 <li><p><strong>扩展类加载器(Extension Class-Loader)，加载<code>jre/lib/ext</code> 包下面的jar文件。我们可以通过把自己开发的类打包成JAR文件放入扩展目录来为Java扩展核心类以外的新功能。</strong></p>
 </li>
 <li><p><strong>应用(系统)类加载器(Application or System Class-Loader)，根据程序的类路径(classpath)来加载Java类。</strong></p>
@@ -478,22 +472,18 @@
 </ol>
 <p>例子：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ClassLoader loader = Test.class.getClassLoader();</span><br><span class="line">        <span class="keyword">while</span> (loader != <span class="keyword">null</span>) &#123;</span><br><span class="line">            System.out.println(loader.toString());</span><br><span class="line">            loader = loader.getParent();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <p>每个 Java 类都维护着一个指向定义它的类加载器的引用，通过 <code>类名.class.getClassLoader()</code> 可以获取到此引用；然后通过 <code>loader.getParent()</code> 可以获取类加载器的上层类加载器。</p>
 <p>这段代码的输出结果如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jdk.internal.loader.ClassLoaders$AppClassLoader@<span class="number">3</span>d4eac69</span><br><span class="line">jdk.internal.loader.ClassLoaders$PlatformClassLoader@<span class="number">38</span>af3868</span><br></pre></td></tr></table></figure>
-
 <p>第一行输出为 Test 的类加载器，即应用类加载器，它是 <code>jdk.internal.loader.ClassLoaders$AppClassLoader</code> 类的实例；第二行输出为启动类加载器，是 <code>jdk.internal.loader.ClassLoaders$PlatformClassLoader@38af3868</code> 类的实例。</p>
-<h3 id="3-1-类加载机制"><a href="#3-1-类加载机制" class="headerlink" title="3.1 类加载机制"></a>3.1 类加载机制</h3><img src="/2019/09/28/JVM类加载机制/classlevel.jpg" title="层级关系">
-
+<h3 id="3-1-类加载机制"><a href="#3-1-类加载机制" class="headerlink" title="3.1 类加载机制"></a>3.1 类加载机制</h3><img src="/.io/2019//09/28/JVM类加载机制/classlevel.jpg" title="层级关系">
 <p>Java类加载机制主要由以下三种：</p>
 <ul>
 <li>双亲委派模型：如果一个类加载器收到了加载类的请求，它会先把请求委托给父类加载器去完成，依次递归，一直到最顶层的启动类加载器；只有在父类加载器无法完成类的加载工作时，当前类加载器才会自己去加载这个类。（注意：类加载器中的父子关系并不是类继承上的父子关系，而是类加载器实例之间的关系）</li>
 <li>全盘负责：当一个类加载器加载某个Class时，该Class所依赖和引用的其他Class也将由该类加载器载入，除非显式的使用另外一个类加载器来载入。</li>
 <li>缓存机制：缓存机制会保证所有加载过的Class都会被缓存，当程序中需要使用某个类时，类加载器先从缓冲区搜索该类，若搜寻不到将读取该类的二进制数据并转换成Class对象存入缓冲区中。这就是为什么修改了Class后需重启JVM才能生效的原因。</li>
 </ul>
-<h2 id="JAVA9的改变"><a href="#JAVA9的改变" class="headerlink" title="JAVA9的改变"></a>JAVA9的改变</h2><img src="/2019/09/28/JVM类加载机制/java9cg.png" title="changed">\
-
+<h2 id="JAVA9的改变"><a href="#JAVA9的改变" class="headerlink" title="JAVA9的改变"></a>JAVA9的改变</h2><p><img src="/.io/2019//09/28/JVM类加载机制/java9cg.png" title="changed">\</p>
 <p>可见，在JDK 9中，应用程序类加载器可以委托给平台类加载器以及引导类加载器；平台类加载器可以委托给引导类加载器和应用程序类加载器。 </p>
 <p>此外，JDK 9不再支持扩展机制。 但是，它将扩展类加载器保留在名为平台类加载器的新名称下。 ClassLoader类包含一个名为getPlatformClassLoader()的静态方法，该方法返回对平台类加载器的引用。</p>
 <p>在JDK 9之前，扩展类加载器和应用程序类加载器都是java.net.URLClassLoader类的一个实例。 而在JDK 9中，平台类加载器（以前的扩展类加载器）和应用程序类加载器是内部JDK类的实例。 如果你的代码依赖于URLClassLoader类的特定方法，代码可能会在JDK 9中崩溃。</p>

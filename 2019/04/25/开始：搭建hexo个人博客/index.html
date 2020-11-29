@@ -411,10 +411,8 @@
 </li>
 <li><p>创建一个blog文件夹，初始化建立博客框架</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在你家的目录下创建blog文件夹</span></span><br><span class="line">mkdir blog</span><br><span class="line"><span class="comment"># 进入目录</span></span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line"><span class="comment"># 初始化目录</span></span><br><span class="line">hexo init</span><br><span class="line"><span class="comment"># 开启本地服务 </span></span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
 <p>出现下面信息就可以本地访问啦，在浏览器输入4000这个网址，就可以到博客首页。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">INFO Start processing</span><br><span class="line">INFO Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
-
 <p>然后就可以看到hexo的主页了</p>
 </li>
 </ul>
@@ -429,7 +427,6 @@
 </li>
 <li><p>然后回到blog目录执行（注意，关于heox的命令都只能写在blog目录下）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 产生静态网页</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="comment"># 部署到GitHub page上</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
 <p>然后输入你的GitHub用户名和密码（这里建议将ssh添加到github上，具体操作请访问<a href="https://blog.csdn.net/jinmie0193/article/details/81589661" target="_blank" rel="noopener">github设置ssh登陆</a> </p>
 </li>
 </ul>
@@ -443,7 +440,6 @@
 </li>
 <li><p>然后就遇到第三个坑：文件上传错误，出现以下类似的代码：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">*** Please tell me who you are.</span><br><span class="line"></span><br><span class="line">Run</span><br><span class="line"></span><br><span class="line">  git config --global user.email <span class="string">"you@example.com"</span></span><br><span class="line">  git config --global user.name <span class="string">"Your Name"</span></span><br><span class="line"></span><br><span class="line">to <span class="built_in">set</span> your account<span class="string">'s default identity.</span></span><br><span class="line"><span class="string">Omit --global to set the identity only in this repository.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">fatal: unable to auto-detect email address (got '</span>xxxxx@DESKTOP-I33C9K5.(none)<span class="string">')</span></span><br><span class="line"><span class="string">error: src refspec HEAD does not match any.</span></span><br><span class="line"><span class="string">error: failed to push some refs to '</span>git@github.com:yourname/yourname.github.io.git<span class="string">'</span></span><br><span class="line"><span class="string">FATAL Something'</span>s wrong. Maybe you can find the solution here: http://hexo.io/docs/xxxx.html</span><br><span class="line">Error: error: src refspec HEAD does not match any.</span><br><span class="line">error: failed to push some refs to <span class="string">'git@github.com:yourname/yourname.github.io</span></span><br></pre></td></tr></table></figure>
-
 <p>这是让我们输入用户名和邮箱，按照他的提示来就好：</p>
 <p><code>git config -global user.email &quot;youremail@xxxx.com&quot;</code></p>
 <p><code>git config -global user.name &quot;yourname&quot;</code></p>
