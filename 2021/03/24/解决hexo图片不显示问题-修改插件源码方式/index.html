@@ -79,21 +79,21 @@
 
 
 
-<meta name="description" content="解决hexo图片不显示问题 自上次解决hexo图片不显示问题已经过去一段时间了，突然有一天因为下载了一个数学公式的插件导致图片又不显示了，拖了一段时间，最后决定今天修一下这个问题。 首先检查一下博客图片所在路径是否有误，浏览器访问博客，检查后发现路径是这样的 https://chenzhuo233.github.io/2020/10/26/deepLearning-1/.io/2020//10/2">
+<meta name="description" content="解决hexo图片不显示问题  原创  自上次解决hexo图片不显示问题已经过去一段时间了，突然有一天因为下载了一个数学公式的插件导致图片又不显示了，拖了一段时间，最后决定今天修一下这个问题。 首先检查一下博客图片所在路径是否有误，浏览器访问博客，检查后发现路径是这样的 https://chenzhuo233.github.io/2020/10/26/deepLearning-1/.io/2020/">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="解决hexo图片不显示问题-修改插件源码方式">
 <meta property="og:url" content="/chenzhuo233.github.io/2021/03/24/解决hexo图片不显示问题-修改插件源码方式/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="解决hexo图片不显示问题 自上次解决hexo图片不显示问题已经过去一段时间了，突然有一天因为下载了一个数学公式的插件导致图片又不显示了，拖了一段时间，最后决定今天修一下这个问题。 首先检查一下博客图片所在路径是否有误，浏览器访问博客，检查后发现路径是这样的 https://chenzhuo233.github.io/2020/10/26/deepLearning-1/.io/2020//10/2">
+<meta property="og:description" content="解决hexo图片不显示问题  原创  自上次解决hexo图片不显示问题已经过去一段时间了，突然有一天因为下载了一个数学公式的插件导致图片又不显示了，拖了一段时间，最后决定今天修一下这个问题。 首先检查一下博客图片所在路径是否有误，浏览器访问博客，检查后发现路径是这样的 https://chenzhuo233.github.io/2020/10/26/deepLearning-1/.io/2020/">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="/chenzhuo233.github.io/2021/03/24/解决hexo图片不显示问题-修改插件源码方式/sublime.png">
 <meta property="og:image" content="/chenzhuo233.github.io/2021/03/24/解决hexo图片不显示问题-修改插件源码方式/old_src.png">
 <meta property="og:image" content="/chenzhuo233.github.io/2021/03/24/解决hexo图片不显示问题-修改插件源码方式/test.png">
-<meta property="og:updated_time" content="2021-05-31T07:09:00.849Z">
+<meta property="og:updated_time" content="2021-05-31T07:17:16.511Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="解决hexo图片不显示问题-修改插件源码方式">
-<meta name="twitter:description" content="解决hexo图片不显示问题 自上次解决hexo图片不显示问题已经过去一段时间了，突然有一天因为下载了一个数学公式的插件导致图片又不显示了，拖了一段时间，最后决定今天修一下这个问题。 首先检查一下博客图片所在路径是否有误，浏览器访问博客，检查后发现路径是这样的 https://chenzhuo233.github.io/2020/10/26/deepLearning-1/.io/2020//10/2">
+<meta name="twitter:description" content="解决hexo图片不显示问题  原创  自上次解决hexo图片不显示问题已经过去一段时间了，突然有一天因为下载了一个数学公式的插件导致图片又不显示了，拖了一段时间，最后决定今天修一下这个问题。 首先检查一下博客图片所在路径是否有误，浏览器访问博客，检查后发现路径是这样的 https://chenzhuo233.github.io/2020/10/26/deepLearning-1/.io/2020/">
 <meta name="twitter:image" content="/chenzhuo233.github.io/2021/03/24/解决hexo图片不显示问题-修改插件源码方式/sublime.png">
 
 
@@ -382,8 +382,11 @@
 
       
         <h1>解决hexo图片不显示问题</h1>
+<blockquote>
+<p>原创</p>
+</blockquote>
 <p>自上次解决hexo图片不显示问题已经过去一段时间了，突然有一天因为下载了一个数学公式的插件导致图片又不显示了，拖了一段时间，最后决定今天修一下这个问题。</p>
-<p>首先检查一下博客图片所在路径是否有误，浏览器访问博客，检查后发现路径是这样的 <code>https://chenzhuo233.github.io/2020/10/26/deepLearning-1/.io/2020//10/26/deepLearning-1/linear.jpg </code> 这路径都不对怎么可能显示图片，正确的应该是<code>https://chenzhuo233.github.io/2020/10/26/deepLearning-1/linear.jpg</code> 这样，可以看到在标题后多了 <code>.io/2020//10/26/deepLearning-1</code> 的字符串，于是我猜测可能是hexo的图片插件解析路径时多拼接了路径地址，所以我们的目的就是把<code>.io</code> 到<code>linear.jpg</code>中间的多余字符串去掉。</p>
+<p>首先检查一下博客图片所在路径是否有误，浏览器访问博客，检查后发现路径是这样的 <code>https://chenzhuo233.github.io/2020/10/26/deepLearning-1/.io/2020//10/26/deepLearning-1/linear.jpg </code> 这路径都不对，怎么可能显示图片，正确的应该是<code>https://chenzhuo233.github.io/2020/10/26/deepLearning-1/linear.jpg</code> 这样，可以看到在标题后多了 <code>.io/2020//10/26/deepLearning-1</code> 的字符串，于是我猜测可能是hexo的图片插件解析路径时多拼接了路径地址，所以我们的目的就是把<code>.io</code> 到<code>linear.jpg</code>中间的多余字符串去掉。</p>
 <blockquote>
 <p>操作</p>
 </blockquote>
@@ -392,10 +395,11 @@
 <p>上面这部分应该是生成静态网页的部分，往下找找到img相关，找到最后面的</p>
 <img src="old_src.png" title="解析img路径部分">
 <p>这里我们通过console打印出来这几个值，可以发现</p>
-<p><code>config.root='/'   link='.io/2020//'   src='10/26/deep-1/linear.jpg' </code>我们只需要将前两个去掉，把src分割一下就可以，把这两段代码注掉，添加以下代码</p>
+<p><code>config.root='/'   link='.io/2020//'   src='10/26/deep-1/linear.jpg' </code>我们只需要将前两个去掉，把src分割一下就可以。把最后这两段注释掉，添加以下代码即可</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> lastindex = src.lastIndexOf(<span class="string">'/'</span>);</span><br><span class="line"><span class="keyword">let</span> imageSrc = src.substr(lastindex+<span class="number">1</span>, src.length - lastindex - <span class="number">1</span>);</span><br><span class="line">$(<span class="keyword">this</span>).attr(<span class="string">'src'</span>, imageSrc);</span><br><span class="line"><span class="built_in">console</span>.info&amp;&amp;<span class="built_in">console</span>.info(<span class="string">"update link as:--&gt;"</span>+imageSrc);</span><br></pre></td></tr></table></figure>
 <p>这样就可以切割掉中间多余的部分了，测试一下：</p>
 <img src="test.png" title="测试通过">
+<p>可以看到博客可以正常找到图片路径了。</p>
 <p>解决</p>
 
       
