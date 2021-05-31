@@ -87,12 +87,12 @@
 <meta property="og:site_name" content="陈某人的基地">
 <meta property="og:description" content="Spring Ioc控制反转 参考博客 DI（依赖注入）是实现Ioc的一种方法 Ioc就是将得到对象的方式反转，不是由我们自身主动创建（new）对象，而是将创建对象的过程交给spring容器完成，我们只负责从容器中得到（get）对象。 Ioc是Spring的核心。可以使用xml，注解的方式实现Ioc，也可以零配置实现。 Spring容器在初始化时会先读取配置文件，根据配置文件或元数据创建与组织对象">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/.io/2019//11/28/Spring/beanzyy.png">
+<meta property="og:image" content="/chenzhuo233.github.io/2019/11/28/Spring/beanzyy.png">
 <meta property="og:updated_time" content="2019-12-03T16:36:01.082Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring">
 <meta name="twitter:description" content="Spring Ioc控制反转 参考博客 DI（依赖注入）是实现Ioc的一种方法 Ioc就是将得到对象的方式反转，不是由我们自身主动创建（new）对象，而是将创建对象的过程交给spring容器完成，我们只负责从容器中得到（get）对象。 Ioc是Spring的核心。可以使用xml，注解的方式实现Ioc，也可以零配置实现。 Spring容器在初始化时会先读取配置文件，根据配置文件或元数据创建与组织对象">
-<meta name="twitter:image" content="/.io/2019//11/28/Spring/beanzyy.png">
+<meta name="twitter:image" content="/chenzhuo233.github.io/2019/11/28/Spring/beanzyy.png">
 
 
 
@@ -461,7 +461,7 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">导入约束 : xmlns:c="http://www.springframework.org/schema/c"</span><br><span class="line"><span class="comment">&lt;!--C(构造: Constructor)命名空间 , 属性依然要设置set方法--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"user"</span> <span class="attr">class</span>=<span class="string">"com.kuang.pojo.User"</span> <span class="attr">c:name</span>=<span class="string">"狂神"</span> <span class="attr">c:age</span>=<span class="string">"18"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test02</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ApplicationContext context = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line">    User user = (User) context.getBean(<span class="string">"user"</span>);</span><br><span class="line">    System.out.println(user);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="Bean作用域">Bean作用域</h3>
-<img src="/.io/2019//11/28/Spring/beanzyy.png" title="作用域">
+<img src="beanzyy.png" title="作用域">
 <h3 id="Bean自动装配">Bean自动装配</h3>
 <p>隐式的bean发现机制和自动装配</p>
 <ol>
