@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="算法学习,">
+  <meta name="keywords" content="DeepLearning,">
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="滑窗算法 滑窗算法是通过使用特定大小的子列表，在遍历完整列表的同时进行特定的操作，以达到降低了循环的嵌套深度。 一般在找无重复最长子串，连续元素最大和等。  双指针移动，遍历时不嵌套循环所有值，外层遍历代表整个窗口向右滑动，每次减去失效值（重复值）加上最新值，比较长度。 例子：  给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。 示例 1: 输入: “abcabcbb” 输出: 3">
-<meta name="keywords" content="算法学习">
+<meta name="description" content="数据处理与数据加载 Dataset abstract class 1234567891011121314151617181920212223from torch.utils.data import Datasetclass DiabetesDataset(Dataset):  # 两种实现方法：1.数据集不大情况下，可以直接读到内存中 2.数据量很大情况，打包到文件，文件列表  def _init">
+<meta name="keywords" content="DeepLearning">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sliding-window-algorithm算法">
-<meta property="og:url" content="/chenzhuo233.github.io/2019/11/03/sliding-window-algorithm算法/index.html">
+<meta property="og:title" content="DeepLearning(2)">
+<meta property="og:url" content="/chenzhuo233.github.io/2020/11/30/DeepLearning-2/index.html">
 <meta property="og:site_name" content="陈某人的基地">
-<meta property="og:description" content="滑窗算法 滑窗算法是通过使用特定大小的子列表，在遍历完整列表的同时进行特定的操作，以达到降低了循环的嵌套深度。 一般在找无重复最长子串，连续元素最大和等。  双指针移动，遍历时不嵌套循环所有值，外层遍历代表整个窗口向右滑动，每次减去失效值（重复值）加上最新值，比较长度。 例子：  给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。 示例 1: 输入: “abcabcbb” 输出: 3">
+<meta property="og:description" content="数据处理与数据加载 Dataset abstract class 1234567891011121314151617181920212223from torch.utils.data import Datasetclass DiabetesDataset(Dataset):  # 两种实现方法：1.数据集不大情况下，可以直接读到内存中 2.数据量很大情况，打包到文件，文件列表  def _init">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/.io/2019//11/03/sliding-window-algorithm算法/sws.png">
-<meta property="og:updated_time" content="2020-02-07T05:54:17.078Z">
+<meta property="og:updated_time" content="2021-01-06T07:35:48.782Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sliding-window-algorithm算法">
-<meta name="twitter:description" content="滑窗算法 滑窗算法是通过使用特定大小的子列表，在遍历完整列表的同时进行特定的操作，以达到降低了循环的嵌套深度。 一般在找无重复最长子串，连续元素最大和等。  双指针移动，遍历时不嵌套循环所有值，外层遍历代表整个窗口向右滑动，每次减去失效值（重复值）加上最新值，比较长度。 例子：  给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。 示例 1: 输入: “abcabcbb” 输出: 3">
-<meta name="twitter:image" content="/.io/2019//11/03/sliding-window-algorithm算法/sws.png">
+<meta name="twitter:title" content="DeepLearning(2)">
+<meta name="twitter:description" content="数据处理与数据加载 Dataset abstract class 1234567891011121314151617181920212223from torch.utils.data import Datasetclass DiabetesDataset(Dataset):  # 两种实现方法：1.数据集不大情况下，可以直接读到内存中 2.数据量很大情况，打包到文件，文件列表  def _init">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="/chenzhuo233.github.io/2019/11/03/sliding-window-algorithm算法/">
+  <link rel="canonical" href="/chenzhuo233.github.io/2020/11/30/DeepLearning-2/">
 
 
 
 
 
-  <title>sliding-window-algorithm算法 | 陈某人的基地</title>
+  <title>DeepLearning(2) | 陈某人的基地</title>
   
 
 
@@ -297,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2019/11/03/sliding-window-algorithm算法/">
+    <link itemprop="mainEntityOfPage" href="/chenzhuo233.github.io/2020/11/30/DeepLearning-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sober ChenZhuo">
@@ -314,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">sliding-window-algorithm算法</h1>
+          <h1 class="post-title" itemprop="name headline">DeepLearning(2)</h1>
         
 
         <div class="post-meta">
@@ -326,8 +324,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-03T22:40:37+08:00">
-                2019-11-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-11-30T23:17:02+08:00">
+                2020-11-30
               </time>
             
 
@@ -337,28 +335,6 @@
           </span>
 
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/sliding-window-algorithm/" itemprop="url" rel="index">
-                    <span itemprop="name">sliding window algorithm</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -367,8 +343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/11/03/sliding-window-algorithm算法/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/11/03/sliding-window-algorithm算法/" itemprop="commentCount"></span>
+                <a href="/2020/11/30/DeepLearning-2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2020/11/30/DeepLearning-2/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -401,24 +377,20 @@
       
 
       
-        <h1>滑窗算法</h1>
-<p>滑窗算法是通过使用特定大小的子列表，在遍历完整列表的同时进行特定的操作，以达到降低了循环的嵌套深度。</p>
-<p>一般在找无重复最长子串，连续元素最大和等。</p>
-<img src="/.io/2019//11/03/sliding-window-algorithm算法/sws.png">
-<p>双指针移动，遍历时不嵌套循环所有值，外层遍历代表整个窗口向右滑动，每次减去失效值（重复值）加上最新值，比较长度。</p>
-<p>例子：</p>
+        <h2 id="数据处理与数据加载">数据处理与数据加载</h2>
+<h3 id="Dataset">Dataset</h3>
+<p><strong>abstract class</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> torch.utils.data <span class="keyword">import</span> Dataset</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">DiabetesDataset</span><span class="params">(Dataset)</span>:</span></span><br><span class="line">  <span class="comment"># 两种实现方法：1.数据集不大情况下，可以直接读到内存中 2.数据量很大情况，打包到文件，文件列表</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">_init_</span><span class="params">(self,FilePath)</span>:</span></span><br><span class="line">    <span class="comment"># 使用numpy的loadtext读取FilePath路径下的csv文件，用,隔开，类型为32位float</span></span><br><span class="line">    xy = np.loadtext(FilePath,delimiter=<span class="string">','</span>,dtype=np.float32)</span><br><span class="line">    <span class="comment"># len即数据集的维度</span></span><br><span class="line">    self.len = xy.shape[<span class="number">0</span>]</span><br><span class="line">    <span class="comment"># 数据集</span></span><br><span class="line">    self.x_data = torch.from_numpy(xy[:,:<span class="number">-1</span>])</span><br><span class="line">    <span class="comment"># label列，这里是认为label在数据集的最后一列，这里[-1]是因为若直接-1，读取出来的是标量会导致数据类型不一致问题，因为pytorch是tensor计算</span></span><br><span class="line">    self.y_data = torch.from_numpy(xy[:,[<span class="number">-1</span>]])</span><br><span class="line">    </span><br><span class="line">  <span class="comment"># 下标获取元素</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">_getitem_</span><span class="params">(self,index)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> self.x_data[index],self.y_data[index]</span><br><span class="line">  </span><br><span class="line">  <span class="comment"># 长度</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">_len_</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> self.len</span><br><span class="line"></span><br><span class="line">dataset = DiabetesDataset(<span class="string">'traindata.csv'</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="DataLoader">DataLoader</h3>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> torch.utils.data <span class="keyword">import</span> DataLoader</span><br><span class="line"></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">   dataset :Dataset的实现类</span></span><br><span class="line"><span class="string">   batch_size:批batch大小</span></span><br><span class="line"><span class="string">   shuffle:是否打乱顺序</span></span><br><span class="line"><span class="string">   num_workers:需要多少线程并行读数据</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line">train_loader = DataLoader(dataset=dataset,batch_size=(int),shuffle=<span class="literal">True</span>,num_workers=<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="图片数据归一化处理">图片数据归一化处理</h2>
+<p>什么是图像归一化：</p>
 <blockquote>
-<p>给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</p>
-<p>示例 1:</p>
-<p>输入: “abcabcbb”<br>
-输出: 3<br>
-解释: 因为无重复字符的最长子串是 “abc”，所以其长度为 3。</p>
+<p>图像归一化是指对图像进行了一系列标准的处理变换，使之变换为一固定标准形式的过程，该标准图像称作<a href="https://baike.baidu.com/item/%E5%BD%92%E4%B8%80%E5%8C%96/2215161" target="_blank" rel="noopener">归一化</a>图像。原始图像在经历一些处理或攻击后可以得到多种副本图像，这些图像在经过相同参数的图像归一化处理后能够得到相同形式的标准图像。</p>
 </blockquote>
-<p>解法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">        Set&lt;Character&gt; NoSameChar = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">while</span>(left &lt; s.length() &amp;&amp; right &lt; s.length())&#123;</span><br><span class="line">            <span class="keyword">if</span>(!NoSameChar.contains(s.charAt(right)))&#123;</span><br><span class="line">                NoSameChar.add(s.charAt(right));</span><br><span class="line">                right++;</span><br><span class="line">                max = max &gt; right-left ? max : right - left;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                NoSameChar.remove(s.charAt(left));</span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>参考：</p>
-<p><a href="https://blog.csdn.net/sty945/article/details/79846516" target="_blank" rel="noopener">滑窗详解</a></p>
-<p><a href="https://www.cnblogs.com/cdfive2018/p/10054563.html" target="_blank" rel="noopener">滑窗算法</a></p>
+<h2 id="自定义Dataset制造imbalanceMNIST数据集">自定义Dataset制造imbalanceMNIST数据集</h2>
+<p>尝试用CNN做一次不平衡数据集检测，但是之前使用的是pytorch自带的MNIST Dataset，想处理不同数据，于是参照MNIST的源码自己实现了一个Dataset，想减少多少数据都可以，用来做imbalance测试。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> torch.nn.functional <span class="keyword">as</span> F</span><br><span class="line"><span class="keyword">import</span> torch.optim <span class="keyword">as</span> optim</span><br><span class="line"><span class="keyword">from</span> torchvision <span class="keyword">import</span> transforms</span><br><span class="line"><span class="keyword">from</span> torchvision <span class="keyword">import</span> datasets</span><br><span class="line"><span class="keyword">from</span> torch.utils.data <span class="keyword">import</span> DataLoader</span><br><span class="line"><span class="keyword">from</span> torch.utils.data <span class="keyword">import</span> Dataset</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line"><span class="comment"># unbalance</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UnBalancedDataset</span><span class="params">(Dataset)</span>:</span></span><br><span class="line">    train_file = <span class="string">'training.pt'</span></span><br><span class="line">    test_file = <span class="string">'test.pt'</span></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,root,train=True,transform=None,filterlist=[<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],**kwargs)</span>:</span></span><br><span class="line">        self.root = root</span><br><span class="line">        self.transform = transform</span><br><span class="line">        self.train = train</span><br><span class="line">        self.filterlist = filterlist</span><br><span class="line">        self._change_data()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> self._check_exists():</span><br><span class="line">            <span class="keyword">raise</span> RuntimeError(<span class="string">'Dataset not found.'</span>)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> self.train:</span><br><span class="line">            data_file = self.train_file</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            data_file = self.test_file</span><br><span class="line"></span><br><span class="line">        self.data, self.targets = torch.load(os.path.join(self.root, <span class="string">'MNIST'</span>, <span class="string">'processed'</span>, data_file))</span><br><span class="line">        </span><br><span class="line">        self._filter()</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self, index)</span>:</span></span><br><span class="line">        img,target = self.data[index],self.targets[index] <span class="comment"># img.shape tensor([28,28])</span></span><br><span class="line"></span><br><span class="line">        img = Image.fromarray(img.numpy())  <span class="comment"># numpy -&gt; PIL image</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> self.transform <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">            img = self.transform(img) <span class="comment"># img.size ([1,28,28])</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> img,target</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__len__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> len(self.data)</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_check_exists</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> (os.path.exists(os.path.join(self.root, <span class="string">'MNIST'</span>, <span class="string">'processed'</span>, self.train_file)) <span class="keyword">and</span> os.path.exists(</span><br><span class="line">            os.path.join(self.root, <span class="string">'MNIST'</span>, <span class="string">'processed'</span>, self.test_file)))</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_change_data</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(self.filterlist)):</span><br><span class="line">            <span class="keyword">if</span>(self.filterlist[i] != <span class="number">0</span>):</span><br><span class="line">                self.filterlist[i] = <span class="number">6000</span> - self.filterlist[i]</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_filter</span><span class="params">(self)</span>:</span></span><br><span class="line">        n = np.arange(<span class="number">10</span>)</span><br><span class="line">        show = pd.Series(self.filterlist,n)</span><br><span class="line">        print(show)</span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        print(<span class="string">'\tDeal with train_set...'</span>)</span><br><span class="line">        <span class="keyword">for</span> image,target <span class="keyword">in</span> zip(self.data,self.targets):</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(target == <span class="number">0</span> <span class="keyword">and</span> self.filterlist[<span class="number">0</span>] &gt; <span class="number">0</span>):</span><br><span class="line">                self.data = self.data[torch.arange(self.data.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.targets = self.targets[torch.arange(self.targets.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.filterlist[<span class="number">0</span>] -= <span class="number">1</span></span><br><span class="line">                i -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(target == <span class="number">1</span> <span class="keyword">and</span> self.filterlist[<span class="number">1</span>] &gt; <span class="number">0</span>):</span><br><span class="line">                self.data = self.data[torch.arange(self.data.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.targets = self.targets[torch.arange(self.targets.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.filterlist[<span class="number">1</span>] -= <span class="number">1</span></span><br><span class="line">                i -= <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(target == <span class="number">2</span> <span class="keyword">and</span> self.filterlist[<span class="number">2</span>] &gt; <span class="number">0</span>):</span><br><span class="line">                self.data = self.data[torch.arange(self.data.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.targets = self.targets[torch.arange(self.targets.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.filterlist[<span class="number">2</span>] -= <span class="number">1</span></span><br><span class="line">                i -= <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(target == <span class="number">3</span> <span class="keyword">and</span> self.filterlist[<span class="number">3</span>] &gt; <span class="number">0</span>):</span><br><span class="line">                self.data = self.data[torch.arange(self.data.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.targets = self.targets[torch.arange(self.targets.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.filterlist[<span class="number">3</span>] -= <span class="number">1</span></span><br><span class="line">                i -= <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(target == <span class="number">4</span> <span class="keyword">and</span> self.filterlist[<span class="number">4</span>] &gt; <span class="number">0</span>):</span><br><span class="line">                self.data = self.data[torch.arange(self.data.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.targets = self.targets[torch.arange(self.targets.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.filterlist[<span class="number">4</span>] -= <span class="number">1</span></span><br><span class="line">                i -= <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(target == <span class="number">5</span> <span class="keyword">and</span> self.filterlist[<span class="number">5</span>] &gt; <span class="number">0</span>):</span><br><span class="line">                self.data = self.data[torch.arange(self.data.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.targets = self.targets[torch.arange(self.targets.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.filterlist[<span class="number">5</span>] -= <span class="number">1</span></span><br><span class="line">                i -= <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(target == <span class="number">6</span> <span class="keyword">and</span> self.filterlist[<span class="number">6</span>] &gt; <span class="number">0</span>):</span><br><span class="line">                self.data = self.data[torch.arange(self.data.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.targets = self.targets[torch.arange(self.targets.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.filterlist[<span class="number">6</span>] -= <span class="number">1</span></span><br><span class="line">                i -= <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(target == <span class="number">7</span> <span class="keyword">and</span> self.filterlist[<span class="number">7</span>] &gt; <span class="number">0</span>):</span><br><span class="line">                self.data = self.data[torch.arange(self.data.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.targets = self.targets[torch.arange(self.targets.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.filterlist[<span class="number">7</span>] -= <span class="number">1</span></span><br><span class="line">                i -= <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(target == <span class="number">8</span> <span class="keyword">and</span> self.filterlist[<span class="number">8</span>] &gt; <span class="number">0</span>):</span><br><span class="line">                self.data = self.data[torch.arange(self.data.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.targets = self.targets[torch.arange(self.targets.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.filterlist[<span class="number">8</span>] -= <span class="number">1</span></span><br><span class="line">                i -= <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(target == <span class="number">9</span> <span class="keyword">and</span> self.filterlist[<span class="number">9</span>] &gt; <span class="number">0</span>):</span><br><span class="line">                self.data = self.data[torch.arange(self.data.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.targets = self.targets[torch.arange(self.targets.size(<span class="number">0</span>))!=i]</span><br><span class="line">                self.filterlist[<span class="number">9</span>] -= <span class="number">1</span></span><br><span class="line">                i -= <span class="number">1</span></span><br><span class="line">            </span><br><span class="line">            i += <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -436,7 +408,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/算法学习/" rel="tag"># 算法学习</a>
+            <a href="/tags/DeepLearning/" rel="tag"># DeepLearning</a>
           
         </div>
       
@@ -449,8 +421,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/29/JAVA垃圾回收/" rel="next" title="JAVA垃圾回收">
-                <i class="fa fa-chevron-left"></i> JAVA垃圾回收
+              <a href="/2020/11/26/matplotlib-pyplot简单使用/" rel="next" title="matplotlib.pyplot简单使用">
+                <i class="fa fa-chevron-left"></i> matplotlib.pyplot简单使用
               </a>
             
           </div>
@@ -458,10 +430,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/28/Spring/" rel="prev" title="Spring">
-                Spring <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -478,7 +446,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="/2019/11/03/sliding-window-algorithm算法/" title="sliding-window-algorithm算法">2019/11/03/sliding-window-algorithm算法/</a>
+    <a href="/2020/11/30/DeepLearning-2/" title="DeepLearning(2)">2020/11/30/DeepLearning-2/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权： </strong>
@@ -632,7 +600,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#null"><span class="nav-number">1.</span> <span class="nav-text">滑窗算法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据处理与数据加载"><span class="nav-number">1.</span> <span class="nav-text">数据处理与数据加载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Dataset"><span class="nav-number">1.1.</span> <span class="nav-text">Dataset</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DataLoader"><span class="nav-number">1.2.</span> <span class="nav-text">DataLoader</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图片数据归一化处理"><span class="nav-number">2.</span> <span class="nav-text">图片数据归一化处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义Dataset制造imbalanceMNIST数据集"><span class="nav-number">3.</span> <span class="nav-text">自定义Dataset制造imbalanceMNIST数据集</span></a></li></ol></div>
             
 
           </div>
