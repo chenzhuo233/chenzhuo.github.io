@@ -87,14 +87,14 @@
 <meta property="og:site_name" content="陈某人的基地">
 <meta property="og:description" content="Java类加载机制 参考 1. 字节码 源码： test.java 12345678package Test;/*这个文件主要用来做java课程作业*/public class test &amp;#123;	public static void main(String[] args)&amp;#123;		System.out.println(&quot;this is a test&quot;);	&amp;#125;&amp;#125; 编译">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/.io/2019//09/28/JVM类加载机制/object.png">
-<meta property="og:image" content="/.io/2019//09/28/JVM类加载机制/classlevel.jpg">
-<meta property="og:image" content="/.io/2019//09/28/JVM类加载机制/java9cg.png">
+<meta property="og:image" content="/chenzhuo233.github.io/2019/09/28/JVM类加载机制/09/28/JVM类加载机制/object.png">
+<meta property="og:image" content="/chenzhuo233.github.io/2019/09/28/JVM类加载机制/09/28/JVM类加载机制/classlevel.jpg">
+<meta property="og:image" content="/chenzhuo233.github.io/2019/09/28/JVM类加载机制/09/28/JVM类加载机制/java9cg.png">
 <meta property="og:updated_time" content="2019-10-29T07:26:21.969Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JVM类加载机制">
 <meta name="twitter:description" content="Java类加载机制 参考 1. 字节码 源码： test.java 12345678package Test;/*这个文件主要用来做java课程作业*/public class test &amp;#123;	public static void main(String[] args)&amp;#123;		System.out.println(&quot;this is a test&quot;);	&amp;#125;&amp;#125; 编译">
-<meta name="twitter:image" content="/.io/2019//09/28/JVM类加载机制/object.png">
+<meta name="twitter:image" content="/chenzhuo233.github.io/2019/09/28/JVM类加载机制/09/28/JVM类加载机制/object.png">
 
 
 
@@ -465,7 +465,7 @@
 </li>
 </ul>
 <h2 id="3-类加载器及加载机制">3. 类加载器及加载机制</h2>
-<img src="/.io/2019//09/28/JVM类加载机制/object.png" title="类加载器负责将class文件读入内存并为之生成对应的java.lang.Class对象">
+<img src="09/28/JVM类加载机制/object.png" title="类加载器负责将class文件读入内存并为之生成对应的java.lang.Class对象">
 <p>对于任意一个类，都需要由它的类加载器和这个类本身一同确定其在 JVM 中的唯一性。也就是说，如果两个类的加载器不同，即使两个类来源于同一个字节码文件，那这两个类就必定不相等（两个类的 Class 对象不 <code>equals</code>）。</p>
 <p>Java类加载器可分为三种：</p>
 <ol>
@@ -489,7 +489,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jdk.internal.loader.ClassLoaders$AppClassLoader@<span class="number">3</span>d4eac69</span><br><span class="line">jdk.internal.loader.ClassLoaders$PlatformClassLoader@<span class="number">38</span>af3868</span><br></pre></td></tr></table></figure>
 <p>第一行输出为 Test 的类加载器，即应用类加载器，它是 <code>jdk.internal.loader.ClassLoaders$AppClassLoader</code> 类的实例；第二行输出为启动类加载器，是 <code>jdk.internal.loader.ClassLoaders$PlatformClassLoader@38af3868</code> 类的实例。</p>
 <h3 id="3-1-类加载机制">3.1 类加载机制</h3>
-<img src="/.io/2019//09/28/JVM类加载机制/classlevel.jpg" title="层级关系">
+<img src="09/28/JVM类加载机制/classlevel.jpg" title="层级关系">
 <p>Java类加载机制主要由以下三种：</p>
 <ul>
 <li>双亲委派模型：如果一个类加载器收到了加载类的请求，它会先把请求委托给父类加载器去完成，依次递归，一直到最顶层的启动类加载器；只有在父类加载器无法完成类的加载工作时，当前类加载器才会自己去加载这个类。（注意：类加载器中的父子关系并不是类继承上的父子关系，而是类加载器实例之间的关系）</li>
@@ -497,7 +497,7 @@
 <li>缓存机制：缓存机制会保证所有加载过的Class都会被缓存，当程序中需要使用某个类时，类加载器先从缓冲区搜索该类，若搜寻不到将读取该类的二进制数据并转换成Class对象存入缓冲区中。这就是为什么修改了Class后需重启JVM才能生效的原因。</li>
 </ul>
 <h2 id="JAVA9的改变">JAVA9的改变</h2>
-<img src="/.io/2019//09/28/JVM类加载机制/java9cg.png" title="changed">\
+<img src="09/28/JVM类加载机制/java9cg.png" title="changed">\
 <p>可见，在JDK 9中，应用程序类加载器可以委托给平台类加载器以及引导类加载器；平台类加载器可以委托给引导类加载器和应用程序类加载器。</p>
 <p>此外，JDK 9不再支持扩展机制。 但是，它将扩展类加载器保留在名为平台类加载器的新名称下。 ClassLoader类包含一个名为getPlatformClassLoader()的静态方法，该方法返回对平台类加载器的引用。</p>
 <p>在JDK 9之前，扩展类加载器和应用程序类加载器都是java.net.URLClassLoader类的一个实例。 而在JDK 9中，平台类加载器（以前的扩展类加载器）和应用程序类加载器是内部JDK类的实例。 如果你的代码依赖于URLClassLoader类的特定方法，代码可能会在JDK 9中崩溃。</p>

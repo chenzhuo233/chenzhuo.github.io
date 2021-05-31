@@ -87,16 +87,16 @@
 <meta property="og:site_name" content="陈某人的基地">
 <meta property="og:description" content="Redis Nosql，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。key-value不仅仅是key-value。 官网 安装（Mac）  使用Homebrew下载redis brew search redis 找到最新版，现在稳定版为redis@4.0 brew install redis@4.0，等待下载完成即可 下载完后会有提示If you need to have re">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/.io/2020//03/30/Redis/redisops.jpg">
-<meta property="og:image" content="/.io/2020//03/30/Redis/rdb.jpg">
-<meta property="og:image" content="/.io/2020//03/30/Redis/aof.jpg">
-<meta property="og:image" content="/.io/2020//03/30/Redis/bl.jpeg">
-<meta property="og:image" content="/.io/2020//03/30/Redis/hcxb.jpeg">
+<meta property="og:image" content="/chenzhuo233.github.io/2020/03/30/Redis/03/30/Redis/redisops.jpg">
+<meta property="og:image" content="/chenzhuo233.github.io/2020/03/30/Redis/03/30/Redis/rdb.jpg">
+<meta property="og:image" content="/chenzhuo233.github.io/2020/03/30/Redis/03/30/Redis/aof.jpg">
+<meta property="og:image" content="/chenzhuo233.github.io/2020/03/30/Redis/03/30/Redis/bl.jpeg">
+<meta property="og:image" content="/chenzhuo233.github.io/2020/03/30/Redis/03/30/Redis/hcxb.jpeg">
 <meta property="og:updated_time" content="2020-04-07T16:39:46.871Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redis">
 <meta name="twitter:description" content="Redis Nosql，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。key-value不仅仅是key-value。 官网 安装（Mac）  使用Homebrew下载redis brew search redis 找到最新版，现在稳定版为redis@4.0 brew install redis@4.0，等待下载完成即可 下载完后会有提示If you need to have re">
-<meta name="twitter:image" content="/.io/2020//03/30/Redis/redisops.jpg">
+<meta name="twitter:image" content="/chenzhuo233.github.io/2020/03/30/Redis/03/30/Redis/redisops.jpg">
 
 
 
@@ -518,7 +518,7 @@
 <ol start="3">
 <li>
 <p>测试</p>
-<img src="/.io/2020//03/30/Redis/redisops.jpg">
+<img src="03/30/Redis/redisops.jpg">
 <p>ops里几乎包含了所有redis操作。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//连接操作</span></span><br><span class="line">RedisConnection connection = redisTemplate.getConnectionFactory().getConnection();</span><br></pre></td></tr></table></figure>
 </li>
@@ -586,7 +586,7 @@
 <blockquote>
 <p>RDB持久化是把当前进程数据生成快照保存到硬盘的过程，触发RDB持久化过程分为手动触发和自动触发</p>
 </blockquote>
-<img src="/.io/2020//03/30/Redis/rdb.jpg" title="RDB">
+<img src="03/30/Redis/rdb.jpg" title="RDB">
 <h4 id="RDB的优点：">RDB的优点：</h4>
 <p>·RDB是一个紧凑压缩的二进制文件，代表Redis在某个时间点上的数据 快照。非常适用于备份，全量复制等场景。比如每6小时执行bgsave备份， 并把RDB文件拷贝到远程机器或者文件系统中（如hdfs），用于灾难恢复。</p>
 <p>·Redis加载RDB恢复数据远远快于AOF的方式。</p>
@@ -599,7 +599,7 @@
 <p>AOF（append only file）持久化：以独立日志的方式记录每次写命令， 重启时再重新执行AOF文件中的命令达到恢复数据的目的。AOF的主要作用 是解决了数据持久化的实时性，目前已经是Redis持久化的主流方式</p>
 </blockquote>
 <p>开启AOF功能需要设置配置：appendonly yes，默认不开启。AOF文件名 通过appendfilename配置设置，默认文件名是appendonly.aof。保存路径同 RDB持久化方式一致，通过dir配置指定。AOF的工作流程操作：命令写入 （append）、文件同步（sync）、文件重写（rewrite）、重启加载 （load）</p>
-<img src="/.io/2020//03/30/Redis/aof.jpg" title="AOF">
+<img src="03/30/Redis/aof.jpg" title="AOF">
 <ol>
 <li>
 <p>所有的写入命令会追加到aof_buf（缓冲区）中。</p>
@@ -709,7 +709,7 @@
 <li>
 <p><strong>布隆过滤器</strong>：</p>
 <p>首先是对所有可能查询的参数以hash形式存储，当用户想要查询的时候，使用布隆过滤器发现不在集合中，就直接丢弃，不再对持久层查询。</p>
-<img src="/.io/2020//03/30/Redis/bl.jpeg" title="布隆过滤器效果">
+<img src="03/30/Redis/bl.jpeg" title="布隆过滤器效果">
 </li>
 <li>
 <p><strong>缓存空对象</strong>：当存储层不命中后，即使返回的空对象也将其缓存起来，同时会设置一个过期时间，之后再访问这个数据将会从缓存中获取，保护了后端数据源；</p>
@@ -739,7 +739,7 @@
 <p>缓存雪崩</p>
 </blockquote>
 <p>缓存集中过期失效，redis缓存服务器宕机，访问量瞬间都会到数据库中，造成数据库压垮。</p>
-<img src="/.io/2020//03/30/Redis/hcxb.jpeg" title="缓存雪崩">
+<img src="03/30/Redis/hcxb.jpeg" title="缓存雪崩">
 <p><strong>解决方案</strong></p>
 <ol>
 <li>

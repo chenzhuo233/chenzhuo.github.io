@@ -87,16 +87,16 @@
 <meta property="og:site_name" content="陈某人的基地">
 <meta property="og:description" content="Garbage Collection，GC 简单介绍Java内存 虚拟机内存运行时的数据区主要有三块：  堆（Heap）：存放对象实例和数组。全局共享 栈（Stack）：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有 方法区（Method Area）：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同   **堆：**最大的最重要的部分，逻辑堆。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="/.io/2019//10/29/JAVA垃圾回收/gc.jpeg">
-<meta property="og:image" content="/.io/2019//10/29/JAVA垃圾回收/gc1.jpg">
-<meta property="og:image" content="/.io/2019//10/29/JAVA垃圾回收/gc2.jpg">
-<meta property="og:image" content="/.io/2019//10/29/JAVA垃圾回收/gc3.png">
-<meta property="og:image" content="/.io/2019//10/29/JAVA垃圾回收/gc4.jpg">
+<meta property="og:image" content="/chenzhuo233.github.io/2019/10/29/JAVA垃圾回收/10/29/JAVA垃圾回收/gc.jpeg">
+<meta property="og:image" content="/chenzhuo233.github.io/2019/10/29/JAVA垃圾回收/10/29/JAVA垃圾回收/gc1.jpg">
+<meta property="og:image" content="/chenzhuo233.github.io/2019/10/29/JAVA垃圾回收/10/29/JAVA垃圾回收/gc2.jpg">
+<meta property="og:image" content="/chenzhuo233.github.io/2019/10/29/JAVA垃圾回收/10/29/JAVA垃圾回收/gc3.png">
+<meta property="og:image" content="/chenzhuo233.github.io/2019/10/29/JAVA垃圾回收/10/29/JAVA垃圾回收/gc4.jpg">
 <meta property="og:updated_time" content="2019-11-02T13:18:12.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JAVA垃圾回收">
 <meta name="twitter:description" content="Garbage Collection，GC 简单介绍Java内存 虚拟机内存运行时的数据区主要有三块：  堆（Heap）：存放对象实例和数组。全局共享 栈（Stack）：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有 方法区（Method Area）：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同   **堆：**最大的最重要的部分，逻辑堆。">
-<meta name="twitter:image" content="/.io/2019//10/29/JAVA垃圾回收/gc.jpeg">
+<meta name="twitter:image" content="/chenzhuo233.github.io/2019/10/29/JAVA垃圾回收/10/29/JAVA垃圾回收/gc.jpeg">
 
 
 
@@ -413,7 +413,7 @@
 <li><strong>栈（Stack）</strong>：也叫虚拟机栈，存放基本数据类型，对象引用。线程私有</li>
 <li><strong>方法区（Method Area）</strong>：存放 ”类“被加载后的信息，常量，静态变量。全局共享。在HotSpot中也叫”永生代“，两者不等同</li>
 </ol>
-<img src="/.io/2019//10/29/JAVA垃圾回收/gc.jpeg">
+<img src="10/29/JAVA垃圾回收/gc.jpeg">
 <p>**堆：**最大的最重要的部分，逻辑堆。对应图中Java Heaps区。</p>
 <p>**方法区：**永生代，主要由类加载器ClassLoader加载类信息。用于储存类的元数据，常量池，字段，静态变量，方法内的局部变量，已编译好的字节码。线程共享。JDK8后类的静态变量和内部字符串分离到逻辑堆。</p>
 <p><strong>栈：</strong> 对象的引用，八种基本数据类型。</p>
@@ -421,7 +421,7 @@
 <h2 id="垃圾回收">垃圾回收</h2>
 <h3 id="堆">堆</h3>
 <p>分为“年轻代”与“老年代”。年轻代分为**“Eden”（伊甸园）区<strong>和两个大小对等的Servivor区：<strong>from区</strong>和</strong>to区**。在Java内存模型中堆中有详细介绍。这里主要记录回收算法。</p>
-<img src="/.io/2019//10/29/JAVA垃圾回收/gc1.jpg">
+<img src="10/29/JAVA垃圾回收/gc1.jpg">
 <p><strong>年轻代垃圾回收</strong></p>
 <p><strong>Mark—Sweep</strong>算法，也就是标记清除算法。标记出活着的实例，清除未标记实例。</p>
 <ol>
@@ -435,7 +435,7 @@
 <ol>
 <li>
 <p><strong>stack栈中引用对象</strong>：就是指存储在JVM栈中的对象引用。</p>
-<img src="/.io/2019//10/29/JAVA垃圾回收/gc2.jpg">
+<img src="10/29/JAVA垃圾回收/gc2.jpg">
 </li>
 <li>
 <p>**static静态变量：**静态方法和变量不产生实例，直接由类引用。Java的类是由类加载器加载（<strong>java.lang.ClassLoader</strong>），类的数据都不在逻辑堆，而是在永生代（Metaspace方法区），类本身一旦被GC清除。他所有的静态变量也一并释放。</p>
@@ -465,11 +465,11 @@
 </blockquote>
 </li>
 </ol>
-<img src="/.io/2019//10/29/JAVA垃圾回收/gc3.png">
+<img src="10/29/JAVA垃圾回收/gc3.png">
 <p><strong>在标记阶段，mutator先中断整个程序的运行。然后collector从根对象开始遍历，对从mutator根对象可以访问到的对象都打上一个标示，在对象header中，将其记录为可达对象。然后清除阶段，collector对堆内存从头到尾进行线性遍历，若发现某个对象没有标记为可达对象，则将其回收</strong></p>
 <p><strong>拷贝到其他代区</strong></p>
 <p><strong>回收过程：新对象内存分配到Eden区，当Eden空间不足时触发年轻代上的垃圾回收（Minor Garbage Collection），gc触发后，存活对象拷贝到一个Survior区同时年龄增加，并清除Eden中非可达对象。其他代区相同方法依次类推。</strong></p>
-<img src="/.io/2019//10/29/JAVA垃圾回收/gc4.jpg">
+<img src="10/29/JAVA垃圾回收/gc4.jpg">
 <p><strong>老年代垃圾回收</strong></p>
 <p>当minor gc发生时，如果Tenured区没有空间容纳新对象时，触发老年代垃圾回收（Major Garbage Collection）。老年代垃圾回收算法取决于JVM用什么垃圾回收器，有三种：Parallel Scavenge(PS),Concurrent Mark Sweep(CMS)还有最新的Garbage First(G1)垃圾收集器。</p>
 <p><strong>Garbage First</strong></p>
